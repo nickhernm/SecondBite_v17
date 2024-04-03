@@ -15,8 +15,6 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 - **Página de inicio**: Se mostrarán opciones como registros y una lista de restaurantes disponibles en la ciudad del usuario.
 - **Página de restaurante**: Cada restaurante exhibirá los platos disponibles con su descripción, precio, valoración y alérgenos.
 - **Categorías**: Los usuarios podrán explorar restaurantes por categorías (por ejemplo, cocina internacional, comida rápida, vegetariana, etc.).
-- **Cesta**: Los usuarios podrán agregar platos a una cesta antes de realizar la compra.
-- **Favoritos**: Los usuarios podrán marcar platos como favoritos para acceder fácilmente a ellos en futuras visitas.
 
 ### Listado EN Pública:
 
@@ -46,4 +44,5 @@ Se plantean las siguientes mejoras para la aplicación:
 
 - Implementación de un sistema de recomendaciones de platos basado en las preferencias del usuario.
 - Incorporación de un sistema de valoración y reseñas de platos y restaurantes por parte de los usuarios.
+- TOP clientes, TOP restaurantes, ventas por restaurante.
 
