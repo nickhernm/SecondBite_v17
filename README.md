@@ -21,8 +21,6 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 1. Registro de usuarios.
 2. Visualización de restaurantes y platos disponibles.
 3. Exploración por categorías de restaurantes.
-4. Agregar platos a la cesta.
-5. Marcar platos como favoritos.
 
 ## Parte privada:
 
