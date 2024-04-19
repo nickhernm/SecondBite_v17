@@ -45,6 +45,10 @@ Se plantean las siguientes mejoras para la aplicación:
 - Incorporación de un sistema de valoración y reseñas de platos y restaurantes por parte de los usuarios.
 - TOP clientes, TOP restaurantes, ventas por restaurante.
 
+## Esquema ER
+
+El esquema entidad-relación de la base de datos se encuentra en la carpeta raíz del proyecto.
+
 ## Corrección: 
 
 La etiqueta de entrega debe ser "propuesta". Modificar algunos EN (deben ser sustantivos: Usuario, Restaurante, Plato...).
