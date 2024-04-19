@@ -17,10 +17,9 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 
 ### Listado EN Pública:
 
-1. Registro de usuarios.
-2. Visualización de restaurantes disponibles.
-3. Visualización de platos disponibles.
-4. Categorías de restaurantes.
+1. Restaurantes.
+2. Platos.
+3. Categorías de restaurantes.
 
 ## Parte privada:
 
@@ -31,10 +30,12 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 
 ### Listado EN Privada:
 
-1. Perfil del cliente.
-2. Visualización y gestión de la cesta de la compra.
-3. Gestión de platos marcados como favoritos.
-4. Visualización del estado de los pedidos.
+1. Usuario cliente.
+2. Usuario restaurante.
+4. Cesta.
+5. Favoritos.
+6. Pedidos.
+7. Linea de Pedido.
 
 ## Posibles mejoras:
 
