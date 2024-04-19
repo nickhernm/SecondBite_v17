@@ -2,7 +2,6 @@
 ## Miembros del Grupo:
 - Jaime Hernandez Delgado
 - Yaroslav
-- Harjot Kaur
 - Nada Benaissa
 - Dario Simon Franco
 
@@ -19,8 +18,9 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 ### Listado EN Pública:
 
 1. Registro de usuarios.
-2. Visualización de restaurantes y platos disponibles.
-3. Exploración por categorías de restaurantes.
+2. Visualización de restaurantes disponibles.
+3. Visualización de platos disponibles.
+4. Categorías de restaurantes.
 
 ## Parte privada:
 
@@ -31,7 +31,7 @@ Se propone desarrollar una plataforma web destinada a la venta de comida sobrant
 
 ### Listado EN Privada:
 
-1. Gestión del perfil del cliente.
+1. Perfil del cliente.
 2. Visualización y gestión de la cesta de la compra.
 3. Gestión de platos marcados como favoritos.
 4. Visualización del estado de los pedidos.
