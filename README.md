@@ -49,6 +49,11 @@ Se plantean las siguientes mejoras para la aplicación:
 
 El esquema entidad-relación de la base de datos se encuentra en la carpeta raíz del proyecto.
 
-## Corrección: 
+## Corrección Entrega 1: 
 
 La etiqueta de entrega debe ser "propuesta". Modificar algunos EN (deben ser sustantivos: Usuario, Restaurante, Plato...).
+
+
+## Corrección Entrega 2: 
+
+Falta etiqueta commit y rellenar ENs.
