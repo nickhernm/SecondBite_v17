@@ -10,6 +10,8 @@ public class ENCategorias
 	public string Nombre { get; set; }
 	public string Descripcion { get; set; }
 	public int Valoracion { get; set; }
- }
-}
+
+
+		 }
+		}
 }
