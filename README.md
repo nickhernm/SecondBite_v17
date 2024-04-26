@@ -1,4 +1,4 @@
-# project-hada
+# SecondBite
 ## Miembros del Grupo:
 - Jaime Hernandez Delgado
 - Yaroslav
