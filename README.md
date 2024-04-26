@@ -1,9 +1,9 @@
-# project-hada
+# SecondBite
 ## Miembros del Grupo:
-- Jaime Hernandez Delgado
-- Yaroslav
-- Nada Benaissa
-- Dario Simon Franco
+- Jaime Hernandez Delgado : 48776654W
+- Yaroslav : 55356368Z
+- Nada Benaissa : BK5734575
+- Dario Simon Franco : 74392984J
 
 ## Descripción:
 
