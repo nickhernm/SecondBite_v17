@@ -1,0 +1,57 @@
+﻿body {
+}
+
+.purple-highlight {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-left a,
+    .navbar-right a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+.purple-highlight {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+.platos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.plato {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
