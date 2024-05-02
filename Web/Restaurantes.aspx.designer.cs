@@ -15,6 +15,15 @@ namespace Web
     {
 
         /// <summary>
+        /// Control head.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+
+        /// <summary>
         /// Control form1.
         /// </summary>
         /// <remarks>
@@ -69,21 +78,39 @@ namespace Web
         protected global::System.Web.UI.WebControls.HyperLink lnkRegister;
 
         /// <summary>
-        /// Control litNombreRestaurante.
+        /// Control txtBuscarRestaurante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNombreRestaurante;
+        protected global::System.Web.UI.WebControls.TextBox txtBuscarRestaurante;
 
         /// <summary>
-        /// Control repeaterPlatos.
+        /// Control btnBuscar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeaterPlatos;
+        protected global::System.Web.UI.WebControls.Button btnBuscar;
+
+        /// <summary>
+        /// Control repeaterRestaurantes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeaterRestaurantes;
+
+        /// <summary>
+        /// Control ContentPlaceHolder1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }
 }
