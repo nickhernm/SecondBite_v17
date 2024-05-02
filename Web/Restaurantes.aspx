@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Web.Site" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Restaurantes.aspx.cs" Inherits="Web.Restaurantes" %>
 
 <!DOCTYPE html>
 
@@ -8,8 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Restaurantes</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 
 <body>
@@ -52,11 +50,6 @@
                     <hr class="restaurante-separator" />
                 </ItemTemplate>
             </asp:Repeater>
-        </div>
-
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>

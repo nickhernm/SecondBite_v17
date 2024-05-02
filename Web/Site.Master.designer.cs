@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Site
+    public partial class Platos
     {
 
         /// <summary>

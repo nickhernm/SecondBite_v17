@@ -55,3 +55,35 @@
     padding: 10px;
     background-color: #f9f9f9;
 }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cesta-grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .cesta-grid th,
+    .cesta-grid td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+.btn-eliminar,
+.btn-vaciar {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Site2
+    public partial class WebForm1
     {
 
         /// <summary>
@@ -69,13 +69,22 @@ namespace Web
         protected global::System.Web.UI.WebControls.HyperLink lnkRegister;
 
         /// <summary>
-        /// Control litNombreRestaurante.
+        /// Control HyperLink1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litNombreRestaurante;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+
+        /// <summary>
+        /// Control Restaurante.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Restaurante;
 
         /// <summary>
         /// Control repeaterPlatos.
