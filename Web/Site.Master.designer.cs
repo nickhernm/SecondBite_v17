@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Site2
+    public partial class Site
     {
 
         /// <summary>
