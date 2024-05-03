@@ -21,7 +21,16 @@
 
             </div>
         </div>
+        <div class="ProfileElement">
+            <div>
+                <h3><a href="Cesta.aspx"> cesta</a></h3>
+                <h3><a href="Favoritos.aspx"> favoritos</a></h3>
+                <h3><a href="Pedidos.aspx"> pedidos</a></h3>
+            </div>
+        </div>
     </div>
+    <hr />
+    <h2>OPINIONES</h2>
     <div class="OpinionList">
         <h2 class="restaurante">Nombre restaurante</h2>
         <h3 class="titulo">Excelente servicio</h3>
@@ -29,6 +38,5 @@
         <p class="valoracion">Valoración: 5/5 estrellas</p>
         <p class="fecha">Publicado el 01/05/2024</p>
     </div>
-
-    <asp:Login ID="Login1" runat="server"></asp:Login>
+    
 </asp:Content>

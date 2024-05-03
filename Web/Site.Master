@@ -47,7 +47,7 @@
                     <div class="TopElement">
                         <div class="LogoMenu">
                             <a href="Default.aspx">
-                                <img src="/Images/logoPlaceHolder.jpg" alt="Menu Principal">
+                                <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
                             </a>
                         </div>
                     </div>
@@ -62,24 +62,21 @@
                         </div>
                     </div>                    
                 </div>
-                <nav class="navbar">
-                    <ul class="menu">
+                <nav class="navbar" style="background-color: #692A8A;">
+                    <ul class="menu" style="padding-top: 15px;">
                         <li><a href="Restaurantes">RESTAURANTES</a></li>
                         <li><a href="Platos">PLATOS</a></li>
                         <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
-                        <li><a href="Favoritos">FAVORITOS</a></li>
-                        <li><a href="Pedidos">PEDIDOS</a></li>
-                        <li><a href="Cesta">CESTA</a></li>
                         <li><a href="Contact">CONTACTO</a></li>
-                        <li><a href="#">QUIENES SOMOS</a></li>
+                        <li><a href="About">QUIENES SOMOS</a></li>
                     </ul>
                 </nav>
             </header>
             <hr />
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
+            <footer style="position: absolute; bottom: 0; width: 100%;">
+                <hr />
                 <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
             </footer>
         </div>

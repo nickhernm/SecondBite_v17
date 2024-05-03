@@ -35,7 +35,7 @@ button {
 }
 
 .navbar {
-    background-color: #111;
+    background-color: #692A8A;
     color: #fff;
     font-family: Arial, sans-serif;
     display: flex;
@@ -43,12 +43,13 @@ button {
 }
 
 .menu {
+    
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
 }
 
 .menu li {
+    
     margin-right: 20px;
     display: inline;
 }
@@ -67,3 +68,4 @@ button {
 .menu li a:hover {
     background-color: #333;
 }
+

@@ -11,25 +11,34 @@ namespace Web
 {
 
 
-    public partial class Cesta
+    public partial class Recomendaciones
     {
 
         /// <summary>
-        /// Control gvCesta.
+        /// Control txtContent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvCesta;
+        protected global::System.Web.UI.WebControls.Label txtContent;
 
         /// <summary>
-        /// Control btnVaciarCesta.
+        /// Control txtPrice.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnVaciarCesta;
+        protected global::System.Web.UI.WebControls.Label txtPrice;
+
+        /// <summary>
+        /// Control Image1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
     }
 }
