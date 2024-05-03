@@ -19,7 +19,7 @@ namespace library
 
         public ENPedido()
         {
-            this.numPedido = null;
+            this.numPedido = 0;
         }
 
         public ENPedido(int num)
@@ -31,24 +31,28 @@ namespace library
         {
             CADPedido ped = new CADPedido();
             bool create = ped.Create(this);
+            return create;
         }
 
         public bool Update()
         {
             CADPedido ped = new CADPedido();
             bool update = ped.Update(this);
+            return update;
         }
 
         public bool Delete()
         {
             CADPedido ped = new CADPedido();
             bool delete = ped.Delete(this);
+            return delete;
         }
 
         public bool Read()
         {
             CADPedido ped = new CADPedido();
             bool read = ped.Read(this);
+            return read;
         }
     }
 }

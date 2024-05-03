@@ -48,24 +48,28 @@ namespace library
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool create = usu.Create(this);
+            return create;
         }
 
         public bool Update()
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool update = usu.Update(this);
+            return update;
         }
 
         public bool Delete()
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool delete = usu.Delete(this);
+            return delete;
         }
 
         public bool Read()
         {
-            CADUsuarioRestaurante lin = new CADUsuarioRestaurante();
+            CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool read = usu.Read(this);
+            return read;
         }
     }
 }

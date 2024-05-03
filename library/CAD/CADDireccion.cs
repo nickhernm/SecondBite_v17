@@ -13,47 +13,34 @@ namespace library
 {
 	public class CADDireccion
 	{
-    	private string con;
-
     	public CADDireccion()
     	{
-    	    con = ConfigurationManager.ConnectionStrings["Database"].ToString();
+    	    // Crear base de datos para conectar
     	}
 
     	public bool Create(ENDireccion en)
     	{
-    	    // Implementación del método Create
-    	}
+            return false;
+            //TODO
+        }
 
-    	public bool Read(ENDireccion en)
+        public bool Read(ENDireccion en)
     	{
-    	    // Implementación del método Read
-    	}
-
-    	public bool readFirst(ENDireccion en)
-    	{
-    	    // Implementación del método readFirst
-    	}
-
-    	public bool readNext(ENDireccion en)
-    	{
-    	    // Implementación del método readNext
-    	}
-
-    	public bool readPrev(ENDireccion en)
-    	{
-    	    // Implementación del método readPrev
-    	}
+            return false;
+            //TODO
+        }
 
     	public bool Update(ENDireccion en)
     	{
-    	    // Implementación del método Update
-    	}
+            return false;
+            //TODO
+        }
 
-    	public bool Delete(ENDireccion en)
+        public bool Delete(ENDireccion en)
     	{
-    	    // Implementación del método Delete
-    	}
-	}
+            return false;
+            //TODO
+        }
+    }
 
 }

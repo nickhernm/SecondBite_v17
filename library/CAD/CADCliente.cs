@@ -9,51 +9,38 @@ using System.Data.Common;
 using System.Data;
 using System.Configuration;
 
-namespace library 
+namespace library
 {
-	public class CADCliente
-	{
-    	private string con;
+    public class CADCliente
+    {
+        public CADCliente()
+        {
+            // Crear base de datos para conectar
+        }
 
-    	public CADCliente()
-    	{
-    	    con = ConfigurationManager.ConnectionStrings["Database"].ToString();
-    	}
+        public bool Create(ENCliente en)
+        {
+            return false;
+            //TODO
+        }
 
-    	public bool Create(ENCliente en)
-    	{
-    	    // Implementación del método Create
-    	}
+        public bool Read(ENCliente en)
+        {
+            return false;
+            //TODO
+        }
 
-    	public bool Read(ENCliente en)
-    	{
-    	    // Implementación del método Read
-    	}
+        public bool Update(ENCliente en)
+        {
+            return false;
+            //TODO
+        }
 
-    	public bool readFirst(ENCliente en)
-    	{
-    	    // Implementación del método readFirst
-    	}
+        public bool Delete(ENCliente en)
+        {
+            return false;
+            //TODO
+        }
 
-    	public bool readNext(ENCliente en)
-    	{
-    	    // Implementación del método readNext
-    	}
-
-    	public bool readPrev(ENCliente en)
-    	{
-    	    // Implementación del método readPrev
-    	}
-
-    	public bool Update(ENCliente en)
-    	{
-    	    // Implementación del método Update
-    	}
-
-    	public bool Delete(ENCliente en)
-    	{
-    	    // Implementación del método Delete
-    	}
-	}
-
+    }
 }
