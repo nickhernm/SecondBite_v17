@@ -1,0 +1,4 @@
+C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
+C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache

@@ -1,8 +1,6 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
-
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html lang="es">
+<<<<<<< HEAD
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
@@ -18,8 +16,20 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="MainPage.css" rel="stylesheet" />
 
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+>>>>>>> a4376cbcde104823a65e490bff662db25bdea7f6
 </head>
 <body>
+<<<<<<< HEAD
+    <h1>Bienvenido a la Página de Inicio</h1>
+    <p>¡Explora nuestros restaurantes!</p>
+    <!-- Enlace a la página de restaurantes -->
+    <a href="Restaurantes.aspx">Ver Restaurantes</a>
+=======
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -41,7 +51,31 @@
             </Scripts>
         </asp:ScriptManager>
 
+<<<<<<< HEAD
         
+=======
+        <div class="navbar navbar-inverse navbar-fixed-top" >
+            <asp:ContentPlaceHolder ID="navBar" runat="server">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Inicio</a></li>
+                        <li><a runat="server" href="~/Favoritos">Favoritos</a></li>
+                        <li><a runat="server" href="~/Pedidos">Pedidos</a></li>
+                    </ul>
+                </div>
+            </div>
+                </asp:ContentPlaceHolder>
+        </div>
+>>>>>>> a4376cbcde104823a65e490bff662db25bdea7f6
         <div class="container body-content">
             <header>
                 <div class ="TopContainer">
@@ -83,5 +117,6 @@
         </div>
 
     </form>
+>>>>>>> 55356368Z
 </body>
 </html>
