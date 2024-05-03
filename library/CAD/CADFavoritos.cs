@@ -9,61 +9,40 @@ using System.Data.Common;
 using System.Data;
 using System.Configuration;
 
-
-
-
-
-
 namespace library
 {
 	public class CADFavoritos
 	{
-    	private string connection;
+    	
 
     	public CADFavoritos()
     	{
-    	    connection = ConfigurationManager.ConnectionStrings["BDD"].ToString();
+    	    // Crear base de datos para conectar
     	}
 
     	public bool Create(ENFavoritos en)
     	{
+            return false;
+            //TODO
+        }
 
-    	}
-
-    	public bool Update(ENFavoritos en)
+        public bool Update(ENFavoritos en)
     	{
+            return false;
+            //TODO
+        }
 
-    	}
-
-    	public bool Read(ENFavoritos en)
+        public bool Read(ENFavoritos en)
     	{
+            return false;
+            //TODO
+        }
 
-    	}
-
-    	public bool Delete(ENFavoritos en)
+        public bool Delete(ENFavoritos en)
     	{
-
-    	}
-
-    	public bool readFirst(ENFavoritos en)
-    	{
-
-    	}
-
-    	public bool readNext(ENFavoritos en)
-    	{
-
-    	}
-
-    	public bool readPrev(ENFavoritos en)
-    	{
-
-    	}
-
-    	public bool readAllClt(ENFavoritos en)
-    	{
-			//Lee todos los platos del cliente
-    	}
+            return false;
+            //TODO
+        }
 
 	}
 

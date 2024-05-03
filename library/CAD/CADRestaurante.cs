@@ -12,48 +12,35 @@ using System.Configuration;
 namespace library 
 {
 	public class CADRestaurante
-	{
-    	private string con;
-
+    { 
     	public CADRestaurante()
     	{
-    	    con = ConfigurationManager.ConnectionStrings["Database"].ToString();
+    	    // Crear base de datos para conectar
     	}
 
     	public bool Create(ENRestaurante en)
     	{
-    	    // Implementación del método Create
-    	}
+            return false;
+            //TODO
+        }
 
-    	public bool Read(ENRestaurante en)
+        public bool Read(ENRestaurante en)
     	{
-    	    // Implementación del método Read
-    	}
+            return false;
+            //TODO
+        }
+      
+        public bool Update(ENRestaurante en)
+    	{
+            return false;
+            //TODO
+        }
 
-    	public bool readFirst(ENRestaurante en)
+        public bool Delete(ENRestaurante en)
     	{
-    	    // Implementación del método readFirst
-    	}
-
-    	public bool readNext(ENRestaurante en)
-    	{
-    	    // Implementación del método readNext
-    	}
-
-    	public bool readPrev(ENRestaurante en)
-    	{
-    	    // Implementación del método readPrev
-    	}
-
-    	public bool Update(ENRestaurante en)
-    	{
-    	    // Implementación del método Update
-    	}
-
-    	public bool Delete(ENRestaurante en)
-    	{
-    	    // Implementación del método Delete
-    	}
-	}
+            return false;
+            //TODO
+        }
+    }
 
 }

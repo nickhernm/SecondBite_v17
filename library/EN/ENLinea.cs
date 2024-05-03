@@ -40,24 +40,28 @@ namespace library
         {
             CADLinea lin = new CADLinea();
             bool create = lin.Create(this);
+            return create;
         }
 
         public bool Update()
         {
             CADLinea lin = new CADLinea();
             bool update = lin.Update(this);
+            return update;
         }
 
         public bool Delete()
         {
             CADLinea lin = new CADLinea();
             bool delete = lin.Delete(this);
+            return delete;
         }
 
         public bool Read()
         {
             CADLinea lin = new CADLinea();
             bool read = lin.Read(this);
+            return read;
         }
     }
 }
