@@ -4,7 +4,6 @@ namespace library
 {
 
     public class ENPlato
-<<<<<<< HEAD
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
@@ -40,20 +39,5 @@ namespace library
             bool read = pla.Read(this);
             return read;
         }
-=======
-    {       
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Alergenos { get; set; }
-
-        // Constructor
-        public ENPlato(int id, string nombre, string alergenos)
-        {
-            Id = id;
-            Nombre = nombre;
-            Alergenos = alergenos;
-        }
-   
->>>>>>> BK5734575
     }
 }
