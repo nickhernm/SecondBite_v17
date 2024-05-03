@@ -129,14 +129,12 @@
     <Content Include="Favs.aspx" />
     <Content Include="Requests.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-<<<<<<< HEAD
+
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
     <Content Include="Perfil.css" />
-=======
     <Content Include="Images\sandwich.jpg" />
     <Content Include="Registrar.aspx" />
->>>>>>> a4376cbcde104823a65e490bff662db25bdea7f6
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -166,11 +164,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-<<<<<<< HEAD
     <Content Include="Default.css" />
-=======
     <Content Include="styles.css" />
->>>>>>> a4376cbcde104823a65e490bff662db25bdea7f6
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
