@@ -12,7 +12,7 @@
                     <div class="centerobject"><asp:TextBox ID="TextBox1" runat="server" placeholder="Usuario"></asp:TextBox> </div>
                     <div class="centerobject"><asp:TextBox ID="TextBox2" runat="server" placeholder="Contraseña"></asp:TextBox> </div>
                     <div class="centerobject"><asp:Button ID="Button3" runat="server" Text="Create Account" OnClick="RegistrarUsu"></asp:Button> </div>
-                    <div class="centerobject">Already have an account? <a runat = "server" href="~/">Login</a> </div>
+                    <div class="centerobject">Already have an account? <a runat = "server" href="~/Login">Login</a> </div>
                 
         </div>
     </div>
