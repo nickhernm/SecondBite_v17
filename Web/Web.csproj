@@ -105,20 +105,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Content Include="Favoritos.aspx" />
-    <Content Include="Pedidos.aspx" />
->>>>>>> 55356368Z
+
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
-=======
     <Content Include="Login.aspx" />
->>>>>>> 55356368Z
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
