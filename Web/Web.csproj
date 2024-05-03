@@ -105,7 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -127,6 +126,8 @@
     <Content Include="Contact.aspx" />
     <Content Include="Restaurantes.aspx" />
     <Content Include="Platos.aspx" />
+    <Content Include="Favs.aspx" />
+    <Content Include="Requests.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Images\sandwich.jpg" />
     <Content Include="Registrar.aspx" />
@@ -167,22 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-
-    <Compile Include="Favoritos.aspx.cs">
-      <DependentUpon>Favoritos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Favoritos.aspx.designer.cs">
-      <DependentUpon>Favoritos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Pedidos.aspx.cs">
-      <DependentUpon>Pedidos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pedidos.aspx.designer.cs">
-      <DependentUpon>Pedidos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,6 +235,20 @@
     </Compile>
     <Compile Include="Platos.aspx.designer.cs">
       <DependentUpon>Platos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Favs.aspx.cs">
+      <DependentUpon>Favs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Favs.aspx.designer.cs">
+      <DependentUpon>Favs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requests.aspx.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Requests.aspx.designer.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

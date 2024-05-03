@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Request
+    public partial class Requests
     {
 
         /// <summary>

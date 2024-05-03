@@ -18,7 +18,6 @@
             <div class="navbar-right">
                 <asp:HyperLink ID="lnkLogin" runat="server" Visible="true" NavigateUrl="~/Login.aspx" Text="Log In"></asp:HyperLink>
                 <asp:HyperLink ID="lnkRegister" runat="server" Visible="true" NavigateUrl="~/Register.aspx" Text="Register"></asp:HyperLink>
-                <!-- Nuevo enlace para la cesta -->
                 <asp:HyperLink ID="HyperLink1" runat="server" Visible="false" NavigateUrl="~/Cesta.aspx" Text="Cesta"></asp:HyperLink>
             </div>
         </div>
