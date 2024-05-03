@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class Log : Page
+    public partial class Login : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +18,7 @@ namespace Web
             }
         }
 
-        protected void LogUsu(object sender, EventArgs e)
+        protected void LoginUsu(object sender, EventArgs e)
         {
             Response.Redirect("Pedidos.aspx");
         }

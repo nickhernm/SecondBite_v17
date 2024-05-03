@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Platos.aspx.cs" Inherits="Web.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Platos.aspx.cs" Inherits="Web.Platos" %>
 <!DOCTYPE html>
 <html>
 <head runat="server">

@@ -7,15 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class Request : Page
+    public partial class Favoritos : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             txtTitle.Text = "Sandwich Gourmet Universitario (Vegano) 160 kcal";
             txtContent.Text = "Sandwich Gourmet con un total 160 kcal /n Pan, Queso, Lechuga";
             txtPrice.Text = "1.30€";
-            txtOrder.Text = "Pedido nº:02-05-2024:000001";
-            txtPriceTotal.Text = "Total: 2.60€";
         }
 
         protected void Delete(object sender, EventArgs e)

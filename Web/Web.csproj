@@ -126,10 +126,9 @@
     <Content Include="Contact.aspx" />
     <Content Include="Restaurantes.aspx" />
     <Content Include="Platos.aspx" />
-    <Content Include="Favs.aspx" />
-    <Content Include="Requests.aspx" />
+    <Content Include="Favoritos.aspx" />
+    <Content Include="Pedidos.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
     <Content Include="Perfil.css" />
@@ -248,24 +247,23 @@
     <Compile Include="Platos.aspx.designer.cs">
       <DependentUpon>Platos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Favs.aspx.cs">
-      <DependentUpon>Favs.aspx</DependentUpon>
+    <Compile Include="Favoritos.aspx.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Favs.aspx.designer.cs">
-      <DependentUpon>Favs.aspx</DependentUpon>
+    <Compile Include="Favoritos.aspx.designer.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Requests.aspx.cs">
-      <DependentUpon>Requests.aspx</DependentUpon>
+    <Compile Include="Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Requests.aspx.designer.cs">
-      <DependentUpon>Requests.aspx</DependentUpon>
+    <Compile Include="Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

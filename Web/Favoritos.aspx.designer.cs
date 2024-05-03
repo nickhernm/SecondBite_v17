@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Favs
+    public partial class Favoritos
     {
 
         /// <summary>
