@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\library",
     "\\Web"
   ],
-  "SelectedNode": "\\Web\\bin",
+  "SelectedNode": "\\Web\\Site.Master",
   "PreviewInSolutionExplorer": false
 }
