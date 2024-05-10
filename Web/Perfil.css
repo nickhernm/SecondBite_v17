@@ -1,0 +1,12 @@
+﻿.ProfileContainer{
+    overflow: hidden;
+}
+
+.ProfileElement {
+    float: left;
+    margin-right: 150px;
+}
+
+.OpinionList {
+    background-color: #9f978c3d;
+}

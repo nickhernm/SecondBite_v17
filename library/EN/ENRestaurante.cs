@@ -9,17 +9,46 @@ using System.Data.Common;
 using System.Data;
 using System.Configuration;
 
-namespace libraty {
+namespace library {
 	public class ENRestaurante
 	{
-		public ENRestaurante()
+        public int cod { get; set; } // Clave primaria
+        public string nombre { get; set; }
+        public string localidad { get; set; }
+        //public Direccion direccion { get; set; } // Relación con Direccion || Arreglar tipo de dato Direccion
+        public string tipo { get; set; }
+        public float puntuacion { get; set; }
+        public ENRestaurante()
 		{
-			public int cod { get; set; } // Clave primaria
-	    	public string nombre { get; set; }
-	    	public string localidad { get; set; }
-	    	public Direccion direccion { get; set; } // Relación con Direccion
-	    	public string tipo { get; set; }
-	    	public float puntuacion { get; set; }
+
 		}
-	}
+
+        public bool Create()
+        {
+            CADRestaurante res = new CADRestaurante();
+            bool create = res.Create(this);
+            return create;
+        }
+
+        public bool Update()
+        {
+            CADRestaurante res = new CADRestaurante();
+            bool update = res.Update(this);
+            return update;
+        }
+
+        public bool Delete()
+        {
+            CADRestaurante res = new CADRestaurante();
+            bool delete = res.Delete(this);
+            return delete;
+        }
+
+        public bool Read()
+        {
+            CADRestaurante res = new CADRestaurante();
+            bool read = res.Read(this);
+            return read;
+        }
+    }
 }
