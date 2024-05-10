@@ -106,8 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Data\DataBase.mdf" />
-    <Content Include="App_Data\DataBase_log.ldf">
+    <Content Include="APP_Data\DataBase.mdf" />
+    <Content Include="APP_Data\DataBase_log.ldf">
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
