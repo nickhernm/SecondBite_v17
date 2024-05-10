@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\library",
+    "\\library\\EN",
     "\\Web"
   ],
-  "SelectedNode": "\\Web\\Site.Master",
+  "SelectedNode": "\\library\\EN\\ENFavoritos.cs",
   "PreviewInSolutionExplorer": false
 }
