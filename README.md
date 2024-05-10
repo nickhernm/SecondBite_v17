@@ -57,3 +57,8 @@ La etiqueta de entrega debe ser "propuesta". Modificar algunos EN (deben ser sus
 ## Corrección Entrega 2: 
 
 Falta etiqueta commit y rellenar ENs.
+
+
+## Corrección Entrega 3: 
+
+Falta etiqueta commit y rellenar pantallas con información de base de datos.
