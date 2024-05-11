@@ -59,7 +59,7 @@ namespace Web
 
         public ItemCesta(int Id, string nombre, decimal precio, int cantidad)
         {
-            Id = id;
+            //Id = id;
             Nombre = nombre;
             Precio = precio;
             Cantidad = cantidad;

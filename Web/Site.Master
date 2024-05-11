@@ -1,14 +1,12 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
-
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
 <!DOCTYPE html>
-
 <html lang="es">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> SECONDBITE
-    </title>
+    <%-- <title><%: Page.Title %> SECONDBITE 
+    </title>--%>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -16,7 +14,10 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="MainPage.css" rel="stylesheet" />
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <form runat="server">
@@ -39,32 +40,44 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        
         <div class="container body-content">
+            <header>
+                <div class ="TopContainer">
+                    <div class="TopElement">
+                        <div class="LogoMenu">
+                            <a href="Default.aspx">
+                                <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="TopElement">
+                        <div class ="LogButtons">
+                            <div class="mitad">
+                                <asp:Button ID="Login" runat="server" Text="Sing In" OnClick="GoLogIn"/>
+                                <asp:Button ID="Registro" runat="server" Text="Sing Up" OnClick="GoSignIn"/>
+                            </div>
+
+                            <asp:Button class="entero" ID="Perfil" runat="server" Text="Profile" OnClick="GoPerfil"/> <%-- falta el evento  --%>
+                        </div>
+                    </div>                    
+                </div>
+                <nav class="navbar" style="background-color: #692A8A;">
+                    <ul class="menu" style="padding-top: 15px;">
+                        <li><a href="Restaurantes">RESTAURANTES</a></li>
+                        <li><a href="Platos">PLATOS</a></li>
+                        <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
+                        <li><a href="Contact">CONTACTO</a></li>
+                        <li><a href="About">QUIENES SOMOS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <hr />
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+            <footer style="position: absolute; bottom: 0; width: 100%;">
+                <hr />
+                <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
             </footer>
         </div>
 

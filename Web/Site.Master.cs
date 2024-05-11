@@ -13,5 +13,18 @@ namespace Web
         {
 
         }
+
+        protected void GoSignIn(object sender, EventArgs e)
+        {
+            Response.Redirect("Registrar.aspx");
+        }
+        protected void GoLogIn(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+        protected void GoPerfil(object sender, EventArgs e)
+        {
+            Response.Redirect("Perfil.aspx");
+        }
     }
 }

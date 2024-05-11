@@ -10,13 +10,42 @@ using System.Data;
 using System.Configuration;
 
 namespace library {
-    public class EnFavoritos
+    public class ENFavoritos
     {
-	    public EnFavoritos()
+        public int id { get; set; } // Arreglar tipo de dato Cliente y Plato
+        //public Cliente cliente { get; set; } // Relación con Cliente
+        //public List<Plato> Platos { get; set; } // Relación con Plato
+        public ENFavoritos()
 	    {
-	    	public int id { get; set; } // Clave primaria
-            public Cliente cliente { get; set; } // Relación con Cliente
-            public List<Plato> Platos { get; set; } // Relación con Plato
+
 	    }
+
+        public bool Create()
+        {
+            CADFavoritos lin = new CADFavoritos();
+            bool create = lin.Create(this);
+            return create;
+        }
+
+        public bool Update()
+        {
+            CADFavoritos lin = new CADFavoritos();
+            bool update = lin.Update(this);
+            return update;
+        }
+
+        public bool Delete()
+        {
+            CADFavoritos lin = new CADFavoritos();
+            bool delete = lin.Delete(this);
+            return delete;
+        }
+
+        public bool Read()
+        {
+            CADFavoritos lin = new CADFavoritos();
+            bool read = lin.Read(this);
+            return read;
+        }
     }
 }
