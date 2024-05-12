@@ -138,6 +138,7 @@
     <Content Include="Pedidos.aspx" />
     <Content Include="Restaurante_Individual.aspx" />
     <Content Include="Menu_Individual.aspx" />
+    <Content Include="CambiarMenu.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
@@ -304,6 +305,13 @@
     </Compile>
     <Compile Include="Menu_Individual.aspx.designer.cs">
       <DependentUpon>Menu_Individual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarMenu.aspx.cs">
+      <DependentUpon>CambiarMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarMenu.aspx.designer.cs">
+      <DependentUpon>CambiarMenu.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

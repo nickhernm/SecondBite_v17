@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,45 +9,41 @@ using System.Data.Common;
 using System.Data;
 using System.Configuration;
 
-namespace library 
+namespace library
 {
-    public class ENDireccion
+    public class ENOpinionRestaurante
     {
-        public string NombreCalle { get; set; }
-        public int CalleNumero { get; set; }
-        public int CodigoPostal { get; set; }
-        public string Ciudad { get; set; }
-        public string Comunidad { get; set; }
-        public int RestauranteId { get; set; } // Clave foránea para la tabla Restaurante
-        public string ClienteCorreo { get; set; } // Clave foránea para la tabla Usuario
+        public int cod_restaurante { get; set; }
+        public int id_opion { get; set; }
+        
 
         // Constructor vacío
-        public ENDireccion() { }
+        public ENOpinionRestaurante() { }
 
         public bool Create()
         {
-            CADDireccion dir = new CADDireccion();
+            CADOpinionRestaurante dir = new CADOpinionRestaurante();
             bool create = dir.Create(this);
             return create;
         }
 
         public bool Update()
         {
-            CADDireccion dir = new CADDireccion();
+            CADOpinionRestaurante dir = new CADOpinionRestaurante();
             bool update = dir.Update(this);
             return update;
         }
 
         public bool Delete()
         {
-            CADDireccion dir = new CADDireccion();
+            CADOpinionRestaurante dir = new CADOpinionRestaurante();
             bool delete = dir.Delete(this);
             return delete;
         }
 
         public bool Read()
         {
-            CADDireccion dir = new CADDireccion();
+            CADDireccCADOpinionRestauranteion dir = new CADCADOpinionRestauranteireccion();
             bool read = dir.Read(this);
             return read;
         }

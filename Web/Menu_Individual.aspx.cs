@@ -30,7 +30,7 @@ namespace Web
 
         private void CargarRestauranteNombre(int restauranteId)
         {
-            string connectionString = "TU_CADENA_DE_CONEXION";
+            string connectionString = "DataBase.mdf";
             string query = "SELECT Nombre FROM Restaurantes WHERE Id = @RestauranteId";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -45,7 +45,7 @@ namespace Web
 
         private void CargarPlatos(int restauranteId)
         {
-            string connectionString = "TU_CADENA_DE_CONEXION";
+            string connectionString = "DataBase.mdf";
             string query = "SELECT PlatoId, Nombre, Descripcion, Precio, Alergenos FROM Platos WHERE RestauranteId = @RestauranteId";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -61,11 +61,11 @@ namespace Web
                 {
                     Plato plato = new Plato
                     {
-                        //PlatoId = (int)reader["PlatoId"],
-                        //Nombre = reader["Nombre"].ToString(),
-                        //Descripcion = reader["Descripcion"].ToString(),
-                        //Precio = (decimal)reader["Precio"],
-                        //Alergenos = reader["Alergenos"].ToString()
+                        id = (int)reader["id"],
+                        Nombre = reader["Nombre"].ToString(),
+                        Descripcion = reader["Descripcion"].ToString(),
+                        Precio = (decimal)reader["Precio"],
+                        Alergenos = reader["Alergenos"].ToString()
                     };
 
                     platos.Add(plato);
