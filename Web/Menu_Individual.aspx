@@ -1,16 +1,28 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu_Individual.aspx.cs" Inherits="Web.WebForm1" %>
+﻿<%@ Page Title="Menu_Individual" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu_Individual.aspx.cs" Inherits="Web.Menu_Individual" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <form id="form1" runat="server">
-        <div>
+        <div class="container">
+            <h1>Menú del Restaurante @RestauranteNombre</h1>
+            <asp:Repeater ID="RepeaterPlatos" runat="server">
+                <HeaderTemplate>
+                    <ul class="menu-list">
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <li class="menu-item">
+                        <div class="menu-item-header">
+                            <h3><%# Eval("Nombre") %></h3>
+                            <span class="menu-item-price"><%# Eval("Precio", "{0:C}") %></span>
+                        </div>
+                        <p class="menu-item-description"><%# Eval("Descripcion") %></p>
+                        <p class="menu-item-alergenos">Alérgenos: <%# Eval("Alergenos") %></p>
+                        <asp:Button ID="BtnAnadirCesta" runat="server" Text="Añadir a cesta" CommandArgument='<%# Eval("PlatoId") %>' OnClick="BtnAnadirCesta_Click" CssClass="btn-add-cart" />
+                    </li>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </ul>
+                </FooterTemplate>
+            </asp:Repeater>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>

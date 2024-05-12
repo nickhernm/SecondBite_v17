@@ -1,34 +1,56 @@
 ﻿<%@ Page Title="Platos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Platos.aspx.cs" Inherits="Web.Platos" %>
 
-
-
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-    
     <!--<link rel="stylesheet" type="text/css" href="styles.css" /> ARREGLAR STYLE.CSS-->
+
     <!-- Navbar superior -->
-         
 
     <!-- Título del menú -->
     <div class="purple-highlight">
-        <h1>Menú de <asp:Literal ID="Restaurante" runat="server"></asp:Literal></h1>
+        <h1>Menú de <asp:Literal ID="LiteralRestaurante" runat="server"></asp:Literal></h1>
+    </div>
+
+    <!-- Barra de búsqueda y filtros -->
+    <div class="search-bar">
+        <asp:TextBox ID="TxtBuscarPlato" runat="server" Placeholder="Buscar plato..."></asp:TextBox>
+        <asp:Button ID="BtnBuscar" runat="server" Text="Buscar" OnClick="BtnBuscar_Click" />
+
+        <!-- Dropdown para Alérgenos -->
+        <label for="DdlAlergenos">Alérgenos:</label>
+        <asp:DropDownList ID="DdlAlergenos" runat="server">
+            <asp:ListItem Text="Todos los alérgenos" Value="" />
+            <asp:ListItem Text="Mariscos" Value="masricos" />
+            <asp:ListItem Text="Pescado" Value="pescado" />
+            <asp:ListItem Text="Soja" Value="soja" />
+        </asp:DropDownList>
+
+        <!-- Dropdown para Puntuación -->
+        <label for="DdlPuntuacion">Puntuación:</label>
+        <asp:DropDownList ID="DdlPuntuacion" runat="server">
+            <asp:ListItem Text="Todas las puntuaciones" Value="" />
+            <asp:ListItem Text="1 estrella" Value="1" />
+            <asp:ListItem Text="2 estrellas" Value="2" />
+            <asp:ListItem Text="3 estrellas" Value="3" />
+            <asp:ListItem Text="4 estrellas" Value="4" />
+            <asp:ListItem Text="5 estrellas" Value="5" />
+        </asp:DropDownList>
+
+        <!-- Botón para limpiar filtros -->
+        <asp:Button ID="BtnLimpiarFiltros" runat="server" Text="Limpiar filtros" OnClick="BtnLimpiarFiltros_Click" />
     </div>
 
     <!-- Lista de platos -->
     <div class="platos-list">
-        <asp:Repeater ID="repeaterPlatos" runat="server">
+        <asp:Repeater ID="RepeaterPlatos" runat="server">
             <ItemTemplate>
                 <div class="plato">
-                    <asp:Image ID="imgPlato" runat="server" ImageUrl='<%# Eval("ImagenUrl") %>' AlternateText='<%# Eval("Nombre") %>' CssClass="plato-imagen" />
-                    <h3><%# Eval("Nombre") %></h3>
-                    <p>Precio: <asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("Precio", "{0:C}") %>'></asp:Label></p>
-                    <p>Alérgenos: <asp:Label ID="lblAlergenos" runat="server" Text='<%# Eval("Alergenos") %>'></asp:Label></p>
-                    <p>Puntuación: <asp:Label ID="lblPuntuacion" runat="server" Text='<%# Eval("Puntuacion") %>'></asp:Label></p>
-                    <asp:Button ID="btnAnadirCesta" runat="server" Text="Añadir a cesta" OnClick="btnAnadirCesta_Click" CommandArgument='<%# Eval("PlatoId") %>' />
+                    <h3><%# Eval("nombre") %></h3>
+                    <p>Alérgenos: <%# Eval("alergenos") %></p>
+                    <p>Puntuación: <%# Eval("puntuacion") %></p>
+                    <asp:Button ID="BtnAnadirCesta" runat="server" Text="Añadir a cesta" OnClick="BtnAnadirCesta_Click" CommandArgument='<%# Eval("id") %>' />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
     </div>
-</asp:Content>
 
+</asp:Content>
