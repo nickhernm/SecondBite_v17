@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.idea",
+    "\\.idea\\.idea.SecondBite",
+    "\\.idea\\.idea.SecondBite\\.idea",
     "\\library",
-    "\\library\\EN",
+    "\\packages",
+    "\\SecondBite",
+    "\\SecondBite\\Properties",
     "\\Web"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\library\\EN\\ENFavoritos.cs",
-=======
-  "SelectedNode": "\\Web\\Restaurantes.aspx",
->>>>>>> develop
+  "SelectedNode": "\\SecondBite.sln",
   "PreviewInSolutionExplorer": false
 }
