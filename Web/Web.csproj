@@ -106,9 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="APP_Data\DataBase.mdf" />
-    <Content Include="APP_Data\DataBase_log.ldf">
-      <DependentUpon>DataBase.mdf</DependentUpon>
+    <Content Include="App_Data\database.mdf" />
+    <Content Include="App_Data\database_log.ldf">
+      <DependentUpon>database.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -136,6 +136,7 @@
     <Content Include="Platos.aspx" />
     <Content Include="Favoritos.aspx" />
     <Content Include="Pedidos.aspx" />
+    <Content Include="Quienesomos.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
@@ -288,6 +289,13 @@
     </Compile>
     <Compile Include="Pedidos.aspx.designer.cs">
       <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quienesomos.aspx.cs">
+      <DependentUpon>Quienesomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quienesomos.aspx.designer.cs">
+      <DependentUpon>Quienesomos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
