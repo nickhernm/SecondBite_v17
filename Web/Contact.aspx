@@ -13,7 +13,7 @@
         <h2>Información de Contacto</h2>
         <p>Nombre de la Empresa: SecondBite</p>
         <p>Teléfono: 678-456-329</p>
-        <p>Email: <a href="mailto:SecondBite@gmail.com">SecondBite@gmail.com</a></p>
+        <p>Email: <a href="mailto:secondbiteweb@gmail.com">secondbiteweb@gmail.com</a></p>
         <p>Dirección: Av. Hada, 12, Alicante, España</p>
     </div>
 
@@ -30,6 +30,19 @@
         <asp:TextBox ID="txtMensaje" runat="server" TextMode="MultiLine" Rows="4"></asp:TextBox>
         <br />
         <asp:Button ID="btnEnviar" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
+    </div>
+
+        <!-- Preguntas frecuentes -->
+    <div class="faq-section">
+        <h2>Preguntas Frecuentes</h2>
+        <asp:Repeater ID="rptFAQs" runat="server">
+            <ItemTemplate>
+                <div class="faq-item">
+                    <h3><%# Eval("Pregunta") %></h3>
+                    <p><%# Eval("Respuesta") %></p>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
     </div>
 
     <!-- Redes Sociales -->
