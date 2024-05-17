@@ -31,7 +31,7 @@ namespace library
                 {
                     connection.Open();
                     //string query = "INSERT INTO USUARIO (correo, nombre, telefono, tipo_usuario, id_metodo_pago) VALUES (@correo, @nombre, @telefono, @tipo_usuario, @id_metodo_pago)";
-                    string query = "INSERT INTO USUARIO (correo, nombre, telefono, contrasena, tipo_usuario) VALUES (@correo, @nombre, @telefono, @contrasena,s @tipo_usuario)";
+                    string query = "INSERT INTO USUARIO (correo, nombre, telefono, contrasena, tipo_usuario) VALUES (@correo, @nombre, @telefono, @contrasena, @tipo_usuario)";
                     //string query = "SELECT * from Products";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -39,9 +39,8 @@ namespace library
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
                         command.Parameters.AddWithValue("@telefono", en.Telefono);
                         command.Parameters.AddWithValue("@contrasena", en.Contrasena);
-                        command.Parameters.AddWithValue("@tipo_usuario", 1);
+                        command.Parameters.AddWithValue("@tipo_usuario", false);
                         //command.Parameters.AddWithValue("@id_metodo_pago", en.Telefono);
-
 
                         //System.Diagnostics.Debug.WriteLine(command.ExecuteReader());
                         int rowsAffected = command.ExecuteNonQuery();
@@ -166,7 +165,7 @@ namespace library
                                 en.Correo = reader["correo"].ToString();
                                 en.Nombre = reader["nombre"].ToString();
                                 en.Telefono = reader["telefono"].ToString();
-                                en.Tipo_usuario = reader["correo"].ToString();
+                                en.Tipo_usuario = ("1" == reader["tipo_usuario"].ToString());
                                 en.Metodo_pago = reader["correo"].ToString();
                                 en.Contrasena = reader["contrasena"].ToString();
                                 return true;
@@ -209,7 +208,7 @@ namespace library
                                 en.Correo = reader["correo"].ToString();
                                 en.Nombre = reader["nombre"].ToString();
                                 en.Telefono = reader["telefono"].ToString();
-                                en.Tipo_usuario = reader["correo"].ToString();
+                                en.Tipo_usuario = ("1" == reader["tipo_usuario"].ToString());
                                 en.Metodo_pago = reader["correo"].ToString();
                                 en.Contrasena = reader["contrasena"].ToString();
                                 return true;
