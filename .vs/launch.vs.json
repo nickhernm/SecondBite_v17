@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "managed",
+      "name": "Contact.aspx",
+      "project": "Web\\Contact.aspx",
+      "projectTarget": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿﻿.OptionContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.OptionElement {
+    float: left;
+    margin-right: 45px;
+}

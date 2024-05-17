@@ -1,15 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
+using System.Data.Common;
+using System.Data;
+using System.Configuration;
 
 namespace library
 {
     // Clase CADPlato
     public class CADPlato
     {
-        private string connectionString;
-
         public CADPlato()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["Database"].ToString();
+            // Crear base de datos para conectar
         }
 
         public bool Create(ENPlato en)
