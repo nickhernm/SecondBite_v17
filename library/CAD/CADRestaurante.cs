@@ -13,7 +13,7 @@ namespace library
 {
     public class CADRestaurante
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string connectionString;
 
         public CADRestaurante()
         {

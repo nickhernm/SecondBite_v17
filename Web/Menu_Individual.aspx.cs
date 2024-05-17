@@ -5,85 +5,52 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-using System.Data;
+using System.Configuration;
 
 namespace Web
 {
     public partial class Menu_Individual : System.Web.UI.Page
     {
-        public string RestauranteNombre { get; set; }
+        private string connectionString = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                // Obtener el ID del restaurante desde la URL o la sesión
-                int restauranteId = Convert.ToInt32(Request.QueryString["restauranteId"]);
-
-                // Cargar el nombre del restaurante
-                CargarRestauranteNombre(restauranteId);
-
-                // Cargar los platos del menú
-                CargarPlatos(restauranteId);
+                int restauranteId = Convert.ToInt32(Request.QueryString["RestauranteId"]);
+                CargarMenuRestaurante(restauranteId);
             }
         }
 
-        private void CargarRestauranteNombre(int restauranteId)
+        private void CargarMenuRestaurante(int restauranteId)
         {
-            string connectionString = "DataBase.mdf";
-            string query = "SELECT Nombre FROM Restaurantes WHERE Id = @RestauranteId";
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                connection.Open();
+                string query = "SELECT Platos.PlatoId, Platos.Nombre, Platos.Descripcion, Platos.Precio, Platos.Alergenos, Restaurantes.Nombre AS RestauranteNombre " +
+                               "FROM Platos " +
+                               "INNER JOIN Restaurantes ON Platos.RestauranteId = Restaurantes.RestauranteId " +
+                               "WHERE Platos.RestauranteId = @RestauranteId";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@RestauranteId", restauranteId);
-
-                connection.Open();
-                RestauranteNombre = (string)command.ExecuteScalar();
-            }
-        }
-
-        private void CargarPlatos(int restauranteId)
-        {
-            string connectionString = "DataBase.mdf";
-            string query = "SELECT PlatoId, Nombre, Descripcion, Precio, Alergenos FROM Platos WHERE RestauranteId = @RestauranteId";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@RestauranteId", restauranteId);
-
-                connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-                List<Plato> platos = new List<Plato>();
+                rptPlatos.DataSource = reader;
+                rptPlatos.DataBind();
 
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    Plato plato = new Plato
-                    {
-                        id = (int)reader["id"],
-                        Nombre = reader["Nombre"].ToString(),
-                        Descripcion = reader["Descripcion"].ToString(),
-                        Precio = (decimal)reader["Precio"],
-                        Alergenos = reader["Alergenos"].ToString()
-                    };
-
-                    platos.Add(plato);
+                    ltlRestauranteNombre.Text = reader["RestauranteNombre"].ToString();
                 }
-
-                reader.Close();
-
-                RepeaterPlatos.DataSource = platos;
-                RepeaterPlatos.DataBind();
             }
         }
 
-        protected void BtnAnadirCesta_Click(object sender, EventArgs e)
+        protected void btnAnadirCesta_Click(object sender, EventArgs e)
         {
-            int platoId = Convert.ToInt32((sender as Button).CommandArgument);
+            Button btnAnadirCesta = (Button)sender;
+            int platoId = Convert.ToInt32(btnAnadirCesta.CommandArgument);
 
-            // Lógica para añadir el plato a la cesta de compra
-            // ...
+            // lógica para añadir el plato a la cesta del cliente
+         
         }
     }
 }

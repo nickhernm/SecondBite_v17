@@ -8,15 +8,16 @@ namespace library
     // Clase CADPlato
     public class CADPlato
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string connectionString;
 
         public CADPlato()
         {
-            // Crear base de datos para conectar
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase.mdf"].ConnectionString;
         }
 
         public bool Create(ENPlato en)
         {
+
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))

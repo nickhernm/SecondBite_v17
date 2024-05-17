@@ -5,11 +5,11 @@ namespace library
 {
     public class CADOpinion
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string connectionString;
 
         public CADOpinion()
         {
-            // Crear base de datos para conectar
+            
         }
 
         public bool Create(ENOpinion en)

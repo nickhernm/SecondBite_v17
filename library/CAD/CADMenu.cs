@@ -5,11 +5,11 @@ namespace library
 {
     public class CADMenu
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string connectionString;
 
         public CADMenu()
         {
-            // Constructor, podrías inicializar la conexión aquí si lo deseas
+            
         }
 
         public bool Create(ENMenu menu)

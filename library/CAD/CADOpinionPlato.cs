@@ -7,11 +7,11 @@ namespace library
 {
     public class CADOpinionPlato
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        private string connectionString;
 
         public CADOpinionPlato()
         {
-            // Constructor
+            
         }
 
         public bool Create(ENOpinionPlato en)

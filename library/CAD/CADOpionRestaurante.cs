@@ -11,11 +11,11 @@ namespace library
 {
     public class CADOpinionRestaurante
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-
+        private string connectionString;
+           
         public CADOpinionRestaurante()
         {
-            // Constructor
+            
         }
 
         public bool Create(ENOpinionRestaurante en)

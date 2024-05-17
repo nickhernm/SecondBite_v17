@@ -15,49 +15,58 @@ namespace Web
     {
 
         /// <summary>
-        /// Control gridMenuActual.
+        /// Control FormViewPlato.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridMenuActual;
+        protected global::System.Web.UI.WebControls.FormView FormViewPlato;
 
         /// <summary>
-        /// Control lblNombrePlato.
+        /// Control RepeaterComentarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombrePlato;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterComentarios;
 
         /// <summary>
-        /// Control txtNombrePlato.
+        /// Control lblNombreUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombrePlato;
+        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
 
         /// <summary>
-        /// Control lblAlergenos.
+        /// Control txtNombreUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlergenos;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
 
         /// <summary>
-        /// Control ddlAlergenos.
+        /// Control lblComentario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAlergenos;
+        protected global::System.Web.UI.WebControls.Label lblComentario;
+
+        /// <summary>
+        /// Control txtComentario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComentario;
 
         /// <summary>
         /// Control lblPuntuacion.
@@ -69,21 +78,21 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label lblPuntuacion;
 
         /// <summary>
-        /// Control txtPuntuacion.
+        /// Control ddlPuntuacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPuntuacion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPuntuacion;
 
         /// <summary>
-        /// Control btnAgregarPlato.
+        /// Control btnAgregarComentario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarPlato;
+        protected global::System.Web.UI.WebControls.Button btnAgregarComentario;
     }
 }

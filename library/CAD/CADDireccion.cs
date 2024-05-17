@@ -13,9 +13,12 @@ namespace library
 {
     public class CADDireccion
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["DataBase.mdf"].ConnectionString;
+        private string connectionString;
+        public CADDireccion()
+        {
+            
+        }
 
-        // Método para crear una dirección
         public bool Create(ENDireccion direccion)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

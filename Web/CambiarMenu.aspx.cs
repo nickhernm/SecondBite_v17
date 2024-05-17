@@ -4,40 +4,166 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Web
 {
     public partial class CambiarMenu : System.Web.UI.Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+        private int platoId = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                // Lógica para cargar el menú actual del restaurante
-                CargarMenuActual();
+                CargarPlatos();
+                LimpiarCampos();
             }
         }
 
-        private void CargarMenuActual()
+        protected void gvPlatos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            // Lógica para cargar el menú actual del restaurante desde la base de datos
-            // Por ahora, solo simularé la carga de datos con un DataTable vacío
-
-            DataTable dtMenuActual = new DataTable();
-            dtMenuActual.Columns.Add("Nombre", typeof(string));
-            dtMenuActual.Columns.Add("Alergenos", typeof(string));
-            dtMenuActual.Columns.Add("Puntuacion", typeof(float));
-
-            // Agregamos algunas filas de ejemplo
-            dtMenuActual.Rows.Add("Plato 1", "Gluten", 4.5f);
-            dtMenuActual.Rows.Add("Plato 2", "Lácteos", 3.8f);
-            dtMenuActual.Rows.Add("Plato 3", "Frutos secos", 4.2f);
-
-            // Asignamos el DataTable como origen de datos del GridView
-            gridMenuActual.DataSource = dtMenuActual;
-            gridMenuActual.DataBind();
+            if (e.CommandName == "Editar")
+            {
+                platoId = Convert.ToInt32(e.CommandArgument);
+                CargarPlatoParaEditar(platoId);
+                ltlTituloAccion.Text = "Editar Plato";
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                platoId = Convert.ToInt32(e.CommandArgument);
+                EliminarPlato(platoId);
+                CargarPlatos();
+            }
         }
 
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombrePlato.Text;
+            string descripcion = txtDescripcion.Text;
+            decimal precio = Convert.ToDecimal(txtPrecio.Text);
+            int calorias = Convert.ToInt32(txtCalorias.Text);
+            string categoria = ddlCategoria.SelectedValue;
+            string alergenos = string.Join(", ", cblAlergenos.Items.Cast<ListItem>().Where(item => item.Selected).Select(item => item.Value));
+
+            if (platoId == 0)
+            {
+                AgregarPlato(nombre, descripcion, precio, calorias, categoria, alergenos);
+            }
+            else
+            {
+                ActualizarPlato(platoId, nombre, descripcion, precio, calorias, categoria, alergenos);
+            }
+
+            CargarPlatos();
+            LimpiarCampos();
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void CargarPlatos()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Id, Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos FROM Platos";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+                gvPlatos.DataSource = reader;
+                gvPlatos.DataBind();
+            }
+        }
+
+        private void CargarPlatoParaEditar(int platoId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos FROM Platos WHERE Id = @PlatoId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PlatoId", platoId);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtNombrePlato.Text = reader["Nombre"].ToString();
+                    txtDescripcion.Text = reader["Descripcion"].ToString();
+                    txtPrecio.Text = reader["Precio"].ToString();
+                    txtCalorias.Text = reader["Calorias"].ToString();
+                    ddlCategoria.SelectedValue = reader["Categoria"].ToString();
+                    string[] alergenos = reader["Alergenos"].ToString().Split(',');
+                    foreach (ListItem item in cblAlergenos.Items)
+                    {
+                        item.Selected = alergenos.Contains(item.Value.Trim());
+                    }
+                }
+            }
+        }
+
+        private void AgregarPlato(string nombre, string descripcion, decimal precio, int calorias, string categoria, string alergenos)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO Platos (Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos) VALUES (@Nombre, @Descripcion, @Precio, @Calorias, @Categoria, @Alergenos)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Nombre", nombre);
+                command.Parameters.AddWithValue("@Descripcion", descripcion);
+                command.Parameters.AddWithValue("@Precio", precio);
+                command.Parameters.AddWithValue("@Calorias", calorias);
+                command.Parameters.AddWithValue("@Categoria", categoria);
+                command.Parameters.AddWithValue("@Alergenos", alergenos);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private void ActualizarPlato(int platoId, string nombre, string descripcion, decimal precio, int calorias, string categoria, string alergenos)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Platos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, Calorias = @Calorias, Categoria = @Categoria, Alergenos = @Alergenos WHERE Id = @PlatoId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PlatoId", platoId);
+                command.Parameters.AddWithValue("@Nombre", nombre);
+                command.Parameters.AddWithValue("@Descripcion", descripcion);
+                command.Parameters.AddWithValue("@Precio", precio);
+                command.Parameters.AddWithValue("@Calorias", calorias);
+                command.Parameters.AddWithValue("@Categoria", categoria);
+                command.Parameters.AddWithValue("@Alergenos", alergenos);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private void EliminarPlato(int platoId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "DELETE FROM Platos WHERE Id = @PlatoId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PlatoId", platoId);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombrePlato.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            txtCalorias.Text = string.Empty;
+            ddlCategoria.SelectedIndex = 0;
+            foreach (ListItem item in cblAlergenos.Items)
+            {
+                item.Selected = false;
+            }
+            platoId = 0;
+            ltlTituloAccion.Text = "Agregar Plato";
+        }
     }
 }
