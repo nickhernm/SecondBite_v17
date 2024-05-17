@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace library
@@ -9,7 +10,8 @@ namespace library
 
         public CADMenu()
         {
-            
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+
         }
 
         public bool Create(ENMenu menu)

@@ -15,40 +15,40 @@ namespace Web
     {
 
         /// <summary>
-        /// Control FormViewPlato.
+        /// Control fvPlato.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FormViewPlato;
+        protected global::System.Web.UI.WebControls.FormView fvPlato;
 
         /// <summary>
-        /// Control RepeaterComentarios.
+        /// Control rptOpiniones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RepeaterComentarios;
+        protected global::System.Web.UI.WebControls.Repeater rptOpiniones;
 
         /// <summary>
-        /// Control lblNombreUsuario.
+        /// Control lblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
+        protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
-        /// Control txtNombreUsuario.
+        /// Control txtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
 
         /// <summary>
         /// Control lblComentario.

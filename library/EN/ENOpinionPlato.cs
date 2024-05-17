@@ -49,6 +49,12 @@ namespace library
             bool read = op.Read(this);
             return read;
         }
+
+        public List<ENOpinion> ObtenerOpinionesPlato(int platoId)
+        {
+            CADOpinionPlato cadOpinionPlato = new CADOpinionPlato();
+            return cadOpinionPlato.ObtenerOpinionesPlato(platoId);
+        }
     }
 }
 
