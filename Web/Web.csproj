@@ -107,6 +107,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="APP_Data\DataBase.mdf" />
+    <Content Include="APP_Data\Database1.mdf" />
+    <Content Include="APP_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="APP_Data\DataBase_log.ldf">
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>

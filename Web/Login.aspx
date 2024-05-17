@@ -6,12 +6,13 @@
     <div class="row" style="display: flex; justify-content: space-between; margin-top: 100px;">
         <div class="card" style="position: relative; width: 400px;">
             <div class="row" style="display: flex; justify-content: space-between;">
-                <h2><%: Title %>.</h2>
+                <h2><%: Title %></h2>
             </div>
         <div class="card-body" style="display: flex;flex-direction: column;">
                     <div class="centerobject"><asp:TextBox ID="TextBox1" runat="server" placeholder="Usuario"></asp:TextBox> </div>
                     <div class="centerobject"><asp:TextBox ID="TextBox2" runat="server" placeholder="Contraseña"></asp:TextBox> </div>
                     <div class="centerobject"><asp:Button ID="Button3" runat="server" Text="Login" OnClick="LoginUsu"></asp:Button> </div>
+                    <div class="centerobject"><asp:Label ID="lblMessage" runat="server" Text="" style="color:red;"></asp:Label> </div>
                     <div class="centerobject">Dont have an account? <a runat = "server" href="~/Registrar">Registrar</a> </div>
                 
         </div>
