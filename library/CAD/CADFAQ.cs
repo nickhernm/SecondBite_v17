@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
+using System.Data.SqlTypes;
 using System.Data.SqlClient;
+using System.Data.Common;
+using System.Data;
+using System.Configuration;
 
-namespace library.CAD
+namespace library
 {
     public class CADFAQ
     {
-        private string constring;
+        private string connectionString;
 
         public CADFAQ()
         {
@@ -19,8 +22,9 @@ namespace library.CAD
 
         public bool Create(ENFAQ en)
         {
+            
             bool created = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO FAQ (pregunta, respuesta) VALUES (@pregunta, @respuesta)";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -36,7 +40,7 @@ namespace library.CAD
         public bool Read(ENFAQ en)
         {
             bool found = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "SELECT pregunta, respuesta FROM FAQ WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -56,7 +60,7 @@ namespace library.CAD
         public bool Update(ENFAQ en)
         {
             bool updated = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "UPDATE FAQ SET pregunta = @pregunta, respuesta = @respuesta WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -73,7 +77,7 @@ namespace library.CAD
         public bool Delete(ENFAQ en)
         {
             bool deleted = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "DELETE FROM FAQ WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);

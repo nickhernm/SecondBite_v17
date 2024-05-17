@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace library.CAD
+namespace library
 {
     public class CADUsuarioFAQ
     {
-        private string constring;
+        private string connectionString;
 
         public CADUsuarioFAQ()
         {
@@ -20,7 +20,7 @@ namespace library.CAD
         public bool Create(ENUsuarioFAQ en)
         {
             bool created = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO USUARIO_FAQ (id_usuario, id_faq) VALUES (@id_usuario, @id_faq)";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -36,7 +36,7 @@ namespace library.CAD
         public bool Read(ENUsuarioFAQ en)
         {
             bool found = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "SELECT id_usuario, id_faq FROM USUARIO_FAQ WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -56,7 +56,7 @@ namespace library.CAD
         public bool Update(ENUsuarioFAQ en)
         {
             bool updated = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "UPDATE USUARIO_FAQ SET id_usuario = @id_usuario, id_faq = @id_faq WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);
@@ -73,7 +73,7 @@ namespace library.CAD
         public bool Delete(ENUsuarioFAQ en)
         {
             bool deleted = false;
-            using (SqlConnection con = new SqlConnection(constring))
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = "DELETE FROM USUARIO_FAQ WHERE id = @id";
                 SqlCommand cmd = new SqlCommand(query, con);

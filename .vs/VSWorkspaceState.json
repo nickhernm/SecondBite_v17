@@ -1,6 +1,5 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
     "",
     "\\.idea",
     "\\.idea\\.idea.SecondBite",
@@ -9,12 +8,9 @@
     "\\packages",
     "\\SecondBite",
     "\\SecondBite\\Properties",
-    "\\Web"
+    "\\Web",
+    "\\Web\\App_Data"
   ],
-  "SelectedNode": "\\SecondBite.sln",
-=======
-    ""
-  ],
->>>>>>> develop
+  "SelectedNode": "\\Web\\App_Data\\dbo.Table.sql",
   "PreviewInSolutionExplorer": false
 }
