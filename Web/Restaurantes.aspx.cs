@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using library;
@@ -16,61 +12,53 @@ namespace Web
         {
             if (!IsPostBack)
             {
-                CargarRestaurantes();
                 CargarComunidades();
                 CargarTipos();
-                CargarPuntuaciones();
+                CargarRestaurantes();
             }
         }
 
-        // Método para cargar los restaurantes desde la base de datos y mostrarlos en el Repeater
-        private void CargarRestaurantes()
+        protected void btnFiltrar_Click(object sender, EventArgs e)
         {
-            ENRestaurante resta = new ENRestaurante();
-            if(resta.Read())
-            {
-                text_Nombre.Text = resta.Nombre.ToString();
-                text_Localidad.Text = resta.Localidad.ToString();
-                text_Tipo.Text = resta.Tipo.ToString();
-                text_Puntuacion.Text = resta.Puntuacion.ToString();
-            }
-
+            CargarRestaurantes();
         }
 
-        // Método para cargar las comunidades en el DropDownList
+        protected void btnVerDetalles_Click(object sender, EventArgs e)
+        {
+            Button btnVerDetalles = (Button)sender;
+            int restauranteId = Convert.ToInt32(btnVerDetalles.CommandArgument);
+            Response.Redirect("Restaurante_Individual.aspx?RestauranteId=" + restauranteId);
+        }
+
         private void CargarComunidades()
         {
-            
+            ENRestaurante enRestaurante = new ENRestaurante();
+            List<string> comunidades = enRestaurante.ObtenerComunidades();
+            ddlComunidad.DataSource = comunidades;
+            ddlComunidad.DataBind();
+            ddlComunidad.Items.Insert(0, new ListItem("Todas", ""));
         }
 
         private void CargarTipos()
         {
-            
+            ENRestaurante enRestaurante = new ENRestaurante();
+            List<string> tipos = enRestaurante.ObtenerTipos();
+            ddlTipo.DataSource = tipos;
+            ddlTipo.DataBind();
+            ddlTipo.Items.Insert(0, new ListItem("Todos", ""));
         }
 
-        // Método para cargar las puntuaciones en el DropDownList
-        private void CargarPuntuaciones()
+        private void CargarRestaurantes()
         {
-            
-        }
+            string busqueda = txtBuscar.Text;
+            string comunidad = ddlComunidad.SelectedValue;
+            string tipo = ddlTipo.SelectedValue;
+            string puntuacion = ddlPuntuacion.SelectedValue;
 
-        // Evento del botón de búsqueda
-        protected void BtnBuscar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        // Evento del botón de limpiar filtros
-        protected void BtnLimpiarFiltros_Click(object sender, EventArgs e)
-        {
-            
-            TxtBuscarRestaurante.Text = string.Empty;
-            DdlComunidades.SelectedIndex = 0;
-            DdlTipo.SelectedIndex = 0;
-            DdlPuntuacion.SelectedIndex = 0;
-
-            
-            CargarRestaurantes();
+            ENRestaurante enRestaurante = new ENRestaurante();
+            List<ENRestaurante> restaurantes = enRestaurante.ObtenerRestaurantes(busqueda, comunidad, tipo, puntuacion);
+            gvRestaurantes.DataSource = restaurantes;
+            gvRestaurantes.DataBind();
         }
     }
 }
