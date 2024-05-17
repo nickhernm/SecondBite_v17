@@ -10,18 +10,18 @@ using System.Data;
 using System.Configuration;
 
 namespace library {
-	public class ENRestaurante
-	{
-        public int cod { get; set; } // Clave primaria
-        public string nombre { get; set; }
-        public string localidad { get; set; }
-        //public Direccion direccion { get; set; } // Relación con Direccion || Arreglar tipo de dato Direccion
-        public string tipo { get; set; }
-        public float puntuacion { get; set; }
-        public ENRestaurante()
-		{
+    public class ENRestaurante
+    {
+        public int Cod { get; set; } // Clave primaria
+        public string Nombre { get; set; }
+        public string Localidad { get; set; }
+        public string Tipo { get; set; }
+        public float Puntuacion { get; set; }
 
-		}
+        public ENRestaurante()
+        {
+
+        }
 
         public bool Create()
         {

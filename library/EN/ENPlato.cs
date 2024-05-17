@@ -2,16 +2,18 @@
 
 namespace library
 {
-
     public class ENPlato
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Alergenos { get; set; }
+        public float Puntuacion { get; set; } // Añadido para reflejar la columna "puntuacion" en la tabla PLATO
+
         public ENPlato()
         {
 
         }
+
         public bool Create()
         {
             CADPlato pla = new CADPlato();
@@ -41,3 +43,4 @@ namespace library
         }
     }
 }
+
