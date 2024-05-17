@@ -45,21 +45,25 @@
     <Compile Include="CAD\CADCesta.cs" />
     <Compile Include="CAD\CADCliente.cs" />
     <Compile Include="CAD\CADDireccion.cs" />
+    <Compile Include="CAD\CADFAQ.cs" />
     <Compile Include="CAD\CADFavoritos.cs" />
     <Compile Include="CAD\CADLinea.cs" />
     <Compile Include="CAD\CADPedido.cs" />
     <Compile Include="CAD\CADPlato.cs" />
     <Compile Include="CAD\CADRestaurante.cs" />
+    <Compile Include="CAD\CADUsuarioFAQ.cs" />
     <Compile Include="CAD\CADUsuarioRestaurante.cs" />
     <Compile Include="EN\ENCategorias.cs" />
     <Compile Include="EN\ENCesta.cs" />
     <Compile Include="EN\ENCliente.cs" />
     <Compile Include="EN\ENDireccion.cs" />
+    <Compile Include="EN\ENFAQ.cs" />
     <Compile Include="EN\ENFavoritos.cs" />
     <Compile Include="EN\ENLinea.cs" />
     <Compile Include="EN\ENPedido.cs" />
     <Compile Include="EN\ENPlato.cs" />
     <Compile Include="EN\ENRestaurante.cs" />
+    <Compile Include="EN\ENUsuarioFAQ.cs" />
     <Compile Include="EN\ENUsuarioRestaurante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
