@@ -18,3 +18,9 @@ C:\Users\yaros\Source\Repos\SecondBite_v17\library\obj\Debug\library.csproj.Asse
 C:\Users\yaros\Source\Repos\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
 C:\Users\yaros\Source\Repos\SecondBite_v17\library\obj\Debug\library.dll
 C:\Users\yaros\Source\Repos\SecondBite_v17\library\obj\Debug\library.pdb
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\bin\Debug\library.dll
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\bin\Debug\library.pdb
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\obj\Debug\library.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\obj\Debug\library.dll
+C:\Users\usuario\Source\Repos\SecondBite_v17d\library\obj\Debug\library.pdb
