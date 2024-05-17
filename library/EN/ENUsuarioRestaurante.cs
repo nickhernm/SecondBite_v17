@@ -1,47 +1,37 @@
 ﻿using System;
 
-namespace library 
+namespace library
 {
-	public class ENUsuarioRestaurante
-	{
-        public string Nif
-        {
-            get { return Nif; }
-            set { Nif = value; }
-        }
+    public class ENUsuarioRestaurante
+    {
+        public string Nif { get; set; }
 
-        public string Nombre
-        {
-            get { return Nombre; }
-            set { Nombre = value; }
-        }
+        public string Nombre { get; set; }
 
-        public string Correo
-        {
-            get { return Correo; }
-            set { Correo = value; }
-        }
+        public string Correo { get; set; }
 
-        public string Telefono
-        {
-            get { return Telefono; }
-            set { Telefono = value; }
-        }
+        public string Telefono { get; set; }
 
         public ENUsuarioRestaurante()
-		{
+        {
             this.Nif = null;
             this.Nombre = null;
             this.Correo = null;
             this.Telefono = null;
         }
 
-		public ENUsuarioRestaurante(string nif, string nombre, string correo, string telefono)
+        public ENUsuarioRestaurante(string nif, string nombre, string correo, string telefono)
         {
             this.Nif = nif;
             this.Nombre = nombre;
             this.Correo = correo;
             this.Telefono = telefono;
+        }
+
+        public ENUsuarioRestaurante(string telefono, string nombre)
+        {
+            this.Telefono = telefono;
+            this.Nombre = nombre;
         }
 
         public bool Create()
@@ -69,6 +59,13 @@ namespace library
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool read = usu.Read(this);
+            return read;
+        }
+
+        public bool CheckUser()
+        {
+            CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
+            bool read = usu.CheckUser(this);
             return read;
         }
     }
