@@ -11,53 +11,44 @@ namespace Web
 {
 
 
-    public partial class CambiarMenu
+    public partial class Plato_Individual
     {
 
         /// <summary>
-        /// Control gvPlatos.
+        /// Control fvPlato.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvPlatos;
+        protected global::System.Web.UI.WebControls.FormView fvPlato;
 
         /// <summary>
-        /// Control lblNombre.
+        /// Control gvValoraciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombre;
+        protected global::System.Web.UI.WebControls.GridView gvValoraciones;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control lblUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.Label lblUsuario;
 
         /// <summary>
-        /// Control lblAlergenos.
+        /// Control txtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlergenos;
-
-        /// <summary>
-        /// Control txtAlergenos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAlergenos;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
 
         /// <summary>
         /// Control lblPuntuacion.
@@ -69,30 +60,39 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label lblPuntuacion;
 
         /// <summary>
-        /// Control txtPuntuacion.
+        /// Control ddlPuntuacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPuntuacion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPuntuacion;
 
         /// <summary>
-        /// Control btnGuardar.
+        /// Control lblComentario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardar;
+        protected global::System.Web.UI.WebControls.Label lblComentario;
 
         /// <summary>
-        /// Control btnCancelar.
+        /// Control txtComentario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        protected global::System.Web.UI.WebControls.TextBox txtComentario;
+
+        /// <summary>
+        /// Control btnAgregarValoracion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarValoracion;
     }
 }

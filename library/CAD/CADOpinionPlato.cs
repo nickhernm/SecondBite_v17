@@ -11,7 +11,8 @@ namespace library
 
         public CADOpinionPlato()
         {
-            
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+
         }
 
         public bool Create(ENOpinionPlato en)
@@ -30,7 +31,7 @@ namespace library
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepción
                 return false;
@@ -53,7 +54,7 @@ namespace library
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepción
                 return false;
@@ -75,7 +76,7 @@ namespace library
                     return rowsAffected > 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepción
                 return false;
@@ -106,7 +107,7 @@ namespace library
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Manejar excepción
                 return false;

@@ -107,10 +107,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="APP_Data\DataBase.mdf" />
-    <Content Include="APP_Data\Database1.mdf" />
-    <Content Include="APP_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="APP_Data\DataBase_log.ldf">
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>
@@ -143,6 +139,7 @@
     <Content Include="Restaurante_Individual.aspx" />
     <Content Include="Menu_Individual.aspx" />
     <Content Include="CambiarMenu.aspx" />
+    <Content Include="Plato_Individual.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
@@ -316,6 +313,12 @@
     </Compile>
     <Compile Include="CambiarMenu.aspx.designer.cs">
       <DependentUpon>CambiarMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plato_Individual.aspx.cs">
+      <DependentUpon>Plato_Individual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plato_Individual.aspx.designer.cs">
+      <DependentUpon>Plato_Individual.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

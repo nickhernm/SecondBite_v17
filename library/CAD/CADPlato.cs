@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,7 +18,6 @@ namespace library
 
         public bool Create(ENPlato en)
         {
-
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -40,6 +40,39 @@ namespace library
             }
         }
 
+        public List<ENPlato> ObtenerPlatosDestacados()
+        {
+            List<ENPlato> platosDestacados = new List<ENPlato>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT TOP 10 * FROM PLATO ORDER BY puntuacion DESC";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ENPlato plato = new ENPlato();
+                        plato.Id = Convert.ToInt32(reader["id"]);
+                        plato.Nombre = reader["nombre"].ToString();
+                        plato.Alergenos = reader["alergenos"].ToString();
+                        plato.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
+                        platosDestacados.Add(plato);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al obtener los platos destacados: " + ex.Message);
+            }
+
+            return platosDestacados;
+        }
+
         public bool Read(ENPlato en)
         {
             try
@@ -58,10 +91,7 @@ namespace library
                         en.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -117,6 +147,70 @@ namespace library
                 Console.WriteLine("Error al eliminar el plato: " + ex.Message);
                 return false;
             }
+        }
+
+        public List<ENPlato> ReadAll()
+        {
+            List<ENPlato> platos = new List<ENPlato>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM PLATO";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ENPlato plato = new ENPlato();
+                        plato.Id = Convert.ToInt32(reader["id"]);
+                        plato.Nombre = reader["nombre"].ToString();
+                        plato.Alergenos = reader["alergenos"].ToString();
+                        plato.Puntuacion = Convert.ToSingle(reader["puntuacion"]); platos.Add(plato);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al obtener los platos: " + ex.Message);
+            }
+
+            return platos;
+        }
+
+        public List<ENPlato> ObtenerPlatosRestaurante(int restauranteId)
+        {
+            List<ENPlato> platos = new List<ENPlato>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT p.* FROM PLATO p INNER JOIN MENU m ON p.id = m.plato WHERE m.restaurante = @RestauranteId";
+                    SqlCommand command = new SqlCommand(query, connection); command.Parameters.AddWithValue("@RestauranteId", restauranteId);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ENPlato plato = new ENPlato();
+                        plato.Id = Convert.ToInt32(reader["id"]);
+                        plato.Nombre = reader["nombre"].ToString();
+                        plato.Alergenos = reader["alergenos"].ToString();
+                        plato.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
+                        platos.Add(plato);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al obtener los platos del restaurante: " + ex.Message);
+            }
+            return platos;
         }
     }
 }
