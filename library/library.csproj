@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,14 @@
     <Compile Include="CAD\CADPlato.cs" />
     <Compile Include="CAD\CADRestaurante.cs" />
     <Compile Include="CAD\CADUsuarioRestaurante.cs" />
+    <Compile Include="CAD\CADMenu.cs" />
+    <Compile Include="CAD\CADOpinion.cs" />
+    <Compile Include="CAD\CADOpionRestaurante.cs" />
+    <Compile Include="CAD\CADOpinionPlato.cs" />
+    <Compile Include="EN\ENOpinionRestaurante.cs" />
+    <Compile Include="EN\ENOpinionPlato.cs" />
+    <Compile Include="EN\ENOpinion.cs" />
+    <Compile Include="EN\ENMenu.cs" />
     <Compile Include="EN\ENCategorias.cs" />
     <Compile Include="EN\ENCesta.cs" />
     <Compile Include="EN\ENCliente.cs" />
