@@ -106,9 +106,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+<<<<<<< HEAD
     <Content Include="App_Data\dbo.table.mdf" />
     <Content Include="App_Data\dbo.table_log.ldf">
       <DependentUpon>dbo.table.mdf</DependentUpon>
+=======
+    <Content Include="APP_Data\DataBase.mdf" />
+    <Content Include="APP_Data\Database1.mdf" />
+    <Content Include="APP_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="APP_Data\DataBase_log.ldf">
+      <DependentUpon>DataBase.mdf</DependentUpon>
+>>>>>>> develop
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -136,7 +146,13 @@
     <Content Include="Platos.aspx" />
     <Content Include="Favoritos.aspx" />
     <Content Include="Pedidos.aspx" />
+<<<<<<< HEAD
     <Content Include="Quienesomos.aspx" />
+=======
+    <Content Include="Restaurante_Individual.aspx" />
+    <Content Include="Menu_Individual.aspx" />
+    <Content Include="CambiarMenu.aspx" />
+>>>>>>> develop
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
@@ -290,6 +306,7 @@
     <Compile Include="Pedidos.aspx.designer.cs">
       <DependentUpon>Pedidos.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Quienesomos.aspx.cs">
       <DependentUpon>Quienesomos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,8 +314,36 @@
     <Compile Include="Quienesomos.aspx.designer.cs">
       <DependentUpon>Quienesomos.aspx</DependentUpon>
     </Compile>
+=======
+    <Compile Include="Restaurante_Individual.aspx.cs">
+      <DependentUpon>Restaurante_Individual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurante_Individual.aspx.designer.cs">
+      <DependentUpon>Restaurante_Individual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Individual.aspx.cs">
+      <DependentUpon>Menu_Individual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu_Individual.aspx.designer.cs">
+      <DependentUpon>Menu_Individual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarMenu.aspx.cs">
+      <DependentUpon>CambiarMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarMenu.aspx.designer.cs">
+      <DependentUpon>CambiarMenu.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\library\library.csproj">
+      <Project>{577da5e8-ef25-4d7a-b0a4-30c6eaf6913c}</Project>
+      <Name>library</Name>
+    </ProjectReference>
+>>>>>>> develop
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

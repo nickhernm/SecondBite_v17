@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using library;
 
 namespace Web
 {
@@ -11,14 +14,35 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                int platoId = Convert.ToInt32(Request.QueryString["PlatoId"]);
+                CargarInformacionPlato(platoId);
+                CargarComentariosPlato(platoId);
+            }
         }
 
-        protected void btnAnadirCesta_Click(object sender, EventArgs e)
+        private void CargarInformacionPlato(int platoId)
         {
-            Button btn = (Button)sender;
-            string platoId = btn.CommandArgument;
-            Console.WriteLine("Se ha añadido el plato con ID: " + platoId + " a la cesta.");
+            ENPlato plato = new ENPlato();  
+            
+        }
+
+        private void CargarComentariosPlato(int platoId)
+        {
+            
+        }
+
+        protected void btnAgregarComentario_Click(object sender, EventArgs e)
+        {
+            
+
+            // Limpiar los campos del formulario
+            txtNombreUsuario.Text = string.Empty;
+            txtComentario.Text = string.Empty;
+            ddlPuntuacion.SelectedIndex = 0;
+
+            // Recargar los comentarios 
         }
     }
 }

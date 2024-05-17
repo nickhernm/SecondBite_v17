@@ -1,5 +1,6 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\.idea",
     "\\.idea\\.idea.SecondBite",
@@ -11,5 +12,9 @@
     "\\Web"
   ],
   "SelectedNode": "\\SecondBite.sln",
+=======
+    ""
+  ],
+>>>>>>> develop
   "PreviewInSolutionExplorer": false
 }

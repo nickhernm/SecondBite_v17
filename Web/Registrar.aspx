@@ -8,10 +8,12 @@
                 <h2><%: Title %>.</h2>
             </div>
         <div class="card-body" style="display: flex;flex-direction: column;">
-            <div class="centerobject"><asp:TextBox ID="TextBox3" runat="server" placeholder="Email"></asp:TextBox> </div>
-                    <div class="centerobject"><asp:TextBox ID="TextBox1" runat="server" placeholder="Usuario"></asp:TextBox> </div>
-                    <div class="centerobject"><asp:TextBox ID="TextBox2" runat="server" placeholder="Contraseña"></asp:TextBox> </div>
+            <div class="centerobject"><asp:TextBox ID="TextBox1" runat="server" placeholder="Email"></asp:TextBox> </div>
+                    <div class="centerobject"><asp:TextBox ID="TextBox2" runat="server" placeholder="Usuario"></asp:TextBox> </div>
+                    <div class="centerobject"><asp:TextBox ID="TextBox3" runat="server" placeholder="Telefono"></asp:TextBox> </div>
+                    <div class="centerobject"><asp:TextBox ID="TextBox4" runat="server" placeholder="Contraseña"></asp:TextBox> </div>
                     <div class="centerobject"><asp:Button ID="Button3" runat="server" Text="Create Account" OnClick="RegistrarUsu"></asp:Button> </div>
+                    <div class="centerobject"><asp:Label ID="lblMessage" runat="server" Text="" style="color:red;"></asp:Label> </div>
                     <div class="centerobject">Already have an account? <a runat = "server" href="~/Login">Login</a> </div>
                 
         </div>
