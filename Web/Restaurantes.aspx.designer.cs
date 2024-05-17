@@ -23,6 +23,11 @@ namespace Web
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtBuscarRestaurante;
 
+        protected global::System.Web.UI.WebControls.Label text_Nombre;
+        protected global::System.Web.UI.WebControls.Label text_Localidad;
+        protected global::System.Web.UI.WebControls.Label text_Tipo;
+        protected global::System.Web.UI.WebControls.Label text_Puntuacion;
+
         /// <summary>
         /// Control BtnBuscar.
         /// </summary>

@@ -42,14 +42,20 @@
     <div class="restaurant-list">
         <asp:Repeater ID="RepeaterRestaurantes" runat="server">
             <ItemTemplate>
-                <div class="restaurante">
-                    <h3><%# Eval("Nombre") %></h3>
-                    <p>Localidad: <%# Eval("Localidad") %></p>
-                    <p>Tipo: <%# Eval("Tipo") %></p>
-                    <p>Puntuación: <%# Eval("Puntuacion") %></p>
-                    <p><%# Eval("Descripcion") %></p>
-                    <asp:HyperLink ID="LnkPlatos" runat="server" NavigateUrl='<%# "~/MenuRestaurante.aspx?id=" + Eval("RestauranteId") %>'>Ver Menú</asp:HyperLink>
-                </div>
+                <div>
+            <p>
+                Nombre: &nbsp;<asp:label ID="text_Nombre" runat="server" Height="20px" style="margin-top: 5px; margin-left: 25px;" Width="200px"></asp:label>
+            </p>
+            <p>
+                Localidad: &nbsp;<asp:label ID="text_Punt" runat="server" Height="20px" style="margin-top: 5px; margin-left: 25px;" Width="200px"></asp:label>
+            </p>
+             <p>
+                Tipo: &nbsp;<asp:label ID="text_tipo" runat="server" Height="20px" style="margin-top: 5px; margin-left: 25px;" Width="200px"></asp:label>
+            </p>
+            <p>
+                Puntuación: &nbsp;<asp:label ID="text_puntuacion" runat="server" Height="20px" style="margin-top: 5px; margin-left: 25px;" Width="200px"></asp:label>
+            </p>
+        </div>
                 <hr class="restaurante-separator" />
             </ItemTemplate>
         </asp:Repeater>
