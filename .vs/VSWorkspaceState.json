@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\library",
+    "\\library\\EN",
     "\\Web"
   ],
+<<<<<<< HEAD
+  "SelectedNode": "\\library\\EN\\ENFavoritos.cs",
+=======
   "SelectedNode": "\\Web\\Restaurantes.aspx",
+>>>>>>> develop
   "PreviewInSolutionExplorer": false
 }
