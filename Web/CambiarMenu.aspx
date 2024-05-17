@@ -10,7 +10,6 @@
                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
                 <asp:BoundField DataField="Descripcion" HeaderText="Descripción" />
                 <asp:BoundField DataField="Precio" HeaderText="Precio" />
-                <asp:BoundField DataField="Calorias" HeaderText="Calorías" />
                 <asp:BoundField DataField="Categoria" HeaderText="Categoría" />
                 <asp:BoundField DataField="Alergenos" HeaderText="Alérgenos" />
                 <asp:TemplateField>
@@ -39,11 +38,6 @@
         <div class="form-group">
             <label for="txtPrecio">Precio:</label>
             <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" />
-        </div>
-        
-        <div class="form-group">
-            <label for="txtCalorias">Calorías:</label>
-            <asp:TextBox ID="txtCalorias" runat="server" CssClass="form-control" />
         </div>
         
         <div class="form-group">

@@ -44,17 +44,16 @@ namespace Web
             string nombre = txtNombrePlato.Text;
             string descripcion = txtDescripcion.Text;
             decimal precio = Convert.ToDecimal(txtPrecio.Text);
-            int calorias = Convert.ToInt32(txtCalorias.Text);
             string categoria = ddlCategoria.SelectedValue;
             string alergenos = string.Join(", ", cblAlergenos.Items.Cast<ListItem>().Where(item => item.Selected).Select(item => item.Value));
 
             if (platoId == 0)
             {
-                AgregarPlato(nombre, descripcion, precio, calorias, categoria, alergenos);
+                AgregarPlato(nombre, descripcion, precio, categoria, alergenos);
             }
             else
             {
-                ActualizarPlato(platoId, nombre, descripcion, precio, calorias, categoria, alergenos);
+                ActualizarPlato(platoId, nombre, descripcion, precio, categoria, alergenos);
             }
 
             CargarPlatos();
@@ -71,7 +70,7 @@ namespace Web
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT Id, Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos FROM Platos";
+                string query = "SELECT Id, Nombre, Descripcion, Precio, Categoria, Alergenos FROM Platos";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
                 gvPlatos.DataSource = reader;
@@ -84,7 +83,7 @@ namespace Web
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos FROM Platos WHERE Id = @PlatoId";
+                string query = "SELECT Nombre, Descripcion, Precio, Categoria, Alergenos FROM Platos WHERE Id = @PlatoId";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@PlatoId", platoId);
                 SqlDataReader reader = command.ExecuteReader();
@@ -93,7 +92,6 @@ namespace Web
                     txtNombrePlato.Text = reader["Nombre"].ToString();
                     txtDescripcion.Text = reader["Descripcion"].ToString();
                     txtPrecio.Text = reader["Precio"].ToString();
-                    txtCalorias.Text = reader["Calorias"].ToString();
                     ddlCategoria.SelectedValue = reader["Categoria"].ToString();
                     string[] alergenos = reader["Alergenos"].ToString().Split(',');
                     foreach (ListItem item in cblAlergenos.Items)
@@ -104,35 +102,33 @@ namespace Web
             }
         }
 
-        private void AgregarPlato(string nombre, string descripcion, decimal precio, int calorias, string categoria, string alergenos)
+        private void AgregarPlato(string nombre, string descripcion, decimal precio, string categoria, string alergenos)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Platos (Nombre, Descripcion, Precio, Calorias, Categoria, Alergenos) VALUES (@Nombre, @Descripcion, @Precio, @Calorias, @Categoria, @Alergenos)";
+                string query = "INSERT INTO Platos (Nombre, Descripcion, Precio, Categoria, Alergenos) VALUES (@Nombre, @Descripcion, @Precio, @Categoria, @Alergenos)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Nombre", nombre);
                 command.Parameters.AddWithValue("@Descripcion", descripcion);
                 command.Parameters.AddWithValue("@Precio", precio);
-                command.Parameters.AddWithValue("@Calorias", calorias);
                 command.Parameters.AddWithValue("@Categoria", categoria);
                 command.Parameters.AddWithValue("@Alergenos", alergenos);
                 command.ExecuteNonQuery();
             }
         }
 
-        private void ActualizarPlato(int platoId, string nombre, string descripcion, decimal precio, int calorias, string categoria, string alergenos)
+        private void ActualizarPlato(int platoId, string nombre, string descripcion, decimal precio, string categoria, string alergenos)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "UPDATE Platos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, Calorias = @Calorias, Categoria = @Categoria, Alergenos = @Alergenos WHERE Id = @PlatoId";
+                string query = "UPDATE Platos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, Categoria = @Categoria, Alergenos = @Alergenos WHERE Id = @PlatoId";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@PlatoId", platoId);
                 command.Parameters.AddWithValue("@Nombre", nombre);
                 command.Parameters.AddWithValue("@Descripcion", descripcion);
                 command.Parameters.AddWithValue("@Precio", precio);
-                command.Parameters.AddWithValue("@Calorias", calorias);
                 command.Parameters.AddWithValue("@Categoria", categoria);
                 command.Parameters.AddWithValue("@Alergenos", alergenos);
                 command.ExecuteNonQuery();
@@ -156,7 +152,6 @@ namespace Web
             txtNombrePlato.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
             txtPrecio.Text = string.Empty;
-            txtCalorias.Text = string.Empty;
             ddlCategoria.SelectedIndex = 0;
             foreach (ListItem item in cblAlergenos.Items)
             {
