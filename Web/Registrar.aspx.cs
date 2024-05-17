@@ -28,7 +28,7 @@ namespace Web
                 string name = TextBox2.Text;
                 string telefono = TextBox3.Text;
                 string contrasena = TextBox4.Text;
-                string tipo_usuario = "0";
+                bool tipo_usuario = false;
 
                 usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);
                 if (usuario.Create())
