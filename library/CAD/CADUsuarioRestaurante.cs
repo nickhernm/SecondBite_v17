@@ -31,13 +31,14 @@ namespace library
                 {
                     connection.Open();
                     //string query = "INSERT INTO USUARIO (correo, nombre, telefono, tipo_usuario, id_metodo_pago) VALUES (@correo, @nombre, @telefono, @tipo_usuario, @id_metodo_pago)";
-                    string query = "INSERT INTO USUARIO (correo, nombre, telefono, tipo_usuario) VALUES (@correo, @nombre, @telefono, @tipo_usuario)";
+                    string query = "INSERT INTO USUARIO (correo, nombre, telefono, contrasena, tipo_usuario) VALUES (@correo, @nombre, @telefono, @contrasena,s @tipo_usuario)";
                     //string query = "SELECT * from Products";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@correo", en.Correo);
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
                         command.Parameters.AddWithValue("@telefono", en.Telefono);
+                        command.Parameters.AddWithValue("@contrasena", en.Contrasena);
                         command.Parameters.AddWithValue("@tipo_usuario", 1);
                         //command.Parameters.AddWithValue("@id_metodo_pago", en.Telefono);
 
@@ -109,15 +110,16 @@ namespace library
                 using (SqlConnection connection = new SqlConnection(constring))
                 {
                     connection.Open();
-                    string query = "UPDATE USUARIO SET correo = @correo, nombre = @nombre, telefono = @telefono, tipo_usuario = @tipo_usuario, id_metodo_pago = @id_metodo_pago WHERE correo = @correo";
+                    string query = "UPDATE USUARIO SET correo = @correo, nombre = @nombre, telefono = @telefono, tipo_usuario = @tipo_usuario, id_metodo_pago = @id_metodo_pago, contrasena = @contrasena, WHERE correo = @correo";
                     //UPDATE Customers SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' WHERE CustomerID = 1;
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@correo", en.Correo);
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
                         command.Parameters.AddWithValue("@telefono", en.Telefono);
-                        command.Parameters.AddWithValue("@tipo_usuario", en.Telefono);
-                        command.Parameters.AddWithValue("@id_metodo_pago", en.Telefono);
+                        command.Parameters.AddWithValue("@tipo_usuario", en.Tipo_usuario);
+                        command.Parameters.AddWithValue("@id_metodo_pago", en.Metodo_pago);
+                        command.Parameters.AddWithValue("@contrasena", en.Contrasena);
 
                         //System.Diagnostics.Debug.WriteLine(command.ExecuteReader());
                         int rowsAffected = command.ExecuteNonQuery();
@@ -161,10 +163,12 @@ namespace library
                         {
                             if (reader.Read())
                             {
-                                en.Nif = reader["nif"].ToString();
-                                en.Nombre = reader["nombre"].ToString();
                                 en.Correo = reader["correo"].ToString();
+                                en.Nombre = reader["nombre"].ToString();
                                 en.Telefono = reader["telefono"].ToString();
+                                en.Tipo_usuario = reader["correo"].ToString();
+                                en.Metodo_pago = reader["correo"].ToString();
+                                en.Contrasena = reader["contrasena"].ToString();
                                 return true;
                             }
                             else
@@ -191,21 +195,23 @@ namespace library
                     connection.Open();
 
                     //string query = "SELECT * FROM USUARIO WHERE correo = @correo";
-                    string query = "SELECT TOP 1 * FROM USUARIO WHERE nombre = @nombre AND telefono = @telefono";
+                    string query = "SELECT TOP 1 * FROM USUARIO WHERE nombre = @nombre AND contrasena = @contrasena";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@telefono", en.Telefono);
+                        command.Parameters.AddWithValue("@contrasena", en.Contrasena);
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                en.Nif = reader["tipo_usuario"].ToString();
-                                en.Nombre = reader["nombre"].ToString();
                                 en.Correo = reader["correo"].ToString();
+                                en.Nombre = reader["nombre"].ToString();
                                 en.Telefono = reader["telefono"].ToString();
+                                en.Tipo_usuario = reader["correo"].ToString();
+                                en.Metodo_pago = reader["correo"].ToString();
+                                en.Contrasena = reader["contrasena"].ToString();
                                 return true;
                             }
                             else

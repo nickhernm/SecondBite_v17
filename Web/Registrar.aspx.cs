@@ -24,13 +24,13 @@ namespace Web
         {
             try
             {
-                string nif = TextBox2.Text;
-                string email = TextBox3.Text;
-                string telefono = TextBox2.Text;
-                string name = TextBox1.Text;
+                string email = TextBox1.Text;
+                string name = TextBox2.Text;
+                string telefono = TextBox3.Text;
+                string contrasena = TextBox4.Text;
+                string tipo_usuario = "0";
 
-
-                usuario = new ENUsuarioRestaurante(nif, name, email, telefono);
+                usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);
                 if (usuario.Create())
                 {
                     Response.Redirect("Pedidos.aspx");

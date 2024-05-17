@@ -28,10 +28,10 @@ namespace Web
             try
             {
                 string name = TextBox1.Text;
-                string telefono = TextBox2.Text;
+                string contrasena = TextBox2.Text;
 
 
-                usuario = new ENUsuarioRestaurante(telefono, name);
+                usuario = new ENUsuarioRestaurante(contrasena, name);
                 if (usuario.CheckUser())
                 {
                     Response.Redirect("Pedidos.aspx");

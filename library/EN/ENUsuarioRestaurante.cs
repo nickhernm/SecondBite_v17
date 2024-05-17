@@ -4,33 +4,50 @@ namespace library
 {
     public class ENUsuarioRestaurante
     {
-        public string Nif { get; set; }
+        public string Correo { get; set; }
 
         public string Nombre { get; set; }
 
-        public string Correo { get; set; }
-
         public string Telefono { get; set; }
+
+        public string Tipo_usuario { get; set; }
+
+        public string Metodo_pago { get; set; }
+
+        public string Contrasena { get; set; }
 
         public ENUsuarioRestaurante()
         {
-            this.Nif = null;
-            this.Nombre = null;
             this.Correo = null;
+            this.Nombre = null;
             this.Telefono = null;
+            this.Tipo_usuario = null;
+            this.Metodo_pago = null;
+            this.Contrasena = null;
         }
 
-        public ENUsuarioRestaurante(string nif, string nombre, string correo, string telefono)
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, string tipo_usuario, string metodo_pago, string contrasena)
         {
-            this.Nif = nif;
-            this.Nombre = nombre;
             this.Correo = correo;
+            this.Nombre = nombre;
             this.Telefono = telefono;
+            this.Tipo_usuario = tipo_usuario;
+            this.Metodo_pago = metodo_pago;
+            this.Contrasena = contrasena;
         }
 
-        public ENUsuarioRestaurante(string telefono, string nombre)
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, string tipo_usuario, string contrasena)
         {
+            this.Correo = correo;
+            this.Nombre = nombre;
             this.Telefono = telefono;
+            this.Tipo_usuario = tipo_usuario;
+            this.Contrasena = contrasena;
+        }
+
+        public ENUsuarioRestaurante(string contrasena, string nombre)
+        {
+            this.Contrasena = contrasena;
             this.Nombre = nombre;
         }
 
