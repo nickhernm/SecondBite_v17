@@ -26,17 +26,23 @@
         <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" />
     </div>
     
-    <asp:GridView ID="gvRestaurantes" runat="server" AutoGenerateColumns="False">
-        <Columns>
-            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-            <asp:BoundField DataField="Localidad" HeaderText="Localidad" />
-            <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
-            <asp:BoundField DataField="Puntuacion" HeaderText="Puntuación" />
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:Button ID="btnVerDetalles" runat="server" Text="Ver Detalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetalles_Click" />
-                </ItemTemplate>
-            </asp:TemplateField>
-        </Columns>
-    </asp:GridView>
+    <asp:Repeater ID="RepeaterRestaurantes" runat="server">
+    <ItemTemplate>
+        <div>
+            <p>
+                Nombre: &nbsp;<asp:Label ID="lblNombre" runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
+            </p>
+            <p>
+                Localidad: &nbsp;<asp:Label ID="lblLocalidad" runat="server" Text='<%# Eval("Localidad") %>'></asp:Label>
+            </p>
+            <p>
+                Tipo: &nbsp;<asp:Label ID="lblTipo" runat="server" Text='<%# Eval("Tipo") %>'></asp:Label>
+            </p>
+            <p>
+                Puntuación: &nbsp;<asp:Label ID="lblPuntuacion" runat="server" Text='<%# Eval("Puntuacion") %>'></asp:Label>
+            </p>
+        </div>
+        <hr class="restaurante-separator" />
+    </ItemTemplate>
+</asp:Repeater>
 </asp:Content>

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections.Generic;
 
 namespace library
 {
@@ -112,6 +113,35 @@ namespace library
                 // Manejar excepción
                 return false;
             }
+        }
+
+        public List<ENOpinion> ObtenerOpinionesPlato(int platoId)
+        {
+            List<ENOpinion> opiniones = new List<ENOpinion>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = @"SELECT op.* 
+                         FROM OPINION op
+                         INNER JOIN OPINION_PLATO op_pl ON op.id = op_pl.id_o
+                         WHERE op_pl.id_p = @PlatoId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PlatoId", platoId);
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ENOpinion opinion = new ENOpinion();
+                    opinion.Id = Convert.ToInt32(reader["id"]);
+                    opinion.Descripcion = reader["descripcion"].ToString();
+                    opinion.Valoracion = Convert.ToSingle(reader["valoracion"]);
+                    opinion.UsuarioCorreo = reader["usuario"].ToString();
+                    opiniones.Add(opinion);
+                }
+            }
+
+            return opiniones;
         }
     }
 }

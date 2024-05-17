@@ -57,8 +57,8 @@ namespace Web
 
             ENRestaurante enRestaurante = new ENRestaurante();
             List<ENRestaurante> restaurantes = enRestaurante.ObtenerRestaurantes(busqueda, comunidad, tipo, puntuacion);
-            gvRestaurantes.DataSource = restaurantes;
-            gvRestaurantes.DataBind();
+            RepeaterRestaurantes.DataSource = restaurantes;
+            RepeaterRestaurantes.DataBind();
         }
     }
 }

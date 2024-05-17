@@ -8,7 +8,6 @@
             <asp:BoundField DataField="Id" HeaderText="ID" />
             <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="Alergenos" HeaderText="Alérgenos" />
-            <asp:BoundField DataField="Puntuacion" HeaderText="Puntuación" />
             <asp:ButtonField Text="Editar" CommandName="Editar" />
             <asp:ButtonField Text="Eliminar" CommandName="Eliminar" />
         </Columns>
