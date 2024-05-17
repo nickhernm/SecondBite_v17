@@ -10,7 +10,7 @@ namespace library
 
         public CADRestaurante()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
         }
 
         public bool Create(ENRestaurante restaurante)

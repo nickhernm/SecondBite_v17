@@ -43,7 +43,7 @@ namespace library
 
         public bool Read()
         {
-            CADDireccCADOpinionRestauranteion dir = new CADCADOpinionRestauranteireccion();
+            CADOpinionRestaurante dir = new CADOpinionRestaurante();
             bool read = dir.Read(this);
             return read;
         }
