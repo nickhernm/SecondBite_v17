@@ -13,12 +13,14 @@ namespace library
 {
 	public class CADUsuarioRestaurante
 	{
-		public CADUsuarioRestaurante()
-		{
-			//crear base de datos y para poder conectar
-		}
+        private string connectionString;
 
-		public bool Create(ENUsuarioRestaurante en)
+        public CADUsuarioRestaurante()
+		{
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+        }
+
+        public bool Create(ENUsuarioRestaurante en)
 		{
 			return false;
 			//TODO

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace library
 {
@@ -15,7 +16,8 @@ namespace library
            
         public CADOpinionRestaurante()
         {
-            
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+
         }
 
         public bool Create(ENOpinionRestaurante en)
