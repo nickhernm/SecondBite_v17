@@ -1,32 +1,42 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cesta.aspx.cs" Inherits="Web.Cesta" %>
+﻿<%@ Page Title="Cesta" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cesta.aspx.cs" Inherits="Web.Cesta" %>
 
-<!DOCTYPE html>
 
-<html>
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cesta de Compra</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div class="container">
-            <h1>Cesta de Compra</h1>
-            <asp:GridView ID="gvCesta" runat="server" AutoGenerateColumns="False">
-                <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Id" />
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Precio" HeaderText="Precio" />
-                    <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" />
-                    <asp:TemplateField HeaderText="Eliminar">
-                        <ItemTemplate>
-                            <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Container.DataItemIndex %>' />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
-            <asp:Button ID="btnVaciarCesta" runat="server" Text="Vaciar Cesta" OnClick="btnVaciarCesta_Click" />
+    
+   
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
+    <!-- Franja morada destacada -->
+    <div class="purple-highlight">
+        <h1>Cesta de Compra</h1>
+    </div>
+
+    <div class="container">
+        <asp:GridView ID="gvCesta" runat="server" AutoGenerateColumns="False" CssClass="cesta-grid">
+            <Columns>
+                <asp:BoundField DataField="Id" HeaderText="Id" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" HtmlEncode="false" />
+                <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" />
+                <asp:TemplateField HeaderText="Cantidad">
+        <ItemTemplate>
+            <asp:Button ID="btnDisminuirCantidad" runat="server" Text="-" CommandName="DisminuirCantidad" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn-disminuir" />
+            <asp:Label ID="lblCantidad" runat="server" Text='<%# Eval("Cantidad") %>'></asp:Label>
+            <asp:Button ID="btnAumentarCantidad" runat="server" Text="+" CommandName="AumentarCantidad" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn-aumentar" />
+        </ItemTemplate>
+    </asp:TemplateField>
+                <asp:TemplateField HeaderText="Eliminar">
+                    <ItemTemplate>
+                        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn-eliminar" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <asp:Label ID="lblMensajeCestaVacia" runat="server" Visible="false" Text="La cesta está vacía." CssClass="mensaje-cesta-vacia"></asp:Label>
+
+        <asp:Button ID="btnVaciarCesta" runat="server" Text="Vaciar Cesta" OnClick="btnVaciarCesta_Click" CssClass="btn-vaciar" />
+            <h2>Precio Total</h2>
+        <div>
+            <asp:Label ID="lblTotalEuros" runat="server" Text=""></asp:Label>
         </div>
-    </form>
-</body>
-</html>
+    </div>
+</asp:Content>

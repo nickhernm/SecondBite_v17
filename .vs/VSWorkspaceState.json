@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.idea",
+    "\\.idea\\.idea.SecondBite",
+    "\\.idea\\.idea.SecondBite\\.idea",
     "\\library",
-    "\\Web"
+    "\\packages",
+    "\\SecondBite",
+    "\\SecondBite\\Properties",
+    "\\Web",
+    "\\Web\\App_Data"
   ],
-  "SelectedNode": "\\Web\\bin",
+  "SelectedNode": "\\Web\\App_Data\\dbo.Table.sql",
   "PreviewInSolutionExplorer": false
 }

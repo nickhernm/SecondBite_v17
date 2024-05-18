@@ -15,8 +15,38 @@ namespace Web
             {
                 // Lógica para cargar la cesta desde la base de datos
                 CargarCesta();
+
+                if (CestaEstaVacia())
+                {
+                    lblMensajeCestaVacia.Visible = true;
+                    lblTotalEuros.Visible = false; //ocultar el precio total si la cesta esta vacia
+                }
+                else
+                {
+                    lblMensajeCestaVacia.Visible = false;
+                    lblTotalEuros.Visible = true;
+                }
+
+                // Calcular y mostrar el precio total en euros
+                double totalEuros = CalcularPrecioTotalEnEuros();
+                lblTotalEuros.Text = totalEuros.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("es-ES"));
             }
+
+            
         }
+        private bool CestaEstaVacia()
+        {
+            // Lógica para verificar si la cesta está vacía
+            return gvCesta.Rows.Count == 0;
+        }
+
+        private double CalcularPrecioTotalEnEuros()
+        {
+            List<ItemCesta> items = ObtenerItemsCestaDesdeBaseDeDatos();
+            double totalEuros = items.Sum(item => Convert.ToDouble(item.Precio));
+            return totalEuros;
+        }
+
 
         private void CargarCesta()
         {
@@ -37,6 +67,15 @@ namespace Web
         {
             // Lógica para vaciar la cesta
             //eliminar todos los elementos de la base de datos
+            VaciarCestaEnBaseDeDatos();
+
+            // Recargar la página para reflejar los cambios
+            Response.Redirect(Request.RawUrl);
+        }
+        private void VaciarCestaEnBaseDeDatos()
+        {
+            // Lógica para vaciar la cesta en la base de datos
+            // Esto podría implicar eliminar todos los registros de la tabla que representa la cesta
         }
 
         protected void gvCesta_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -46,6 +85,52 @@ namespace Web
                 int index = Convert.ToInt32(e.CommandArgument);
                 // Lógica para eliminar el elemento de la cesta en la posición 'index'
                 //eliminar el elemento de la base de datos en la posición 'index'
+                EliminarItemCestaDeBaseDeDatos(index);
+
+                // Recargar la página para reflejar los cambios
+                Response.Redirect(Request.RawUrl);
+            }
+            if (e.CommandName == "DisminuirCantidad")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                // Disminuir la cantidad del artículo en la posición 'index'
+                DisminuirCantidad(index);
+                // Recargar la cesta
+                CargarCesta();
+            }
+            else if (e.CommandName == "AumentarCantidad")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                // Aumentar la cantidad del artículo en la posición 'index'
+                AumentarCantidad(index);
+                // Recargar la cesta
+                CargarCesta();
+            }
+
+        }
+
+        private void EliminarItemCestaDeBaseDeDatos(int index)
+        {
+            // Lógica para eliminar el elemento de la cesta en la posición 'index' de la base de datos
+        }
+        private void AumentarCantidad(int index)
+        {
+            // Obtener el artículo correspondiente
+            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[index];
+            // Aumentar la cantidad
+            item.Cantidad++;
+            // Lógica para actualizar la cantidad en la base de datos si es necesario
+        }
+
+        private void DisminuirCantidad(int index)
+        {
+            // Obtener el artículo correspondiente
+            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[index];
+            // Disminuir la cantidad si es mayor que 1
+            if (item.Cantidad > 1)
+            {
+                item.Cantidad--;
+                // Lógica para actualizar la cantidad en la base de datos si es necesario
             }
         }
     }
@@ -59,7 +144,7 @@ namespace Web
 
         public ItemCesta(int Id, string nombre, decimal precio, int cantidad)
         {
-            Id = id;
+            //Id = id;
             Nombre = nombre;
             Precio = precio;
             Cantidad = cantidad;
