@@ -15,21 +15,12 @@ namespace Web
     {
 
         /// <summary>
-        /// Control ltlRestauranteNombre.
+        /// Control gvPlatos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltlRestauranteNombre;
-
-        /// <summary>
-        /// Control rptPlatos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPlatos;
+        protected global::System.Web.UI.WebControls.GridView gvPlatos;
     }
 }

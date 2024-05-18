@@ -14,20 +14,19 @@ namespace library
 {
     public class CADUsuarioRestaurante
     {
-        private string constring;
+        private string connectionString;
 
         public CADUsuarioRestaurante()
         {
-
-            constring = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
-            System.Diagnostics.Debug.WriteLine(constring);
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+            
         }
 
         public bool Create(ENUsuarioRestaurante en)
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(constring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     //string query = "INSERT INTO USUARIO (correo, nombre, telefono, tipo_usuario, id_metodo_pago) VALUES (@correo, @nombre, @telefono, @tipo_usuario, @id_metodo_pago)";
@@ -71,7 +70,7 @@ namespace library
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(constring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "DELETE FROM USUARIO WHERE correo = @correo";
@@ -107,7 +106,7 @@ namespace library
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(constring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "UPDATE USUARIO SET correo = @correo, nombre = @nombre, telefono = @telefono, tipo_usuario = @tipo_usuario, id_metodo_pago = @id_metodo_pago, contrasena = @contrasena, WHERE correo = @correo";
@@ -149,7 +148,7 @@ namespace library
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(constring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
@@ -190,7 +189,7 @@ namespace library
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(constring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 

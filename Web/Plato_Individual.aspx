@@ -1,15 +1,13 @@
-﻿<%@ Page Title="@nombre" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Restaurante_Individual.aspx.cs" Inherits="Web.Restaurante_Individual" %>
+﻿<%@ Page Title="Plato_Individual" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Plato_Individual.aspx.cs" Inherits="Web.Plato_Individual" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Detalles del Restaurante</h2>
+    <h2>Detalles del Plato</h2>
     
-    <asp:FormView ID="fvRestaurante" runat="server">
+    <asp:FormView ID="fvPlato" runat="server">
         <ItemTemplate>
             <h3><%# Eval("Nombre") %></h3>
-            <p>Localidad: <%# Eval("Localidad") %></p>
-            <p>Tipo: <%# Eval("Tipo") %></p>
+            <p>Alérgenos: <%# Eval("Alergenos") %></p>
             <p>Puntuación: <%# Eval("Puntuacion") %></p>
-            <asp:Button ID="btnVerMenu" runat="server" Text="Ver Menú" CommandArgument='<%# Eval("Cod") %>' OnClick="btnVerMenu_Click" />
         </ItemTemplate>
     </asp:FormView>
     
@@ -39,5 +37,4 @@
     <asp:TextBox ID="txtComentario" runat="server" TextMode="MultiLine"></asp:TextBox>
     
     <asp:Button ID="btnAgregarValoracion" runat="server" Text="Agregar Valoración" OnClick="btnAgregarValoracion_Click" />
-</asp:Content>s
-
+</asp:Content>

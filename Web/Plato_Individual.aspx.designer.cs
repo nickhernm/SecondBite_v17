@@ -11,17 +11,17 @@ namespace Web
 {
 
 
-    public partial class Restaurante_Individual
+    public partial class Plato_Individual
     {
 
         /// <summary>
-        /// Control fvRestaurante.
+        /// Control fvPlato.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView fvRestaurante;
+        protected global::System.Web.UI.WebControls.FormView fvPlato;
 
         /// <summary>
         /// Control gvValoraciones.

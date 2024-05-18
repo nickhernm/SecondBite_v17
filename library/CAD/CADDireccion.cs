@@ -16,7 +16,7 @@ namespace library
         private string connectionString;
         public CADDireccion()
         {
-            
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
         }
 
         public bool Create(ENDireccion direccion)
