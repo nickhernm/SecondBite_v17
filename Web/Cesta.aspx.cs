@@ -4,13 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using library;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
+using System.Data.Common;
+using System.Data;
+using System.Configuration;
 
 namespace Web
 {
     public partial class Cesta : System.Web.UI.Page
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 // Lógica para cargar la cesta desde la base de datos
@@ -60,6 +68,22 @@ namespace Web
         {
             List<ItemCesta> items = new List<ItemCesta>();
             // Agregar elementos a la lista (desde una base de datos)
+             using (SqlConnection con = new SqlConnection(connectionString))
+             {
+                 string query = "SELECT Id, Nombre, Precio, Cantidad FROM CESTA";
+                 SqlCommand cmd = new SqlCommand(query, con);
+                 con.Open();
+                 SqlDataReader reader = cmd.ExecuteReader();
+                 while (reader.Read())
+                 {
+                     items.Add(new ItemCesta(
+                         (int)reader["Id"],
+                         (string)reader["Nombre"],
+                         (decimal)reader["Precio"],
+                         (int)reader["Cantidad"]
+                     ));
+                 }
+             }
             return items;
         }
 
@@ -76,61 +100,84 @@ namespace Web
         {
             // Lógica para vaciar la cesta en la base de datos
             // Esto podría implicar eliminar todos los registros de la tabla que representa la cesta
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM CESTA";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
 
         protected void gvCesta_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int index = Convert.ToInt32(e.CommandArgument);
+            int itemId = Convert.ToInt32(gvCesta.DataKeys[index].Value);
+
             if (e.CommandName == "Eliminar")
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                // Lógica para eliminar el elemento de la cesta en la posición 'index'
-                //eliminar el elemento de la base de datos en la posición 'index'
-                EliminarItemCestaDeBaseDeDatos(index);
-
-                // Recargar la página para reflejar los cambios
+                EliminarItemCestaDeBaseDeDatos(itemId);
                 Response.Redirect(Request.RawUrl);
             }
-            if (e.CommandName == "DisminuirCantidad")
+            else if (e.CommandName == "DisminuirCantidad")
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                // Disminuir la cantidad del artículo en la posición 'index'
-                DisminuirCantidad(index);
-                // Recargar la cesta
+                DisminuirCantidad(itemId);
                 CargarCesta();
             }
             else if (e.CommandName == "AumentarCantidad")
             {
-                int index = Convert.ToInt32(e.CommandArgument);
-                // Aumentar la cantidad del artículo en la posición 'index'
-                AumentarCantidad(index);
-                // Recargar la cesta
+                AumentarCantidad(itemId);
                 CargarCesta();
             }
 
         }
 
-        private void EliminarItemCestaDeBaseDeDatos(int index)
+        private void EliminarItemCestaDeBaseDeDatos(int itemId)
         {
-            // Lógica para eliminar el elemento de la cesta en la posición 'index' de la base de datos
+            // Lógica para eliminar el elemento de la cesta en la posición 'item' de la base de datos
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM CESTA WHERE Id = @Id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Id", itemId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
-        private void AumentarCantidad(int index)
+        private void AumentarCantidad(int itemId)
         {
             // Obtener el artículo correspondiente
-            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[index];
+            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[itemId];
             // Aumentar la cantidad
             item.Cantidad++;
             // Lógica para actualizar la cantidad en la base de datos si es necesario
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE CESTA SET Cantidad = Cantidad + 1 WHERE Id = @Id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Id", itemId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
 
-        private void DisminuirCantidad(int index)
+        private void DisminuirCantidad(int itemId)
         {
             // Obtener el artículo correspondiente
-            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[index];
+            ItemCesta item = ObtenerItemsCestaDesdeBaseDeDatos()[itemId];
             // Disminuir la cantidad si es mayor que 1
             if (item.Cantidad > 1)
             {
                 item.Cantidad--;
                 // Lógica para actualizar la cantidad en la base de datos si es necesario
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE CESTA SET Cantidad = Cantidad - 1 WHERE Id = @Id AND Cantidad > 1";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Id", itemId);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
