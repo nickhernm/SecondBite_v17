@@ -13,10 +13,10 @@ namespace library
 {
     public class ENCesta
     {
-        public int id { get; set; } // Arreglar tipo de datos Cliente y Plato
+        public int Id { get; set; } // Arreglar tipo de datos Cliente y Plato
         //public Cliente cliente { get; set; } // Relación con Cliente
         //public List<Plato> Platos { get; set; } // Relación con Platos
-
+        public int? NumPedido { get; set; }
         public ENCesta()
         {
 
