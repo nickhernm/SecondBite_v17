@@ -1,26 +1,23 @@
 ﻿<%@ Page Title="Menu_Individual" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Menu_Individual.aspx.cs" Inherits="Web.Menu_Individual" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
-        <h1>Menú de <asp:Literal ID="ltlRestauranteNombre" runat="server" /></h1>
-        <asp:Repeater ID="rptPlatos" runat="server">
-            <HeaderTemplate>
-                <ul class="menu-list">
-            </HeaderTemplate>
-            <ItemTemplate>
-                <li class="menu-item">
-                    <div class="menu-item-header">
-                        <h3><%# Eval("Nombre") %></h3>
-                        <span class="menu-item-price"><%# Eval("Precio", "{0:C}") %></span>
-                    </div>
-                    <p class="menu-item-description"><%# Eval("Descripcion") %></p>
-                    <p class="menu-item-alergenos">Alérgenos: <%# Eval("Alergenos") %></p>
-                    <asp:Button ID="btnAnadirCesta" runat="server" Text="Añadir a cesta" CommandArgument='<%# Eval("PlatoId") %>' OnClick="btnAnadirCesta_Click" CssClass="btn-add-cart" />
-                </li>
-            </ItemTemplate>
-            <FooterTemplate>
-                </ul>
-            </FooterTemplate>
-        </asp:Repeater>
-    </div>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>Menú del Restaurante</h2>
+    
+    <asp:GridView ID="gvPlatos" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+            <asp:BoundField DataField="Alergenos" HeaderText="Alérgenos" />
+            <asp:BoundField DataField="Puntuacion" HeaderText="Puntuación" />
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Button ID="btnAnadirCesta" runat="server" Text="Añadir a la cesta" CommandArgument='<%# Eval("Id") %>' OnClick="btnAnadirCesta_Click" />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <asp:Button ID="btnVerDetalles" runat="server" Text="Ver detalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetalles_Click" />
+                </ItemTemplate>
+            </asp:TemplateField>
+        </Columns>
+    </asp:GridView>
 </asp:Content>

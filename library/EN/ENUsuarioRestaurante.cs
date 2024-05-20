@@ -10,7 +10,7 @@ namespace library
 
         public string Telefono { get; set; }
 
-        public string Tipo_usuario { get; set; }
+        public bool Tipo_usuario { get; set; }
 
         public string Metodo_pago { get; set; }
 
@@ -21,12 +21,12 @@ namespace library
             this.Correo = null;
             this.Nombre = null;
             this.Telefono = null;
-            this.Tipo_usuario = null;
+            this.Tipo_usuario = false;
             this.Metodo_pago = null;
             this.Contrasena = null;
         }
 
-        public ENUsuarioRestaurante(string correo, string nombre, string telefono, string tipo_usuario, string metodo_pago, string contrasena)
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, bool tipo_usuario, string metodo_pago, string contrasena)
         {
             this.Correo = correo;
             this.Nombre = nombre;
@@ -36,7 +36,7 @@ namespace library
             this.Contrasena = contrasena;
         }
 
-        public ENUsuarioRestaurante(string correo, string nombre, string telefono, string tipo_usuario, string contrasena)
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, bool tipo_usuario, string contrasena)
         {
             this.Correo = correo;
             this.Nombre = nombre;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace library
 {
@@ -14,11 +15,23 @@ namespace library
 
         }
 
+        public List<ENPlato> ReadAll()
+        {
+            CADPlato cadPlato = new CADPlato();
+            return cadPlato.ReadAll();
+        }
+
         public bool Create()
         {
             CADPlato pla = new CADPlato();
             bool create = pla.Create(this);
             return create;
+        }
+
+        public List<ENPlato> ObtenerPlatosDestacados()
+        {
+            CADPlato cadPlato = new CADPlato();
+            return cadPlato.ObtenerPlatosDestacados();
         }
 
         public bool Update()
@@ -40,6 +53,12 @@ namespace library
             CADPlato pla = new CADPlato();
             bool read = pla.Read(this);
             return read;
+        }
+
+        public List<ENPlato> ObtenerPlatosRestaurante(int restauranteId)
+        {
+            CADPlato cadPlato = new CADPlato();
+            return cadPlato.ObtenerPlatosRestaurante(restauranteId);
         }
     }
 }

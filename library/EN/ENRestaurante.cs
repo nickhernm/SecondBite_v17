@@ -50,5 +50,23 @@ namespace library {
             bool read = res.Read(this);
             return read;
         }
+
+        public List<ENRestaurante> ObtenerRestaurantes(string busqueda, string comunidad, string tipo, string puntuacion)
+        {
+            CADRestaurante cadRestaurante = new CADRestaurante();
+            return cadRestaurante.ObtenerRestaurantes(busqueda, comunidad, tipo, puntuacion);
+        }
+
+        public List<string> ObtenerTipos()
+        {
+            CADRestaurante cadRestaurante = new CADRestaurante();
+            return cadRestaurante.ObtenerTipos();
+        }
+
+        public List<string> ObtenerComunidades()
+        {
+            CADRestaurante cadRestaurante = new CADRestaurante();
+            return cadRestaurante.ObtenerComunidades();
+        }
     }
 }
