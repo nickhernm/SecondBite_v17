@@ -12,7 +12,7 @@ namespace library
 
         public CADPlato()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DataBase.mdf"].ConnectionString;
+            connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
         }
 
         public bool Create(ENPlato en)
