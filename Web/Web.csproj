@@ -118,6 +118,9 @@
     <Content Include="Default.aspx" />
     <Content Include="Default.css" />
     <Content Include="Default.js" />
+    <Content Include="Images\cover2.jpeg" />
+    <Content Include="Images\cover3.jpeg" />
+    <Content Include="Images\cover4.jpeg" />
     <Content Include="Login.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -321,12 +324,6 @@
     <Compile Include="Plato_Individual.aspx.designer.cs">
       <DependentUpon>Plato_Individual.aspx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\library\library.csproj">
-      <Project>{577da5e8-ef25-4d7a-b0a4-30c6eaf6913c}</Project>
-      <Name>library</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

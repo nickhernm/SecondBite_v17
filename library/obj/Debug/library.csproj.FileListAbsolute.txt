@@ -26,9 +26,7 @@ C:\Users\ramaj\source\repos\SecondBite_v17\library\bin\Debug\library.dll
 C:\Users\ramaj\source\repos\SecondBite_v17\library\bin\Debug\library.pdb
 C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.dll
 C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.pdb
-<<<<<<< HEAD
 >>>>>>> 48776654W
-=======
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\bin\Debug\library.dll
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\bin\Debug\library.pdb
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
