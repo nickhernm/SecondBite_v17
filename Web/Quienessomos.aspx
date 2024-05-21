@@ -66,7 +66,7 @@
                 <p>
                     ¡Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas!
                 </p>
-                <form>
+                <!--<form action="#" method="post">-->
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="SeconBite">
@@ -80,7 +80,7 @@
                         <label class="form-check-label" for="politicaPrivacidad">Acepto la Política de Privacidad, Cookies y Términos de uso</label>
                     </div>
                     <button type="submit" class="btn btn-primary">¡Me Apunto!</button>
-                </form>
+                <!--</form>-->
 
                
             </div>
