@@ -2,22 +2,26 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link href="Default.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Default.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Default.js"></script>
 
-    <div class="OptionContainer">
-        <div class="OptionElement">
-            <a href="Restaurantes">
-                <img src="/Images/restaurantesPlaceHolder.jpg" alt="Restaurante">
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <a href="Restaurantes.aspx">
+                <img src="Images/restaurantes.png" style="width:100%" alt="Restaurantes">
             </a>
         </div>
-        <div class="OptionElement">
-            <a href="Platos">
-                <img src="/Images/platosPlaceHolder.jpg" alt="Plato">
+
+        <div class="mySlides">
+            <a href="Platos.aspx">
+                <img src="Images/platos.png" style="width:100%" alt="Platos">
             </a>
         </div>
-        <div class="OptionElement">
-            <a href="Recomendaciones">
-                <img src="/Images/recoPlaceHolder.jpg" alt="Recomendado">
+
+        <div class="mySlides">
+            <a href="Recomendaciones.aspx">
+                <img src="Images/reco.png" style="width:100%" alt="Recomendaciones">
             </a>
         </div>
     </div>

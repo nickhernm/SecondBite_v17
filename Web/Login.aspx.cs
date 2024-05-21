@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
-using library;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace Web
 {
@@ -53,6 +46,23 @@ namespace Web
         {
             // Logic to retrieve dynamic content
             return "Dynamic card content";
+        }
+
+        private class ENUsuarioRestaurante
+        {
+            private string contrasena;
+            private string name;
+
+            public ENUsuarioRestaurante(string contrasena, string name)
+            {
+                this.contrasena = contrasena;
+                this.name = name;
+            }
+
+            internal bool CheckUser()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
