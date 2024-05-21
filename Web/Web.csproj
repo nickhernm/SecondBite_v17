@@ -117,19 +117,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Default.css" />
-<<<<<<< HEAD
-    <Content Include="Default.js" />
-<<<<<<< HEAD
     <Content Include="Images\cover2.jpeg" />
     <Content Include="Images\cover3.jpeg" />
     <Content Include="Images\cover4.jpeg" />
-=======
-=======
-    <Content Include="Images\cover2.jpeg" />
-    <Content Include="Images\cover3.jpeg" />
-    <Content Include="Images\cover4.jpeg" />
->>>>>>> 28ea8a38838113268f2cd1183a84c3f18c2f06fe
->>>>>>> aa02f21307e21bc4d2601d81557adfd9d75f56b7
     <Content Include="Login.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
