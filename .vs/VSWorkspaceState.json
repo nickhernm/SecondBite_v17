@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Web",
+    "\\Web\\App_Data"
   ],
+  "SelectedNode": "\\Web\\App_Data\\SQLQuery1.sql",
   "PreviewInSolutionExplorer": false
 }
