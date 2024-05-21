@@ -1,8 +1,8 @@
-﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%-- <title><%: Page.Title %> SECONDBITE 
@@ -14,7 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="MainPage.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="MainPage.css" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,27 +41,25 @@
             </Scripts>
         </asp:ScriptManager>
         
-        <div class="container body-content">
+        <div class="container">
             <header>
-                <div class ="TopContainer">
-                    <div class="TopElement">
-                        <div class="LogoMenu">
-                            <a href="Default.aspx">
-                                <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
-                            </a>
-                        </div>
+                <div class="TopContainer">
+                    <div class="LogoMenu">
+                        <a href="Default.aspx">
+                            <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
+                        </a>
                     </div>
-                    <div class="TopElement">
-                        <div class ="LogButtons">
-                            <div class="mitad">
-                                <asp:Button ID="Login" runat="server" Text="Sing In" OnClick="GoLogIn"/>
-                                <asp:Button ID="Registro" runat="server" Text="Sing Up" OnClick="GoSignIn"/>
-                            </div>
-
-                            <asp:Button class="entero" ID="Perfil" runat="server" Text="Profile" OnClick="GoPerfil"/> <%-- falta el evento  --%>
-                        </div>
+                    <div class="AuthButtons">
+                        <asp:Panel ID="PanelAnonymous" runat="server">
+                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" OnClick="btnSignIn_Click" />
+                            <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
+                        </asp:Panel>
+                        <asp:Panel ID="PanelAuthenticated" runat="server">
+                            <asp:Button ID="btnProfile" runat="server" Text="Profile" OnClick="btnProfile_Click" />
+                        </asp:Panel>
                     </div>                    
                 </div>
+
                 <nav class="navbar" style="background-color: #692A8A;">
                     <ul class="menu" style="padding-top: 15px;">
                         <li><a href="Restaurantes">RESTAURANTES</a></li>
@@ -72,15 +70,14 @@
                     </ul>
                 </nav>
             </header>
-            <hr />
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <footer style="position: absolute; bottom: 0; width: 100%;">
-                <hr />
-                <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
-            </footer>
+            <main>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
         </div>
-
+        <footer>
+            <p> &copy; <%: DateTime.Now.Year %> - SecondBite</p>
+        </footer>
     </form>
 </body>
 </html>

@@ -11,18 +11,37 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                UpdateButtonVisibility();
+            }
         }
 
-        protected void GoSignIn(object sender, EventArgs e)
+        private void UpdateButtonVisibility()
         {
-            Response.Redirect("Registrar.aspx");
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                PanelAnonymous.Visible = false;
+                PanelAuthenticated.Visible = true;
+            }
+            else
+            {
+                PanelAnonymous.Visible = true;
+                PanelAuthenticated.Visible = false;
+            }
         }
-        protected void GoLogIn(object sender, EventArgs e)
+
+        protected void btnSignIn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }
-        protected void GoPerfil(object sender, EventArgs e)
+
+        protected void btnSignUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registrar.aspx");
+        }
+
+        protected void btnProfile_Click(object sender, EventArgs e)
         {
             Response.Redirect("Perfil.aspx");
         }
