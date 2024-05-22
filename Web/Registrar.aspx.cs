@@ -30,8 +30,8 @@ namespace Web
                 string contrasena = TextBox4.Text;
                 bool tipo_usuario = false;
 
-                usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);
-                if (usuario.Create())
+                
+usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);                if (usuario.Create())
                 {
                     Response.Redirect("Pedidos.aspx");
                 }
