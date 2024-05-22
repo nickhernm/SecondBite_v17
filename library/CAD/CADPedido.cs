@@ -79,7 +79,7 @@ namespace library
                                 enTemp.numPedido = Convert.ToInt32(reader["num_pedido"].ToString());
                                 enTemp.fechaPedido = reader["fecha"].ToString();
                                 enTemp.emailPedido = reader["usuario"].ToString();
-                                enTemp.lineasPedido = enLinea.ReadAllPed();
+                                //enTemp.lineasPedido = enLinea.ReadAllPed();
                                 listPedido.Add(enTemp);
                                 System.Diagnostics.Debug.WriteLine(enTemp.emailPedido);
                                 System.Diagnostics.Debug.WriteLine("sssss");
@@ -135,7 +135,7 @@ namespace library
                                 enTemp.numPedido = Convert.ToInt32(reader["num_pedido"].ToString());
                                 enTemp.fechaPedido = reader["fecha"].ToString();
                                 enTemp.emailPedido = reader["usuario"].ToString();
-                                enTemp.lineasPedido = enLinea.ReadAllPed();
+                                //enTemp.lineasPedido = enLinea.ReadAllPed();
                                 listPedido.Add(enTemp);
                                 System.Diagnostics.Debug.WriteLine(enTemp.emailPedido);
                                 System.Diagnostics.Debug.WriteLine("sssss");
