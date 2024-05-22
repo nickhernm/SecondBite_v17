@@ -60,5 +60,12 @@ namespace Web
             RepeaterRestaurantes.DataSource = restaurantes;
             RepeaterRestaurantes.DataBind();
         }
+
+        protected void btnMostrarMenu_Click(object sender, EventArgs e)
+        {
+            Button btnMostrarMenu = (Button)sender;
+            int restauranteId = Convert.ToInt32(btnMostrarMenu.CommandArgument);
+            Response.Redirect("Menu_Individual.aspx?RestauranteId=" + restauranteId);
+        }
     }
 }
