@@ -1,20 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace library
 {
     public class CADOpinion
     {
-        private string connectionString;
+        private string constring;
 
         public CADOpinion()
         {
-            
+            constring = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            System.Diagnostics.Debug.WriteLine(constring);
         }
 
         public bool Create(ENOpinion en)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(constring))
             {
                 string query = "INSERT INTO OPINION (id, descripcion, valoracion, usuario) VALUES (@Id, @Descripcion, @Valoracion, @UsuarioCorreo)";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -31,7 +34,7 @@ namespace library
 
         public bool Read(ENOpinion en)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(constring))
             {
                 string query = "SELECT * FROM OPINION WHERE id = @Id";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -52,7 +55,7 @@ namespace library
 
         public bool Update(ENOpinion en)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(constring))
             {
                 string query = "UPDATE OPINION SET descripcion = @Descripcion, valoracion = @Valoracion, usuario = @UsuarioCorreo WHERE id = @Id";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -69,7 +72,7 @@ namespace library
 
         public bool Delete(ENOpinion en)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(constring))
             {
                 string query = "DELETE FROM OPINION WHERE id = @Id";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -80,5 +83,7 @@ namespace library
                 return rowsAffected > 0;
             }
         }
+
+        
     }
 }

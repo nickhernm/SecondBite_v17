@@ -44,8 +44,7 @@
                       
                     </div>
                 </div>
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/sandwich.jpg"  AlternateText="Image" Width="200px" Height="200px" style="float: right;"></asp:Image>
-            </div>
+                </div>
         </div>
         </ItemTemplate>
     </asp:Repeater>

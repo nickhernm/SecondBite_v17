@@ -10,6 +10,7 @@ namespace library
     {
         public int IdPlato { get; set; }
         public int IdOpinion { get; set; }
+        public List<ENOpinion> listaOpiniones { get; set; }
 
         public ENOpinionPlato()
         {
@@ -48,6 +49,13 @@ namespace library
             CADOpinionPlato op = new CADOpinionPlato();
             bool read = op.Read(this);
             return read;
+        }
+
+
+        public List<ENOpinion> ReadAll(ENPlato en)
+        {
+            CADOpinionPlato op = new CADOpinionPlato();
+            return op.ReadAll(en);
         }
     }
 }
