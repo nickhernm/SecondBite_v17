@@ -24,8 +24,9 @@ namespace Web
         {
             ENPlato enPlato = new ENPlato();
             List<ENPlato> platosDestacados = enPlato.ObtenerPlatosDestacados();
-            gvPlatosDestacados.DataSource = platosDestacados;
-            gvPlatosDestacados.DataBind();
+            //gvPlatosDestacados.DataSource = platosDestacados;
+            //gvPlatosDestacados.DataBind();
+            // MIRAR COMO ARREGLAR ESTO
         }
 
         private void CargarOpinionesPlato(int platoId)
