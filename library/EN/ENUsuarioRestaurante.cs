@@ -43,6 +43,7 @@ namespace library
             this.Telefono = telefono;
             this.Tipo_usuario = tipo_usuario;
             this.Contrasena = contrasena;
+            System.Diagnostics.Debug.WriteLine("dest?: ", tipo_usuario);
         }
 
         public ENUsuarioRestaurante(string contrasena, string nombre)
@@ -54,6 +55,7 @@ namespace library
         public bool Create()
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
+            System.Diagnostics.Debug.WriteLine("Rest?: ", Tipo_usuario);
             bool create = usu.Create(this);
             return create;
         }
