@@ -5,7 +5,11 @@
         <div class="row">
             <div class="col-md-12 text-center">
             <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image" CssClass="img-fluid" Height="619px" Width="1479px" />
-            <div class="col-md-12">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                
                 <h1>Quiénes Somos</h1>
                 <p>
                     Somos una empresa comprometida con la reducción del desperdicio de alimentos y el apoyo a los restaurantes locales. Nuestra plataforma permite a los restaurantes vender su exceso de comida a precios reducidos, brindando a nuestros clientes la oportunidad de disfrutar de deliciosos platillos a precios accesibles.
@@ -16,6 +20,10 @@
                 <p>
                     Nuestro objetivo es no solo proporcionar una solución económica para los clientes, sino también contribuir positivamente al medio ambiente al reducir la cantidad de alimentos que se desperdician diariamente. ¡Únete a nosotros en nuestra misión de hacer del mundo un lugar mejor, un bocado a la vez!
                 </p>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
                 
                 <h2>Nuestra Misión</h2>
                 <p>
@@ -37,7 +45,10 @@
                 <p>
                     <strong>Innovación:</strong> Buscamos continuamente maneras nuevas y efectivas de reducir el desperdicio de alimentos.
                 </p>
-                
+                   </div>
+                  </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">             
                 <h2>Nuestro Equipo</h2>
                 <p>
                     <strong>Jaime Hernandez Delgado</strong> - Fundador
@@ -55,7 +66,10 @@
                     <strong>Dario Simon Franco</strong> - CTO
                     <br>Dario, con amplia experiencia en tecnología y desarrollo de software, lidera los esfuerzos tecnológicos para mejorar la plataforma de SecondBite.
                 </p>
-
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
                 <h2>Contacto</h2>
                 <p>
                     <strong>Teléfono:</strong> 678-456-329
@@ -66,26 +80,29 @@
                 <p>
                     ¡Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas!
                 </p>
-                <form>
+
+                <!--<form action="#" method="post">-->
+
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="SeconBite">
                     </div>
                     <div class="form-group">
-                        <label for="correo">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo" placeholder="secondbiteweb@gmail.com">
+                        <asp:TextBox ID="correo" runat="server" CssClass="form-control" placeholder="secondbiteweb@gmail.com"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="emailValidator" runat="server" ControlToValidate="correo" ErrorMessage="Formato de correo electrónico inválido" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" CssClass="text-danger" Display="Dynamic"></asp:RegularExpressionValidator>
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="politicaPrivacidad">
                         <label class="form-check-label" for="politicaPrivacidad">Acepto la Política de Privacidad, Cookies y Términos de uso</label>
                     </div>
                     <button type="submit" class="btn btn-primary">¡Me Apunto!</button>
-                </form>
+
+                <!--</form>-->
+
 
                
             </div>
         </div>
     </div>
 
-    </div>
 </asp:Content>

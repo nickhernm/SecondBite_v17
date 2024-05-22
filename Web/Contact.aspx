@@ -22,14 +22,20 @@
         <h2>Envíanos un mensaje</h2>
         <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label>
         <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="El nombre es obligatorio." ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <asp:Label ID="lblCorreo" runat="server" Text="Correo Electrónico:"></asp:Label>
         <asp:TextBox ID="txtCorreo" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="El correo electrónico es obligatorio." ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="El correo electrónico no es válido." ForeColor="Red" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$"></asp:RegularExpressionValidator>
         <br />
         <asp:Label ID="lblMensaje" runat="server" Text="Mensaje:"></asp:Label>
         <asp:TextBox ID="txtMensaje" runat="server" TextMode="MultiLine" Rows="4"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvMensaje" runat="server" ControlToValidate="txtMensaje" ErrorMessage="El mensaje es obligatorio." ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <asp:Button ID="btnEnviar" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
+        <br />
+        <asp:Label ID="lblConfirmacion" runat="server" ForeColor="Green" Visible="false" Text="¡Mensaje enviado correctamente!"></asp:Label>
     </div>
 
         <!-- Preguntas frecuentes -->
