@@ -66,26 +66,15 @@ Contraseña: vivalafruta
 Nombre: UAMilDelicias
 contraseña: UAmildeli
 
-## TEREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
-| Componente | Tareas realizadas |  
-| ----- | -------- |
-| Jaime Hernández (Coordinador) | 
-- Implementación de las páginas restaurantes
-- Implementación donde se muestra el menú de cada restaurante
-- Mostrar platos mejor valorados
-- Mostrar información restaurante individual
-- Información plato individual
-- Página donde el restaurante puede modificar el menú
-- Creación Base de datos y creación de tablas|
-| Darío Simón | 
-- Master Page
-- Página principal
-- Parte visual de la página genérica
-- Arreglos y ayuda de subpáginas (restaurante y platos) 
-- Creación Base de datos
-- Arreglos EN CAD|
-| Yaroslav  | Poner aqui |
-| Nada Benaissa | Poner aquí |
+## TAREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
+
+| Componente                | Tareas realizadas                                                                                                                  |  
+| ------------------------- | -----------------------------------------------------------------------------------------------------------------------------    |
+| Jaime Hernández (Coordinador) | - Implementación de las páginas restaurantes  <br>- Implementación donde se muestra el menú de cada restaurante  <br>- Mostrar platos mejor valorados  <br>- Mostrar información restaurante individual  <br>- Información plato individual  <br>- Página donde el restaurante puede modificar el menú  <br>- Creación Base de datos y creación de tablas  |
+| Darío Simón               | - Master Page  <br>- Página principal  <br>- Parte visual de la página genérica  <br>- Arreglos y ayuda de subpáginas (restaurante y platos)  <br>- Creación Base de datos  <br>- Arreglos EN CAD  |
+| Yaroslav                  | - [Poner tareas aquí]  |
+| Nada Benaissa             | - [Poner tareas aquí]  |
+
 
 
 
