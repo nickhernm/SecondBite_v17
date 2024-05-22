@@ -1,5 +1,16 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\web\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\secondbiterepo\\secondbite_v17\\web\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\about.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+=======
   "WorkspaceRootPath": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\",
   "Documents": [
     {
@@ -57,6 +68,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\en\\enpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3567a7a0a1ce792e03a4f81445e71103e64cba9a
     }
   ],
   "DocumentGroupContainers": [
@@ -65,14 +77,31 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
+<<<<<<< HEAD
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+=======
           "DockedWidth": 322,
           "SelectedChildIndex": 4,
+>>>>>>> 3567a7a0a1ce792e03a4f81445e71103e64cba9a
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+<<<<<<< HEAD
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "About.aspx",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\Web\\About.aspx",
+              "RelativeDocumentMoniker": "Web\\About.aspx",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\Web\\About.aspx",
+              "RelativeToolTip": "Web\\About.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-22T09:44:35.28Z",
+=======
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
@@ -95,10 +124,22 @@
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-05-22T09:53:04.854Z",
+>>>>>>> 3567a7a0a1ce792e03a4f81445e71103e64cba9a
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 0,
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\Web\\Site.Master",
+              "RelativeDocumentMoniker": "Web\\Site.Master",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\SecondBiteRepo\\SecondBite_v17\\Web\\Site.Master",
+              "RelativeToolTip": "Web\\Site.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-22T09:43:45.81Z",
+=======
               "DocumentIndex": 1,
               "Title": "CADLinea.cs",
               "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADLinea.cs",
@@ -270,6 +311,7 @@
               "ViewState": "AQIAACAAAAAAAAAAAAAAADMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T09:26:31.914Z",
+>>>>>>> 3567a7a0a1ce792e03a4f81445e71103e64cba9a
               "EditorCaption": ""
             }
           ]
