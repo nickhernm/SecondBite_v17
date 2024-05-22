@@ -39,10 +39,10 @@ namespace library
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
                         command.Parameters.AddWithValue("@telefono", en.Telefono);
                         command.Parameters.AddWithValue("@contrasena", en.Contrasena);
-                        command.Parameters.AddWithValue("@tipo_usuario", false);
+                        command.Parameters.AddWithValue("@tipo_usuario", en.Tipo_usuario);
                         //command.Parameters.AddWithValue("@id_metodo_pago", en.Telefono);
-
-                        //System.Diagnostics.Debug.WriteLine(command.ExecuteReader());
+                        System.Diagnostics.Debug.WriteLine("en.Correo:  " + en.Correo);
+                        System.Diagnostics.Debug.WriteLine("en.Tipo_usuario:  " + en.Tipo_usuario);
                         int rowsAffected = command.ExecuteNonQuery();
 
 

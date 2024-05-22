@@ -10,6 +10,7 @@
         <div class="card-body" style="display: flex;flex-direction: column;">
             <div class="centerobject"><asp:TextBox ID="TextBox1" runat="server" placeholder="Email"></asp:TextBox> </div>
                     <div class="centerobject"><asp:TextBox ID="TextBox2" runat="server" placeholder="Usuario"></asp:TextBox> </div>
+                    <div class="centerobject"> <asp:CheckBox id="checkbox1" runat="server" AutoPostBack="True" TextAlign="Right" OnCheckedChanged="Check_Clicked"/> Es un restaurante?</div>
                     <div class="centerobject"><asp:TextBox ID="TextBox3" runat="server" placeholder="Telefono"></asp:TextBox> </div>
                     <div class="centerobject"><asp:TextBox ID="TextBox4" runat="server" placeholder="Contraseña"></asp:TextBox> </div>
                     <div class="centerobject"><asp:Button ID="Button3" runat="server" Text="Create Account" OnClick="RegistrarUsu"></asp:Button> </div>

@@ -14,8 +14,9 @@ namespace Web
         protected void Page_Load(object sender, EventArgs e)
         {
             favorito = new ENFavoritos();
-            List<ENFavoritos> listFavorito = favorito.ReadAll();
-            Repeater1.DataSource = listFavorito;
+            //List<ENFavoritos> listFavorito = favorito.ReadAll();
+            List<ENPlato> lista = favorito.ReadFavoritosUsu();
+            Repeater1.DataSource = lista;
             Repeater1.DataBind();
         }
 

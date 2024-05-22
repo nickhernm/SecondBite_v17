@@ -13,13 +13,14 @@
                 <asp:Button ID="Button3" runat="server" Text="Buy" OnClick="Delete"></asp:Button>
             </div>
             <div class="card-header">
-                <h2><%# DataBinder.Eval(Container.DataItem, "usuario.correo") %></h2>
+                <h2>Nombre: <%# DataBinder.Eval(Container.DataItem, "Nombre") %></h2>
             </div>
             <div class="card-body row">
-                <div style="width: 300px;float: left; position: relative; height:200px">
+                <div style="width: 300px;float: left; position: relative; height:100px">
                 <p><asp:Label ID="txtContent" runat="server"></asp:Label></p>
                     <div style="position: absolute; bottom: 0px;">
-                        <h3 ><%# DataBinder.Eval(Container.DataItem, "id") %></h3>
+                        <h3 >Alergenos: <%# DataBinder.Eval(Container.DataItem, "Alergenos") %></h3>
+                        <h3 >Puntuacion: <%# DataBinder.Eval(Container.DataItem, "Puntuacion") %>/5</h3>
                     </div>
                 </div>
              </div>

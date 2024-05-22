@@ -53,5 +53,14 @@ namespace library {
             CADFavoritos fav = new CADFavoritos();
             return fav.ReadAll();
         }
+
+        public List<ENPlato> ReadFavoritosUsu()
+        {
+            CADFavoritos fav = new CADFavoritos();
+            ENFavoritos eNFavoritos = new ENFavoritos();
+            eNFavoritos.usuario = new ENUsuarioRestaurante();
+            eNFavoritos.usuario.Correo = "john.doe@example.com";
+            return fav.ReadFavoritosUsu(eNFavoritos);
+        }
     }
 }
