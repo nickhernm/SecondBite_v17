@@ -180,6 +180,11 @@ namespace Web
                 }
             }
         }
+        private void btnPasarAPagar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Ckeckout.aspx");
+        }
+
     }
 
     public class ItemCesta

@@ -38,5 +38,6 @@
         <div>
             <asp:Label ID="lblTotalEuros" runat="server" Text=""></asp:Label>
         </div>
+        <asp:Button ID="btnPasarAPagar" runat="server" Text="Pasar a Pagar" CssClass="btn-pasar-pagar" OnClick="btnPasarAPagar_Click" />
     </div>
 </asp:Content>
