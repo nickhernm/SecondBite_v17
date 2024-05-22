@@ -7,10 +7,14 @@
         <div class="row">
             <div class="col-md-12 text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image"  />
 =======
             <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image" CssClass="img-fluid" Height="619px" Width="1264px" />
 >>>>>>> BK5734575
+=======
+            <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image"  />
+>>>>>>> 9c37179981818a754bc4695ea410d69e8034033e
             </div>
         </div>
         <div class="row">
