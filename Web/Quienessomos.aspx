@@ -6,7 +6,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
+<<<<<<< HEAD
+<<<<<<< HEAD
             <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image"  />
+=======
+            <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image" CssClass="img-fluid" Height="619px" Width="1264px" />
+>>>>>>> BK5734575
+=======
+            <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image"  />
+>>>>>>> 9c37179981818a754bc4695ea410d69e8034033e
             </div>
         </div>
         <div class="row">
@@ -86,12 +94,15 @@
                 <!--<form action="#" method="post">-->
 
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="SeconBite">
+                        <label for="txtNombre">Nombre</label>
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="El nombre es obligatorio." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
-                        <asp:TextBox ID="correo" runat="server" CssClass="form-control" placeholder="secondbiteweb@gmail.com"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="emailValidator" runat="server" ControlToValidate="correo" ErrorMessage="Formato de correo electrónico inválido" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" CssClass="text-danger" Display="Dynamic"></asp:RegularExpressionValidator>
+                        <label for="txtCorreo">Correo Electrónico</label>
+                        <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" placeholder="Correo Electrónico"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="El correo electrónico es obligatorio." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Formato de correo electrónico inválido" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" CssClass="text-danger" Display="Dynamic"></asp:RegularExpressionValidator>
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="politicaPrivacidad">
