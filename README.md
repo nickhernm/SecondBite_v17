@@ -1,12 +1,104 @@
-Pedidos: mostrar los pedidos dentro de for, los cuales tienen un for para mostrar las lineas.
-Favoritos: Mostrara los platos favoritos del usuario junto a un corazón en la esquina que se puede quitar para quitar de favoritos.
-Opinion: Tiene una tabla intermedia entre opinion y restaurante, la cual mostraremos debajo de plato/restaurante
+# SecondBite
+## Miembros del Grupo:
+- Jaime Hernandez Delgado : 48776654W
+- Yaroslav : 55356368Z
+- Nada Benaissa : BK5734575
+- Dario Simón Franco : 74392984J
 
-Login: Hacer login con nombre y contraseña, al logearse que envie toda la info (incluyendo si es cliente o restaurante) a Main
-Register: Al hacer un register, que eliga si es cliente o restaurante y crear un usuario.
+## Descripción:
+
+Se propone desarrollar una plataforma web destinada a la venta de comida sobrante por parte de restaurantes locales. La aplicación permitirá a los usuarios encontrar restaurantes cercanos que ofrecen platos disponibles a precios reducidos, contribuyendo así a reducir el desperdicio de alimentos.
+
+## Parte pública:
+
+- **Página de inicio**: Se mostrarán opciones como registros y una lista de restaurantes disponibles en la ciudad del usuario.
+- **Página de restaurante**: Cada restaurante exhibirá los platos disponibles con su descripción, precio, valoración y alérgenos.
+- **Categorías**: Los usuarios podrán explorar restaurantes por categorías (por ejemplo, cocina internacional, comida rápida, vegetariana, etc.).
+
+### Listado EN Pública:
+
+1. Restaurantes.
+2. Platos.
+3. Categorías de restaurantes.
+
+## Parte privada:
+
+- **Perfil del cliente**: Los usuarios podrán gestionar su información personal, incluyendo foto, dirección, nombre, teléfono de contacto y correo de registro.
+- **Cesta**: Los usuarios podrán visualizar y gestionar los platos agregados a la cesta antes de realizar la compra.
+- **Favoritos**: Los usuarios podrán gestionar los platos marcados como favoritos.
+- **Pedidos**: Se mostrará el estado de los pedidos realizados por el usuario.
+
+### Listado EN Privada:
+
+1. Usuario cliente.
+2. Usuario restaurante.
+4. Cesta.
+5. Favoritos.
+6. Pedidos.
+7. Linea de Pedido.
+
+## Posibles mejoras:
+
+Se plantean las siguientes mejoras para la aplicación:
+
+- Implementación de un sistema de recomendaciones de platos basado en las preferencias del usuario.
+- Incorporación de un sistema de valoración y reseñas de platos y restaurantes por parte de los usuarios.
+- TOP clientes, TOP restaurantes, ventas por restaurante.
+
+## Esquema ER
+
+El esquema entidad-relación de la base de datos se encuentra en la carpeta raíz del proyecto.
+
+## APUNTES ENTREGA FINAL:
+
+# Propuestas:
+ 
+# Dificultades encontradas:
+
+# Problemas que se han encontrado:
+
+## USUARIOS Y CONTRASEÑAS PARA EL REGISTRO
+# Como usuario:
+Nombre: cesar98
+Contraseña: vivalafruta
+
+# Como restaurante:
+Nombre: UAMilDelicias
+contraseña: UAmildeli
+
+## TEREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
+| Componente | Tareas realizadas |  
+| ----- | -------- |
+| Jaime Hernández (Coordinador) | 
+- Implementación de las páginas restaurantes
+- Implementación donde se muestra el menú de cada restaurante
+- Mostrar platos mejor valorados
+- Mostrar información restaurante individual
+- Información plato individual
+- Página donde el restaurante puede modificar el menú
+- Creación Base de datos y creación de tablas|
+| Darío Simón | 
+- Master Page
+- Página principal
+- Parte visual de la página genérica
+- Arreglos y ayuda de subpáginas (restaurante y platos) 
+- Creación Base de datos
+- Arreglos EN CAD|
+| Yaroslav  | Poner aqui |
+| Nada Benaissa | Poner aquí |
 
 
 
+## Corrección Entrega 1: 
+
+La etiqueta de entrega debe ser "propuesta". Modificar algunos EN (deben ser sustantivos: Usuario, Restaurante, Plato...).
 
 
-(Tras acabar todo eso implementar metodo de pago junto a Nada (Dentro de cesta pasar a pagar, una vez pagado pasar a ver el pedido))
+## Corrección Entrega 2: 
+
+Falta etiqueta commit y rellenar ENs.
+
+
+## Corrección Entrega 3: 
+
+Falta etiqueta commit y rellenar pantallas con información de base de datos.
