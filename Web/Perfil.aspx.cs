@@ -21,12 +21,12 @@ namespace Web
         private void CargarDatosPerfil()
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
-            string query = "SELECT NombreUsuario, Correo, FechaNacimiento, Direccion, Ciudad, CodigoPostal FROM Usuarios WHERE UsuarioID = @UsuarioID";
+            string query = "SELECT nombre, correo FROM USUARIO WHERE correo = @correo";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@UsuarioID", 1); // Reemplaza con el ID del usuario actual
+                command.Parameters.AddWithValue("@correo", 1); // Reemplaza con el ID del usuario actual
 
                 try
                 {
@@ -37,12 +37,11 @@ namespace Web
                     {
                         while (reader.Read())
                         {
-                            lblNombreUsuario.Text = reader["NombreUsuario"].ToString();
-                            lblCorreo.Text = reader["Correo"].ToString();
-                            lblFechaNacimiento.Text = Convert.ToDateTime(reader["FechaNacimiento"]).ToString("dd/MM/yyyy");
-                            lblDireccion.Text = reader["Direccion"].ToString();
-                            lblCiudad.Text = reader["Ciudad"].ToString();
-                            lblCodigoPostal.Text = reader["CodigoPostal"].ToString();
+                            lblNombreUsuario.Text = reader["nombre"].ToString();
+                            lblCorreo.Text = reader["correo"].ToString();
+                        
+                            //lblDireccion.Text = reader["direccion"].ToString();
+
                         }
                     }
                     reader.Close();
