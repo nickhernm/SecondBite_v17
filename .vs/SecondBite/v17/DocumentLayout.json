@@ -1,7 +1,25 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\secondbite2repo\\secondbite_v17\\web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\g513\\desktop\\secondbite2repo\\secondbite_v17\\library\\cad\\cadcesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\cad\\cadcesta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+=======
   "WorkspaceRootPath": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\",
   "Documents": [],
+>>>>>>> 6223dfd149792239da7b04ea268783f617989340
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +27,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 322,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +48,44 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CADCesta.cs",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\library\\CAD\\CADCesta.cs",
+              "RelativeDocumentMoniker": "library\\CAD\\CADCesta.cs",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\library\\CAD\\CADCesta.cs",
+              "RelativeToolTip": "library\\CAD\\CADCesta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T11:38:09.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Perfil.aspx",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\Web\\Perfil.aspx",
+              "RelativeDocumentMoniker": "Web\\Perfil.aspx",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\Web\\Perfil.aspx",
+              "RelativeToolTip": "Web\\Perfil.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-22T11:33:48.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Perfil.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\Web\\Perfil.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\Perfil.aspx.cs",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\Web\\Perfil.aspx.cs",
+              "RelativeToolTip": "Web\\Perfil.aspx.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBYAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T11:23:03.129Z",
+              "EditorCaption": ""
             }
           ]
         }

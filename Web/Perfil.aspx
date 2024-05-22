@@ -12,13 +12,12 @@
         </div>
         <div class="ProfileElement">
             <div class="TextInfo">
-                <h1>Nombre de Usuario</h1>
-                <p>Correo electrónico: usuario@gmail.com</p>
-                <p>Fecha de nacimiento: 01/01/2000</p>
-                <p>Dirección: C/ Don Fernando Alonso N33</p>
-                <p>Ciudad: Oviedo</p>
-                <p>Codigo postal: 03333</p>
-
+                <h1><asp:Label ID="lblNombreUsuario" runat="server" /></h1>
+                <p>Correo electrónico: <asp:Label ID="lblCorreo" runat="server" /></p>
+                <p>Fecha de nacimiento: <asp:Label ID="lblFechaNacimiento" runat="server" /></p>
+                <p>Dirección: <asp:Label ID="lblDireccion" runat="server" /></p>
+                <p>Ciudad: <asp:Label ID="lblCiudad" runat="server" /></p>
+                <p>Codigo postal: <asp:Label ID="lblCodigoPostal" runat="server" /></p>
             </div>
         </div>
         <div class="ProfileElement">

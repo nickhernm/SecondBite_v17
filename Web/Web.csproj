@@ -134,6 +134,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Cesta.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Quienes.css" />
     <Content Include="Quienessomos.aspx" />
     <Content Include="Recomendaciones.aspx" />
     <Content Include="Restaurantes.aspx" />
