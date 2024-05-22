@@ -47,9 +47,24 @@ namespace Web
             public string Respuesta { get; set; }
         }
 
+
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
-           
+            if (Page.IsValid)
+            {
+                string nombre = txtNombre.Text;
+                string correo = txtCorreo.Text;
+                string mensaje = txtMensaje.Text;
+
+                // Mostrar el mensaje de confirmación
+                lblConfirmacion.Visible = true;
+
+                // Limpiar los campos del formulario
+                txtNombre.Text = string.Empty;
+                txtCorreo.Text = string.Empty;
+                txtMensaje.Text = string.Empty;
+            }
+
         }
 
  
