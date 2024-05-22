@@ -1,64 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Source\\Repos\\SecondBite_v17as\\.vs\\SecondBite\\config\\applicationhost.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\SecondBite\\config\\applicationhost.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\usuario\\source\\repos\\secondbite_v17as\\library\\cad\\cadlinea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\cad\\cadlinea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\usuario\\source\\repos\\secondbite_v17as\\web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\web\\pedidos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\pedidos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\web\\pedidos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\pedidos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\web\\favoritos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\favoritos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\en\\enplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\cad\\cadopinionplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\cad\\cadopinionplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\web\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\en\\enopinionplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enopinionplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\en\\enopinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enopinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\cad\\cadopinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\cad\\cadopinion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\en\\enpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enpedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -66,8 +9,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 322,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -83,194 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "applicationhost.config",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\.vs\\SecondBite\\config\\applicationhost.config",
-              "RelativeDocumentMoniker": ".vs\\SecondBite\\config\\applicationhost.config",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\.vs\\SecondBite\\config\\applicationhost.config",
-              "RelativeToolTip": ".vs\\SecondBite\\config\\applicationhost.config",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-22T09:53:04.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CADLinea.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADLinea.cs",
-              "RelativeDocumentMoniker": "library\\CAD\\CADLinea.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADLinea.cs",
-              "RelativeToolTip": "library\\CAD\\CADLinea.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAACsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:33:02.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ENPedido.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENPedido.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENPedido.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENPedido.cs",
-              "RelativeToolTip": "library\\EN\\ENPedido.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:26:23.133Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 10,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Perfil.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Perfil.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Perfil.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Perfil.aspx.cs",
-              "RelativeToolTip": "Web\\Perfil.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:41:13.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Favoritos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Favoritos.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Favoritos.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Favoritos.aspx.cs",
-              "RelativeToolTip": "Web\\Favoritos.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:45:06.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pedidos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Pedidos.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Pedidos.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Pedidos.aspx.cs",
-              "RelativeToolTip": "Web\\Pedidos.aspx.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:44:47.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pedidos.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Pedidos.aspx",
-              "RelativeDocumentMoniker": "Web\\Pedidos.aspx",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Pedidos.aspx",
-              "RelativeToolTip": "Web\\Pedidos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-22T09:49:20.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Perfil.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Perfil.aspx",
-              "RelativeDocumentMoniker": "Web\\Perfil.aspx",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Perfil.aspx",
-              "RelativeToolTip": "Web\\Perfil.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-22T09:41:15.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Favoritos.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Favoritos.aspx",
-              "RelativeDocumentMoniker": "Web\\Favoritos.aspx",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Favoritos.aspx",
-              "RelativeToolTip": "Web\\Favoritos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-22T09:45:09.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ENPlato.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENPlato.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENPlato.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENPlato.cs",
-              "RelativeToolTip": "library\\EN\\ENPlato.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:34:27.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CADOpinionPlato.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADOpinionPlato.cs",
-              "RelativeDocumentMoniker": "library\\CAD\\CADOpinionPlato.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADOpinionPlato.cs",
-              "RelativeToolTip": "library\\CAD\\CADOpinionPlato.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAAAHEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:30:52.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CADOpinion.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADOpinion.cs",
-              "RelativeDocumentMoniker": "library\\CAD\\CADOpinion.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\CAD\\CADOpinion.cs",
-              "RelativeToolTip": "library\\CAD\\CADOpinion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:28:23.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ENOpinion.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENOpinion.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENOpinion.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENOpinion.cs",
-              "RelativeToolTip": "library\\EN\\ENOpinion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:26:26.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ENOpinionPlato.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENOpinionPlato.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENOpinionPlato.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENOpinionPlato.cs",
-              "RelativeToolTip": "library\\EN\\ENOpinionPlato.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAADMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T09:26:31.914Z",
-              "EditorCaption": ""
             }
           ]
         }
