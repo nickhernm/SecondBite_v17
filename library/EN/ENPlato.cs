@@ -9,7 +9,7 @@ namespace library
         public string Nombre { get; set; }
         public string Alergenos { get; set; }
         public float Puntuacion { get; set; } // Añadido para reflejar la columna "puntuacion" en la tabla PLATO
-
+        public List<ENOpinion> opinion { get; set; }
         public ENPlato()
         {
 

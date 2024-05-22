@@ -34,7 +34,7 @@ namespace Web
                 usuario = new ENUsuarioRestaurante(contrasena, name);
                 if (usuario.CheckUser())
                 {
-                    Response.Redirect("Pedidos.aspx");
+                    Response.Redirect("Default.aspx");
                 }
                 else
                 {

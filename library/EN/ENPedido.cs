@@ -1,21 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace library
 {
     public class ENPedido
     {
-        private int numPedido;
 
-        /*
-            Hablar con el grupo para ver como mejorar el 
-            pedido/linea de pedido
-         */
+        public int numPedido { get; set; }
 
-        public int NumPedido
-        {
-            get { return numPedido; }
-            set { numPedido = value; }
-        }
+        public string fechaPedido { get; set; }
+
+        public string emailPedido { get; set; }
+
+        public List<ENLinea> lineasPedido { get; set; }
 
         public ENPedido()
         {
@@ -53,6 +50,12 @@ namespace library
             CADPedido ped = new CADPedido();
             bool read = ped.Read(this);
             return read;
+        }
+
+        public List<ENPedido> ReadAll()
+        {
+            CADPedido ped = new CADPedido();
+            return ped.ReadAll();
         }
     }
 }
