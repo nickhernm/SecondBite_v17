@@ -46,7 +46,7 @@
                 <div class="TopContainer">
                     <div class="LogoMenu">
                         <a href="Default.aspx">
-                            <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
+                            <img src="/Images/logo.png" width="100px" alt="Menu Principal">
                         </a>
                     </div>
                     <div class="AuthButtons">

@@ -100,6 +100,28 @@ namespace library
             return deleted;
         }
 
+        /*public List<ENLinea> GetLines(ENCesta en)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM LINPED where CESTA.num_pedido = LINPED.num_pedido";
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                
+                while (reader.Read())
+                {
+                    ENLinea linea = new ENLinea();
+                    linea.Linea = Convert.ToInt32(reader["linea"]);
+                    linea.NumPed = reader["num_pedido"].ToString();
+                    linea.Importe = reader["Importe"].ToString();
+                    linea.Cantidad = reader["Cantidad"].ToString();
+                    linea.Plato = Convert.ToSingle(reader["Plato"]);
+                    linea.Add(linea);
+                }
+            }
+                
+        }*/
+
 	}
 
 }

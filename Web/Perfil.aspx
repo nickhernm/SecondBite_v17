@@ -6,7 +6,7 @@
         <div class="ProfileElement">
             <div class="ProfilePic">
                 <a href="#">
-                    <img src="/Images/perfilPlaceHolder.jpg" alt="Foto de perfil">
+                    <img src="/Images/kawaii.png" alt="Foto de perfil">
                 </a>        
             </div>
         </div>

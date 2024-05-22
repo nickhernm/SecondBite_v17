@@ -21,8 +21,18 @@ namespace library
             get { return Cantidad; }
             set { Cantidad = value; }
         }
+        public int NumPed
+        {
+            get { return NumPed; }
+            set { NumPed = value; }
+        }
+        public string Plato
+        {
+            get { return Plato; }
+            set { Plato = value; }
+        }
 
-		public ENLinea()
+        public ENLinea()
 		{
             this.Linea = 0;
             this.Importe = 0;
@@ -62,6 +72,11 @@ namespace library
             CADLinea lin = new CADLinea();
             bool read = lin.Read(this);
             return read;
+        }
+
+        internal void Add(ENLinea linea)
+        {
+            throw new NotImplementedException();
         }
     }
 }
