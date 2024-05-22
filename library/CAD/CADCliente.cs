@@ -13,34 +13,10 @@ namespace library
 {
     public class CADCliente
     {
+        private string connectionString;
         public CADCliente()
         {
-            // Crear base de datos para conectar
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
         }
-
-        public bool Create(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
-
-        public bool Read(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
-
-        public bool Update(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
-
-        public bool Delete(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
-
     }
 }

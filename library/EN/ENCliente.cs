@@ -17,36 +17,13 @@ namespace library {
         public string nombre { get; set; } // Arreglar problme con tipo de dato Direccion
        // public Direccion direccion { get; set; } // Relación con Direccion
         public string telefono { get; set; }
-        public ENCliente()
+        public ENCliente(string dni, string correo, string nombre, string telefono)
 	    {
-
+            this.dni = dni;
+            this.correo = correo;
+            this.nombre = nombre;
+            this.telefono = telefono;
 	    }
-        public bool Create()
-        {
-            CADCliente cli = new CADCliente();
-            bool create = cli.Create(this);
-            return create;
-        }
-
-        public bool Update()
-        {
-            CADCliente cli = new CADCliente();
-            bool update = cli.Update(this);
-            return update;
-        }
-
-        public bool Delete()
-        {
-            CADCliente cli = new CADCliente();
-            bool delete = cli.Delete(this);
-            return delete;
-        }
-
-        public bool Read()
-        {
-            CADCliente cli = new CADCliente();
-            bool read = cli.Read(this);
-            return read;
-        }
+        
     }
 }

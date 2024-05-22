@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Quienessomos.aspx.cs" Inherits="Web.Quienessomos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    <link rel="stylesheet" type="text/css" href="Quienes.css" />
+
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-            <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image" CssClass="img-fluid" Height="619px" Width="1479px" />
+            <asp:Image ID="CoverImage" runat="server" ImageUrl="~/Images/cover2.jpeg" AlternateText="Cover Image"  />
             </div>
         </div>
         <div class="row">

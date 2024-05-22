@@ -43,3 +43,9 @@ C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.pd
 >>>>>>> develop
 >>>>>>> BK5734575
 >>>>>>> 28ea8a38838113268f2cd1183a84c3f18c2f06fe
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\bin\Debug\library.dll
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\bin\Debug\library.pdb
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.dll
+C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.pdb
