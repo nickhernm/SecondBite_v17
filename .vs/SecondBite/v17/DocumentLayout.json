@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\SecondBite2repo\\SecondBite_v17\\",
   "Documents": [
     {
@@ -15,6 +16,10 @@
       "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\",
+  "Documents": [],
+>>>>>>> 6223dfd149792239da7b04ea268783f617989340
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
