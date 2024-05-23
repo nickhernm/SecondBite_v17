@@ -9,10 +9,10 @@
             </a>
         </div>
         <div class="ProfileElement TextInfo">
-            <h1><asp:Label ID="lblNombreUsuario" runat="server" Text="Maria Fads" /></h1>
-            <p class="correo">Correo: <%# Eval("Correo") %> </p>         
-            <p class="nombre">Nombre: <%# Eval("Nombre") %> </p>
-            <p class="telefono">Telefono: <%# Eval("Telefono") %> </p>
+            <h1><asp:Label ID="lblNombreUsuario" runat="server" /></h1>
+            <p class="correo">Correo: <asp:Label ID="lblCorreo" runat="server" /></p>
+            <p class="nombre">Nombre: <asp:Label ID="lblNombre" runat="server" /></p>
+            <p class="telefono">Teléfono: <asp:Label ID="lblTelefono" runat="server" /></p>
         </div>
         <div class="ProfileElement ProfileActions">
             <a href="Cesta.aspx" class="btn">Cesta</a>

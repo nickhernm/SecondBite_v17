@@ -34,7 +34,7 @@ namespace Web
                     // Autenticar al usuario y establecer la sesión
                     FormsAuthentication.SetAuthCookie(username, false);
                     GuardarUsuarioAutenticado(username); // Pasar el nombre de usuario
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Perfil.aspx");
                 }
                 else
                 {
@@ -78,21 +78,24 @@ namespace Web
                 {
                     connection.Open();
 
-                    // Eliminar todos los registros en la vista
-                    string queryVistaEliminar = "DELETE FROM UsuariosAutenticados";
-                    using (SqlCommand deleteCommand = new SqlCommand(queryVistaEliminar, connection))
+                    // Crear o actualizar la vista con el usuario autenticado
+                    string queryVistaActualizar = @"
+                IF OBJECT_ID('dbo.prueba', 'V') IS NOT NULL
+                BEGIN
+                    DROP VIEW dbo.prueba;
+                END;
+                CREATE VIEW prueba AS 
+                SELECT correo, nombre, telefono, tipo_usuario 
+                FROM USUARIO 
+                WHERE correo = @Correo;
+            ";
+                    using (SqlCommand command = new SqlCommand(queryVistaActualizar, connection))
                     {
-                        deleteCommand.ExecuteNonQuery();
+                        command.Parameters.AddWithValue("@Correo", correo);
+                        command.ExecuteNonQuery();
                     }
 
-                    // Insertar el usuario autenticado en la vista
-                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (correo, nombre, tipo_usuario) " +
-                                                "SELECT correo, nombre, tipo_usuario FROM USUARIO WHERE correo = @Correo";
-                    using (SqlCommand insertCommand = new SqlCommand(queryVistaInsertar, connection))
-                    {
-                        insertCommand.Parameters.AddWithValue("@Correo", correo);
-                        insertCommand.ExecuteNonQuery();
-                    }
+                    Debug.WriteLine("Vista actualizada con el usuario autenticado.");
                 }
             }
             catch (Exception ex)
