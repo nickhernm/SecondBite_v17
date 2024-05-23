@@ -24,13 +24,22 @@ namespace Web
             rptPlatos.DataBind();
         }
 
-        protected void rptPlatos_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected void btnVerDetallesPlato_Click(object sender, EventArgs e)
+        {
+            Button btnVerDetalles = (Button)sender;
+            int platoId = Convert.ToInt32(btnVerDetalles.CommandArgument);
+            Response.Redirect("Plato_Individual.aspx?PlatoId=" + platoId);
+        }
+
+        /*protected void rptPlatos_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             if (e.CommandName == "VerDetalles")
             {
                 int platoId = Convert.ToInt32(e.CommandArgument);
                 Response.Redirect("Plato_Individual.aspx");
             }
-        }
+        }*/
+
+
     }
 }

@@ -8,7 +8,7 @@
                 <h3><%# Eval("Nombre") %></h3>
                 <p>Alérgenos: <%# Eval("Alergenos") %></p>
                 <p>Puntuación: <%# Eval("Puntuacion") %></p>
-                <asp:Button ID="btnVerDetalles" runat="server" Text="Ver Detalles" CommandName="VerDetalles" CommandArgument='<%# Eval("Id") %>' />
+                <asp:Button ID="btnVerDetalles" runat="server" Text="Ver Detalles" CommandName="VerDetalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetallesPlato_Click" />
             </div>
             <hr />
         </ItemTemplate>

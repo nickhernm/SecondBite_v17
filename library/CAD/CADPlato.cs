@@ -23,8 +23,9 @@ namespace library
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO PLATO (nombre, alergenos, puntuacion) VALUES (@Nombre, @Alergenos, @Puntuacion)";
+                    string query = "INSERT INTO PLATO (id, nombre, alergenos, puntuacion) VALUES (@PlatoId, @Nombre, @Alergenos, @Puntuacion)";
                     SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@PlatoId", en.Id);
                     command.Parameters.AddWithValue("@Nombre", en.Nombre);
                     command.Parameters.AddWithValue("@Alergenos", en.Alergenos);
                     command.Parameters.AddWithValue("@Puntuacion", en.Puntuacion);
