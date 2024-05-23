@@ -25,9 +25,12 @@ namespace Web
 
         protected void btnPasarAPagar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Ckeckout.aspx");
+            Response.Redirect("Checkout.aspx");
         }
 
+        protected void btnVaciarCesta_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

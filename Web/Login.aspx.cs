@@ -85,30 +85,30 @@ namespace Web
                 {
                     connection.Open();
 
+                    // Eliminar todos los registros
                     string queryVistaEliminar = "DELETE FROM UsuariosAutenticados";
-                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (Correo, Nombre, Telefono, Tipo_usuario) VALUES (@Correo, @Nombre, @Telefono, @Tipo_usuario)";
-                    string queryObtenerDato = "SELECT FROM corre, nombre, telefono, tipo_usuario FROM usario where correo = " + username;
-                    using (SqlCommand command = new SqlCommand())
+                    using (SqlCommand deleteCommand = new SqlCommand(queryVistaEliminar, connection))
                     {
-                        // Eliminar todos los registros
-                        command.Connection = connection;
-                        command.CommandText = queryVistaEliminar;
-                        command.ExecuteNonQuery();
+                        deleteCommand.ExecuteNonQuery();
+                    }
 
-                        // Insertar el usuario autenticado en la primera posición
-                        command.CommandText = queryVistaInsertar;
-                        command.Parameters.AddWithValue("@Correo", usuario.Correo);
-                        command.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-                        command.Parameters.AddWithValue("@Telefono", usuario.Telefono);
-                        command.Parameters.AddWithValue("@Tipo_usuario", usuario.Tipo_usuario);
-                        command.ExecuteNonQuery();
+                    // Insertar el usuario autenticado
+                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (Correo, Nombre, Tipo_usuario) VALUES (@Correo, @Nombre, @Tipo_usuario)";
+                    using (SqlCommand insertCommand = new SqlCommand(queryVistaInsertar, connection))
+                    {
+                        insertCommand.Parameters.AddWithValue("@Correo", usuario.Correo);
+                        insertCommand.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                        insertCommand.Parameters.AddWithValue("@Telefono", usuario.Telefono);
+                        insertCommand.Parameters.AddWithValue("@Tipo_usuario", usuario.Tipo_usuario);
+
+                        insertCommand.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de excepciones
-                Console.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
+                Debug.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
             }
         }
     }
