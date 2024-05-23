@@ -24,11 +24,11 @@ namespace Web
             // PENDINTE
         }
 
-        protected void btnVerDetalles_Click(object sender, EventArgs e)
+        protected void btnVerDetallesPlato_Click(object sender, EventArgs e)
         {
             Button btnVerDetalles = (Button)sender;
             int platoId = Convert.ToInt32(btnVerDetalles.CommandArgument);
-            Response.Redirect("Platos.aspx?PlatoId=" + platoId);
+            Response.Redirect("Plato_Individual.aspx?PlatoId=" + platoId);
         }
 
         private void CargarPlatosRestaurante(int restauranteId)

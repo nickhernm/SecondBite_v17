@@ -329,6 +329,7 @@
     </Compile>
     <Compile Include="Plato_Individual.aspx.cs">
       <DependentUpon>Plato_Individual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plato_Individual.aspx.designer.cs">
       <DependentUpon>Plato_Individual.aspx</DependentUpon>
