@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
-using library;
-=======
->>>>>>> ea3ffb7fb036a07add0a211820e65dc767a2a630
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -67,10 +57,6 @@ namespace Web
         {
             txtContrasena.TextMode = cbxMostrarContrasena.Checked ? TextBoxMode.SingleLine : TextBoxMode.Password;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> ea3ffb7fb036a07add0a211820e65dc767a2a630
 
         private bool AuthenticateUser(string username, string password)
         {

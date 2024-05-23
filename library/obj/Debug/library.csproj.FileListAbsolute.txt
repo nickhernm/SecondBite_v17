@@ -49,3 +49,9 @@ C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.c
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.dll
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.pdb
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\bin\Debug\library.dll
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\bin\Debug\library.pdb
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\obj\Debug\library.dll
+C:\Users\G513\Desktop\finalRepo\SecondBite_v17\library\obj\Debug\library.pdb
