@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-	public partial class Quienessomos : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class Quienes : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Web
 {
 
 
-    public partial class Quienessomos
+    public partial class Quienes
     {
 
         /// <summary>

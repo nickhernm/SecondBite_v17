@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Quienessomos.aspx.cs" Inherits="Web.Quienessomos" %>
+﻿<%@ Page Title="Quienes Somos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Quienes.aspx.cs" Inherits="Web.Quienes" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <link rel="stylesheet" type="text/css" href="Quienes.css" />
