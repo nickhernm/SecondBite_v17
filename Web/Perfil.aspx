@@ -14,8 +14,6 @@
             <div class="TextInfo">
                 <h1><asp:Label ID="lblNombreUsuario" runat="server" /></h1>
                 <p>Correo electrónico: <asp:Label ID="lblCorreo" runat="server" /></p>
-
-                <%--<p>Dirección: <asp:Label ID="lblDireccion" runat="server" /></p>--%>
             </div>
         </div>
         <div class="ProfileElement">
