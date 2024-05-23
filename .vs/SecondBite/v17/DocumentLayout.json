@@ -3,46 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\usuario\\source\\repos\\secondbite_v17as\\web\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\usuario\\source\\repos\\secondbite_v17as\\library\\en\\enusuariorestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enusuariorestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\usuario\\source\\repos\\secondbite_v17as\\web\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-=======
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramaj\\AppData\\Local\\Temp\\km0c0vh4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\web\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\library\\cad\\cadusuariorestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\cad\\cadusuariorestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\web\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramaj\\AppData\\Local\\Temp\\km0c0vh4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramaj\\AppData\\Local\\Temp\\km0c0vh4..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
+      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\library\\en\\enrestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enrestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -76,115 +38,15 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "ENUsuarioRestaurante.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENUsuarioRestaurante.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENUsuarioRestaurante.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\library\\EN\\ENUsuarioRestaurante.cs",
-              "RelativeToolTip": "library\\EN\\ENUsuarioRestaurante.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T10:09:15.518Z",
-=======
               "DocumentIndex": 0,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\ramaj\\AppData\\Local\\Temp\\km0c0vh4..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\km0c0vh4..sql",
-              "ToolTip": "SQLQuery1.sql *",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-23T15:20:31.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Perfil.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Perfil.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Perfil.aspx.cs",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Perfil.aspx.cs",
-              "RelativeToolTip": "Web\\Perfil.aspx.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAowEkAAAAJAAAA",
+              "Title": "ENRestaurante.cs",
+              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\EN\\ENRestaurante.cs",
+              "RelativeDocumentMoniker": "library\\EN\\ENRestaurante.cs",
+              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\EN\\ENRestaurante.cs",
+              "RelativeToolTip": "library\\EN\\ENRestaurante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T14:32:42.64Z",
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Login.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Login.aspx.cs",
-              "RelativeToolTip": "Web\\Login.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T10:08:31.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Login.aspx",
-              "RelativeDocumentMoniker": "Web\\Login.aspx",
-              "ToolTip": "C:\\Users\\usuario\\source\\repos\\SecondBite_v17as\\Web\\Login.aspx",
-              "RelativeToolTip": "Web\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-22T10:08:25.014Z",
-=======
-              "DocumentIndex": 2,
-              "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Login.aspx.cs",
-              "RelativeDocumentMoniker": "Web\\Login.aspx.cs",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Login.aspx.cs",
-              "RelativeToolTip": "Web\\Login.aspx.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAkwGkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T14:30:39.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Perfil.aspx",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Perfil.aspx",
-              "RelativeDocumentMoniker": "Web\\Perfil.aspx",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Perfil.aspx",
-              "RelativeToolTip": "Web\\Perfil.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-05-23T14:38:31.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CADUsuarioRestaurante.cs",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\CAD\\CADUsuarioRestaurante.cs",
-              "RelativeDocumentMoniker": "library\\CAD\\CADUsuarioRestaurante.cs",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\CAD\\CADUsuarioRestaurante.cs",
-              "RelativeToolTip": "library\\CAD\\CADUsuarioRestaurante.cs",
-              "ViewState": "AQIAAOAAAAAAAAAAAAAmwOUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T14:36:00.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Site.Master.cs",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Site.Master.cs",
-              "RelativeDocumentMoniker": "Web\\Site.Master.cs",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\Web\\Site.Master.cs",
-              "RelativeToolTip": "Web\\Site.Master.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAowGcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T14:30:51.974Z",
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
+              "WhenOpened": "2024-05-23T16:41:35.63Z",
               "EditorCaption": ""
             }
           ]
