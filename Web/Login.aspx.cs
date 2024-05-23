@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 ï»¿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
+=======
+using library;
+using System;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Web.Security;
+>>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
@@ -13,7 +22,8 @@ namespace Web
 {
     public partial class Login : Page
     {
-        private ENUsuarioRestaurante usuario;
+        private string username;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ContentPlaceHolder navigation = (ContentPlaceHolder)this.Master.FindControl("navBar");
@@ -27,32 +37,86 @@ namespace Web
         {
             try
             {
-                string name = TextBox1.Text;
-                string contrasena = TextBox2.Text;
+                username = txtUsuario.Text;
+                string contrasena = txtContrasena.Text;
 
-
-                usuario = new ENUsuarioRestaurante(contrasena, name);
-                if (usuario.CheckUser())
+                if (AuthenticateUser(username, contrasena))
                 {
-                    Response.Redirect("Pedidos.aspx");
+                    // Autenticar al usuario y establecer la sesión
+                    FormsAuthentication.SetAuthCookie(username, false);
+                    GuardarUsuarioAutenticado(username); // Pasar el nombre de usuario
+                    Response.Redirect("Perfil.aspx");
                 }
                 else
                 {
-                    lblMessage.Text = "Usuario Incorrecto";
-                    TextBox2.Text = "";
+                    lblMessage.Text = "Usuario o contraseña incorrectos. Verifique sus credenciales o regístrese.";
+                    txtContrasena.Text = "";
                 }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Login has failed. Error: {0}", ex.Message);
+                Debug.WriteLine("Login has failed. Error: {0}", ex.Message);
+            }
+        }
+
+        protected void cbxMostrarContrasena_CheckedChanged(object sender, EventArgs e)
+        {
+            txtContrasena.TextMode = cbxMostrarContrasena.Checked ? TextBoxMode.SingleLine : TextBoxMode.Password;
+        }
+<<<<<<< HEAD
+=======
+
+        private bool AuthenticateUser(string username, string password)
+        {
+            ENUsuarioRestaurante usuario = new ENUsuarioRestaurante();
+            usuario.Correo = username;
+            usuario.Contrasena = password;
+
+            if (usuario.CheckUser())
+            {
+                // Usuario autenticado correctamente
+                return true;
             }
 
+            return false;
         }
 
-        protected string GetCardContent()
+        private void GuardarUsuarioAutenticado(string correo)
         {
-            // Logic to retrieve dynamic content
-            return "Dynamic card content";
+            string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Crear o actualizar la vista con el usuario autenticado
+                    string queryVistaActualizar = @"
+                IF OBJECT_ID('dbo.prueba', 'V') IS NOT NULL
+                BEGIN
+                    DROP VIEW dbo.prueba;
+                END;
+                CREATE VIEW prueba AS 
+                SELECT correo, nombre, telefono, tipo_usuario 
+                FROM USUARIO 
+                WHERE correo = @Correo;
+            ";
+                    using (SqlCommand command = new SqlCommand(queryVistaActualizar, connection))
+                    {
+                        command.Parameters.AddWithValue("@Correo", correo);
+                        command.ExecuteNonQuery();
+                    }
+
+                    Debug.WriteLine("Vista actualizada con el usuario autenticado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Debug.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
+            }
         }
+>>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
     }
 }

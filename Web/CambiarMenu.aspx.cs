@@ -21,25 +21,28 @@ namespace Web
             if (e.CommandName == "Editar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvPlatos.Rows[index];
-                int platoId = Convert.ToInt32(row.Cells[0].Text);
+                int platoId = Convert.ToInt32(gvPlatos.DataKeys[index].Value);
                 CargarPlatoParaEditar(platoId);
             }
             else if (e.CommandName == "Eliminar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = gvPlatos.Rows[index];
-                int platoId = Convert.ToInt32(row.Cells[0].Text);
+                int platoId = Convert.ToInt32(gvPlatos.DataKeys[index].Value);
                 EliminarPlato(platoId);
                 CargarPlatos();
             }
+        }
+
+        protected void gvPlatos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPlatos.PageIndex = e.NewPageIndex;
+            CargarPlatos();
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
             string alergenos = txtAlergenos.Text;
-            float puntuacion = Convert.ToSingle(txtPuntuacion.Text);
 
             if (string.IsNullOrWhiteSpace(nombre))
             {
@@ -47,10 +50,11 @@ namespace Web
                 return;
             }
 
-            ENPlato plato = new ENPlato();
-            plato.Nombre = nombre;
-            plato.Alergenos = alergenos;
-            plato.Puntuacion = puntuacion;
+            ENPlato plato = new ENPlato
+            {
+                Nombre = nombre,
+                Alergenos = alergenos
+            };
 
             if (plato.Id == 0)
             {
@@ -82,20 +86,17 @@ namespace Web
 
         private void CargarPlatoParaEditar(int platoId)
         {
-            ENPlato plato = new ENPlato();
-            plato.Id = platoId;
+            ENPlato plato = new ENPlato { Id = platoId };
             if (plato.Read())
             {
                 txtNombre.Text = plato.Nombre;
                 txtAlergenos.Text = plato.Alergenos;
-                txtPuntuacion.Text = plato.Puntuacion.ToString();
             }
         }
 
         private void EliminarPlato(int platoId)
         {
-            ENPlato plato = new ENPlato();
-            plato.Id = platoId;
+            ENPlato plato = new ENPlato { Id = platoId };
             plato.Delete();
         }
 
@@ -103,7 +104,6 @@ namespace Web
         {
             txtNombre.Text = string.Empty;
             txtAlergenos.Text = string.Empty;
-            txtPuntuacion.Text = string.Empty;
         }
     }
 }

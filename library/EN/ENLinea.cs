@@ -17,8 +17,7 @@ namespace library
 
         public ENPlato plato { get; set; }
 
-
-		public ENLinea()
+        public ENLinea()
 		{
             this.linea = 0;
             this.pedido = 0;
@@ -63,11 +62,11 @@ namespace library
             bool read = lin.Read(this);
             return read;
         }
-        
-        public List<ENLinea> ReadAllPed()
+
+        internal void Add(ENLinea linea)
         {
-            CADLinea lin = new CADLinea();
-            return lin.ReadAllPed(this);
+            throw new NotImplementedException();
+
         }
     }
 }

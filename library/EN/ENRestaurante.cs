@@ -57,6 +57,12 @@ namespace library {
             return cadRestaurante.ObtenerRestaurantes(busqueda, comunidad, tipo, puntuacion);
         }
 
+        public List<ENRestaurante> ObtenerRestaurantes()
+        {
+            CADRestaurante cadRestaurante = new CADRestaurante();
+            return cadRestaurante.ObtenerRestaurantes();
+        }
+
         public List<string> ObtenerTipos()
         {
             CADRestaurante cadRestaurante = new CADRestaurante();

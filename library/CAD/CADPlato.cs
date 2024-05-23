@@ -40,19 +40,19 @@ namespace library
             }
         }
 
-        public List<ENPlato> ObtenerPlatosDestacados()
+        public List<ENPlato> ObtenerPlatosDestacados(int codigoRestaurante)
         {
-            List<ENPlato> platosDestacados = new List<ENPlato>();
-
+            List<ENPlato> platos = new List<ENPlato>();
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT TOP 10 * FROM PLATO ORDER BY puntuacion DESC";
+                    string query = "SELECT p.* FROM PLATO p INNER JOIN MENU m ON p.id = m.plato WHERE m.restaurante = @RestauranteId ORDER BY p.puntuacion DESC LIMIT 10";
                     SqlCommand command = new SqlCommand(query, connection);
-                    SqlDataReader reader = command.ExecuteReader();
+                    command.Parameters.AddWithValue("@RestauranteId", codigoRestaurante);
 
+                    SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
                         ENPlato plato = new ENPlato();
@@ -60,7 +60,7 @@ namespace library
                         plato.Nombre = reader["nombre"].ToString();
                         plato.Alergenos = reader["alergenos"].ToString();
                         plato.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
-                        platosDestacados.Add(plato);
+                        platos.Add(plato);
                     }
                 }
             }
@@ -69,11 +69,11 @@ namespace library
                 // Manejo de excepciones
                 Console.WriteLine("Error al obtener los platos destacados: " + ex.Message);
             }
-
-            return platosDestacados;
+            return platos;
         }
+    
 
-        public bool Read(ENPlato en)
+    public bool Read(ENPlato en)
         {
             try
             {

@@ -8,46 +8,49 @@ using System.Data.SqlClient;
 using System.Data.Common;
 using System.Data;
 using System.Configuration;
+using library;
+using library.library;
 
 namespace library
 {
     public class ENCesta
     {
-        public int Id { get; set; } // Arreglar tipo de datos Cliente y Plato
-        //public Cliente cliente { get; set; } // Relación con Cliente
-        //public List<Plato> Platos { get; set; } // Relación con Platos
+        public int Id { get; set; }
         public int? NumPedido { get; set; }
+
         public ENCesta()
         {
+        }
 
+        public ENCesta(int id, int? numPedido)
+        {
+            Id = id;
+            NumPedido = numPedido;
         }
 
         public bool Create()
         {
-            CADCesta ces = new CADCesta();
-            bool create = ces.Create(this);
-            return create;
+            CADCesta cad = new CADCesta();
+            return cad.Create(this);
         }
 
         public bool Update()
         {
-            CADCesta ces = new CADCesta();
-            bool update = ces.Update(this);
-            return update;
+            CADCesta cad = new CADCesta();
+            return cad.Update(this);
         }
 
         public bool Delete()
         {
-            CADCesta ces = new CADCesta();
-            bool delete = ces.Delete(this);
-            return delete;
+            CADCesta cad = new CADCesta();
+            return cad.Delete(this);
         }
 
         public bool Read()
         {
-            CADCesta ces = new CADCesta();
-            bool read = ces.Read(this);
-            return read;
+            CADCesta cad = new CADCesta();
+            return cad.Read(this);
         }
     }
 }
+

@@ -38,19 +38,6 @@
         <asp:Label ID="lblConfirmacion" runat="server" ForeColor="Green" Visible="false" Text="¡Mensaje enviado correctamente!"></asp:Label>
     </div>
 
-        <!-- Preguntas frecuentes -->
-    <div class="faq-section">
-        <h2>Preguntas Frecuentes</h2>
-        <asp:Repeater ID="rptFAQs" runat="server">
-            <ItemTemplate>
-                <div class="faq-item">
-                    <h3><%# Eval("Pregunta") %></h3>
-                    <p><%# Eval("Respuesta") %></p>
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
-
     <!-- Redes Sociales -->
     <div class="social-media">
         <h2>Síguenos en redes sociales</h2>

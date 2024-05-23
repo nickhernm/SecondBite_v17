@@ -13,34 +13,34 @@ namespace library
 {
     public class CADCliente
     {
+        private string connectionString;
         public CADCliente()
         {
-            // Crear base de datos para conectar
+            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
         }
 
-        public bool Create(ENCliente en)
+        public bool EsRestaurante(string username)
         {
-            return false;
-            //TODO
-        }
+            bool esRestaurante = false;
 
-        public bool Read(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
-        public bool Update(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
+                string query = "SELECT tipo_usuario FROM USUARIO WHERE correo = @Username";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
 
-        public bool Delete(ENCliente en)
-        {
-            return false;
-            //TODO
-        }
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        esRestaurante = Convert.ToBoolean(result);
+                    }
+                }
+            }
 
+            return esRestaurante;
+        }
     }
 }

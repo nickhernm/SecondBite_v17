@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using library;
@@ -10,7 +7,6 @@ namespace Web
 {
     public partial class Registrar : System.Web.UI.Page
     {
-        private ENUsuarioRestaurante usuario;
         protected void Page_Load(object sender, EventArgs e)
         {
             ContentPlaceHolder navigation = (ContentPlaceHolder)this.Master.FindControl("navBar");
@@ -28,29 +24,44 @@ namespace Web
                 string name = TextBox2.Text;
                 string telefono = TextBox3.Text;
                 string contrasena = TextBox4.Text;
-                bool tipo_usuario = false;
+                bool tipo_usuario = cbxRestaurante.Checked; // true si es restaurante, false si es cliente
 
-                
-usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);                if (usuario.Create())
+                if (IsValidEmail(email))
                 {
-                    Response.Redirect("Pedidos.aspx");
+                    ENUsuarioRestaurante usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);
+
+                    if (usuario.Create())
+                    {
+                        Response.Redirect("Pedidos.aspx");
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Datos faltantes y/o incorrectos";
+                        TextBox2.Text = "";
+                    }
                 }
                 else
                 {
-                    lblMessage.Text = "Datos faltantes y/o incorrectos";
-                    TextBox2.Text = "";
+                    lblMessage.Text = "Correo electrónico no válido";
                 }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Register has failed. Error: {0}", ex.Message);
+                lblMessage.Text = "Ha ocurrido un error: " + ex.Message;
             }
         }
 
-        protected string GetCardContent()
+        private bool IsValidEmail(string email)
         {
-            // Logic to retrieve dynamic content
-            return "Dynamic card content";
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

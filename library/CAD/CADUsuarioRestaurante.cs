@@ -9,6 +9,7 @@ using System.Data.Common;
 using System.Data;
 using System.Configuration;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace library
 {
@@ -38,10 +39,10 @@ namespace library
                         command.Parameters.AddWithValue("@nombre", en.Nombre);
                         command.Parameters.AddWithValue("@telefono", en.Telefono);
                         command.Parameters.AddWithValue("@contrasena", en.Contrasena);
-                        command.Parameters.AddWithValue("@tipo_usuario", false);
+                        command.Parameters.AddWithValue("@tipo_usuario", en.Tipo_usuario);
                         //command.Parameters.AddWithValue("@id_metodo_pago", en.Telefono);
-
-                        //System.Diagnostics.Debug.WriteLine(command.ExecuteReader());
+                        System.Diagnostics.Debug.WriteLine("en.Correo:  " + en.Correo);
+                        System.Diagnostics.Debug.WriteLine("en.Tipo_usuario:  " + en.Tipo_usuario);
                         int rowsAffected = command.ExecuteNonQuery();
 
 
@@ -151,7 +152,7 @@ namespace library
                 {
                     connection.Open();
 
-                    string query = "SELECT TOP 1 * FROM USUARIO WHERE correo = @correo";
+                    string query = "SELECT TOP 1 * FROM prueba WHERE correo = @correo";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -191,30 +192,24 @@ namespace library
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    //string query = "SELECT * FROM USUARIO WHERE correo = @correo";
-                    string query = "SELECT TOP 1 * FROM USUARIO WHERE nombre = @nombre AND contrasena = @contrasena";
-
+                    string query = "SELECT TOP 1 * FROM USUARIO WHERE correo = @correo AND contrasena = @contrasena";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@correo", en.Correo);
                         command.Parameters.AddWithValue("@contrasena", en.Contrasena);
-                        command.Parameters.AddWithValue("@nombre", en.Nombre);
-
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                en.Correo = reader["correo"].ToString();
                                 en.Nombre = reader["nombre"].ToString();
                                 en.Telefono = reader["telefono"].ToString();
                                 en.Tipo_usuario = ("1" == reader["tipo_usuario"].ToString());
                                 en.Metodo_pago = reader["correo"].ToString();
-                                en.Contrasena = reader["contrasena"].ToString();
                                 return true;
                             }
                             else
                             {
-                                return false;
+                                return false; // Credenciales incorrectas
                             }
                         }
                     }
@@ -222,8 +217,31 @@ namespace library
             }
             catch (SqlException ex)
             {
-                System.Diagnostics.Debug.WriteLine("Error al leer el usuario. Error: {0}", ex.Message);
+                Debug.WriteLine("Error al leer el usuario. Error: {0}", ex.Message);
                 return false;
+            }
+        }
+
+        public string ObtenerCorreoUsuario(string nombreUsuario)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT correo FROM USUARIO WHERE nombre = @nombreUsuario";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                        object result = command.ExecuteScalar();
+                        return result != null ? result.ToString() : string.Empty;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Error al obtener el correo del usuario. Error: {0}", ex.Message);
+                return string.Empty;
             }
         }
     }

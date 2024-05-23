@@ -105,11 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="APP_Data\DataBase.mdf" />
     <Content Include="APP_Data\DataBase_log.ldf">
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>
+    <Content Include="Checkout.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -132,6 +132,11 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Cesta.aspx" />
     <Content Include="Contact.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="Quienes.css" />
+    <Content Include="Quienessomos.aspx" />
+>>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
     <Content Include="Recomendaciones.aspx" />
     <Content Include="Restaurantes.aspx" />
     <Content Include="Platos.aspx" />
@@ -141,6 +146,8 @@
     <Content Include="Menu_Individual.aspx" />
     <Content Include="CambiarMenu.aspx" />
     <Content Include="Plato_Individual.aspx" />
+    <Content Include="libman.json" />
+    <Content Include="FAQS.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="MainPage.css" />
     <Content Include="Perfil.aspx" />
@@ -177,21 +184,22 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="styles.css" />
+    <Content Include="Menu.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -320,6 +328,13 @@
     </Compile>
     <Compile Include="Plato_Individual.aspx.designer.cs">
       <DependentUpon>Plato_Individual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQS.aspx.cs">
+      <DependentUpon>FAQS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQS.aspx.designer.cs">
+      <DependentUpon>FAQS.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
