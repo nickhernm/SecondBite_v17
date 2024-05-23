@@ -1,17 +1,15 @@
-<<<<<<< HEAD
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
-=======
 using library;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Web.Security;
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
@@ -63,8 +61,7 @@ namespace Web
         {
             txtContrasena.TextMode = cbxMostrarContrasena.Checked ? TextBoxMode.SingleLine : TextBoxMode.Password;
         }
-<<<<<<< HEAD
-=======
+
 
         private bool AuthenticateUser(string username, string password)
         {
@@ -117,6 +114,5 @@ namespace Web
                 Debug.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
             }
         }
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
     }
 }

@@ -132,11 +132,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Cesta.aspx" />
     <Content Include="Contact.aspx" />
-<<<<<<< HEAD
-=======
     <Content Include="Quienes.css" />
     <Content Include="Quienessomos.aspx" />
->>>>>>> 6870ef3b649fbcf11d54237b63a7550514495b76
     <Content Include="Recomendaciones.aspx" />
     <Content Include="Restaurantes.aspx" />
     <Content Include="Platos.aspx" />
