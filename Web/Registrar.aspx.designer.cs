@@ -33,13 +33,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// Control checkbox1.
+        /// Control cbxRestaurante.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checkbox1;
+        protected global::System.Web.UI.WebControls.CheckBox cbxRestaurante;
 
         /// <summary>
         /// Control TextBox3.

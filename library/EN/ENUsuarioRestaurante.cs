@@ -45,7 +45,6 @@ namespace library
             this.Contrasena = contrasena;
             System.Diagnostics.Debug.WriteLine("dest?: ", tipo_usuario);
         }
-
         public ENUsuarioRestaurante(string contrasena, string nombre)
         {
             this.Contrasena = contrasena;
@@ -83,9 +82,14 @@ namespace library
 
         public bool CheckUser()
         {
-            CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
-            bool read = usu.CheckUser(this);
-            return read;
+            CADUsuarioRestaurante cad = new CADUsuarioRestaurante();
+            return cad.CheckUser(this);
+        }
+
+        public string ObtenerCorreoUsuario(string nombreUsuario)
+        {
+            CADUsuarioRestaurante cad = new CADUsuarioRestaurante();
+            return cad.ObtenerCorreoUsuario(nombreUsuario);
         }
     }
 }

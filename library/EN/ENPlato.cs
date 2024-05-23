@@ -8,11 +8,13 @@ namespace library
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Alergenos { get; set; }
-        public float Puntuacion { get; set; } // Añadido para reflejar la columna "puntuacion" en la tabla PLATO
-        public List<ENOpinion> opinion { get; set; }
+        public float Puntuacion { get; set; }
+        public List<ENOpinion> Opiniones { get; set; }
+        public int RestauranteId { get; set; }
+
         public ENPlato()
         {
-
+            Opiniones = new List<ENOpinion>();
         }
 
         public List<ENPlato> ReadAll()
@@ -26,12 +28,6 @@ namespace library
             CADPlato pla = new CADPlato();
             bool create = pla.Create(this);
             return create;
-        }
-
-        public List<ENPlato> ObtenerPlatosDestacados()
-        {
-            CADPlato cadPlato = new CADPlato();
-            return cadPlato.ObtenerPlatosDestacados();
         }
 
         public bool Update()
@@ -55,11 +51,16 @@ namespace library
             return read;
         }
 
-        public List<ENPlato> ObtenerPlatosRestaurante(int restauranteId)
+        public List<ENPlato> ObtenerPlatosRestaurante(int codigoRestaurante)
         {
             CADPlato cadPlato = new CADPlato();
-            return cadPlato.ObtenerPlatosRestaurante(restauranteId);
+            return cadPlato.ObtenerPlatosRestaurante(codigoRestaurante);
+        }
+
+        public List<ENPlato> ObtenerPlatosDestacados(int codigoRestaurante)
+        {
+            CADPlato cadPlato = new CADPlato();
+            return cadPlato.ObtenerPlatosDestacados(codigoRestaurante);
         }
     }
 }
-

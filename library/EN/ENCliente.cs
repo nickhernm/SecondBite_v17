@@ -24,6 +24,17 @@ namespace library {
             this.nombre = nombre;
             this.telefono = telefono;
 	    }
-        
+
+        public bool EsRestaurante(string username)
+        {
+            // Lógica para verificar si el usuario es un restaurante
+            // Puedes utilizar la base de datos o cualquier otra forma de verificación
+            // Devuelve true si el usuario es un restaurante, false en caso contrario
+
+            // Ejemplo de implementación utilizando una consulta a la base de datos
+            CADCliente cadUsuario = new CADCliente();
+            return cadUsuario.EsRestaurante(username);
+        }
+
     }
 }

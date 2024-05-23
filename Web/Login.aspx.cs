@@ -1,19 +1,23 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using library;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace Web
 {
     public partial class Login : Page
     {
+        private string username;
         private ENUsuarioRestaurante usuario;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ContentPlaceHolder navigation = (ContentPlaceHolder)this.Master.FindControl("navBar");
@@ -27,32 +31,85 @@ namespace Web
         {
             try
             {
-                string name = TextBox1.Text;
-                string contrasena = TextBox2.Text;
+                username = txtUsuario.Text;
+                string contrasena = txtContrasena.Text;
 
-
-                usuario = new ENUsuarioRestaurante(contrasena, name);
-                if (usuario.CheckUser())
+                if (AuthenticateUser(username, contrasena))
                 {
+                    // Autenticar al usuario y establecer la sesión
+                    FormsAuthentication.SetAuthCookie(username, false);
                     Response.Redirect("Default.aspx");
                 }
                 else
                 {
-                    lblMessage.Text = "Usuario Incorrecto";
-                    TextBox2.Text = "";
+                    lblMessage.Text = "Usuario o contraseña incorrectos. Verifique sus credenciales o regístrese.";
+                    txtContrasena.Text = "";
                 }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Login has failed. Error: {0}", ex.Message);
+                Debug.WriteLine("Login has failed. Error: {0}", ex.Message);
             }
-
         }
 
-        protected string GetCardContent()
+        protected void cbxMostrarContrasena_CheckedChanged(object sender, EventArgs e)
         {
-            // Logic to retrieve dynamic content
-            return "Dynamic card content";
+            txtContrasena.TextMode = cbxMostrarContrasena.Checked ? TextBoxMode.SingleLine : TextBoxMode.Password;
+        }
+
+        private bool AuthenticateUser(string username, string password)
+        {
+            ENUsuarioRestaurante usuario = new ENUsuarioRestaurante();
+            usuario.Correo = username;
+            usuario.Contrasena = password;
+
+            if (usuario.CheckUser())
+            {
+                // Autenticar al usuario
+                FormsAuthentication.RedirectFromLoginPage(username, false);
+                GuardarUsuarioAutenticado(usuario);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        private void GuardarUsuarioAutenticado(ENUsuarioRestaurante usuario)
+        {
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string queryVistaEliminar = "DELETE FROM UsuariosAutenticados";
+                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (Correo, Nombre, Telefono, Tipo_usuario) VALUES (@Correo, @Nombre, @Telefono, @Tipo_usuario)";
+                    string queryObtenerDato = "SELECT FROM corre, nombre, telefono, tipo_usuario FROM usario where correo = " + username;
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        // Eliminar todos los registros
+                        command.Connection = connection;
+                        command.CommandText = queryVistaEliminar;
+                        command.ExecuteNonQuery();
+
+                        // Insertar el usuario autenticado en la primera posición
+                        command.CommandText = queryVistaInsertar;
+                        command.Parameters.AddWithValue("@Correo", usuario.Correo);
+                        command.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                        command.Parameters.AddWithValue("@Telefono", usuario.Telefono);
+                        command.Parameters.AddWithValue("@Tipo_usuario", usuario.Tipo_usuario);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
+            }
         }
     }
 }

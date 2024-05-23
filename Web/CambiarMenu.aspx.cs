@@ -35,6 +35,12 @@ namespace Web
             }
         }
 
+        protected void gvPlatos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPlatos.PageIndex = e.NewPageIndex;
+            CargarPlatos();
+        }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;

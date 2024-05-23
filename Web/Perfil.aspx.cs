@@ -21,13 +21,11 @@ namespace Web
         private void CargarDatosPerfil()
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
-            string query = "SELECT nombre, correo FROM USUARIO WHERE correo = @correo";
+            string query = "SELECT TOP 1 Correo FROM UsuariosAutenticados";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@correo", 1); // Reemplaza con el ID del usuario actual
-
                 try
                 {
                     connection.Open();
@@ -37,7 +35,7 @@ namespace Web
                     {
                         while (reader.Read())
                         {
-                            lblNombreUsuario.Text = reader["nombre"].ToString();
+                        
                             lblCorreo.Text = reader["correo"].ToString();
                         
                             //lblDireccion.Text = reader["direccion"].ToString();

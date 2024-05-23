@@ -5,9 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <%-- <title><%: Page.Title %> SECONDBITE 
-    </title>--%>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -18,6 +15,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .username {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -40,7 +46,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        
+
         <div class="container">
             <header>
                 <div class="TopContainer">
@@ -51,13 +57,14 @@
                     </div>
                     <div class="AuthButtons">
                         <asp:Panel ID="PanelAnonymous" runat="server">
-                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" OnClick="btnSignIn_Click" />
-                            <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
+                            <asp:Button ID="btnSignIn" runat="server" Text="Log In" OnClick="btnSignIn_Click" />
+                            <asp:Button ID="btnSignUp" runat="server" Text="Register" OnClick="btnSignUp_Click" />
                         </asp:Panel>
                         <asp:Panel ID="PanelAuthenticated" runat="server">
+                            <asp:LinkButton ID="lnkUsername" runat="server" CssClass="username" OnClick="lnkUsername_Click"></asp:LinkButton>
                             <asp:Button ID="btnProfile" runat="server" Text="Profile" OnClick="btnProfile_Click" />
-                        </asp:Panel>
-                    </div>                    
+                    </asp:Panel>
+                    </div>
                 </div>
 
                 <nav class="navbar" style="background-color: #692A8A;">
@@ -67,6 +74,9 @@
                         <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
                         <li><a href="Contact">CONTACTO</a></li>
                         <li><a href="Quienessomos">QUIENES SOMOS</a></li>
+                      
+                            <li><a href="CambiarMenu">CAMBIAR MENÚ</a></li>
+                     
                     </ul>
                 </nav>
             </header>
