@@ -24,12 +24,21 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label lblNombreUsuario;
 
         /// <summary>
-        /// Control lblCorreo.
+        /// Control lblMensajeOpiniones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCorreo;
+        protected global::System.Web.UI.WebControls.Label lblMensajeOpiniones;
+
+        /// <summary>
+        /// Control rptOpiniones.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptOpiniones;
     }
 }

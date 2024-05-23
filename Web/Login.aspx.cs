@@ -1,22 +1,17 @@
+using library;
 using System;
-using System.Collections.Generic;
-using System.Data;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
-using library;
 
 namespace Web
 {
     public partial class Login : Page
     {
         private string username;
-        private ENUsuarioRestaurante usuario;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,6 +33,7 @@ namespace Web
                 {
                     // Autenticar al usuario y establecer la sesión
                     FormsAuthentication.SetAuthCookie(username, false);
+                    GuardarUsuarioAutenticado(username); // Pasar el nombre de usuario
                     Response.Redirect("Default.aspx");
                 }
                 else
@@ -65,19 +61,16 @@ namespace Web
 
             if (usuario.CheckUser())
             {
-                // Autenticar al usuario
-                FormsAuthentication.RedirectFromLoginPage(username, false);
-                GuardarUsuarioAutenticado(usuario);
-
+                // Usuario autenticado correctamente
                 return true;
             }
 
             return false;
         }
 
-        private void GuardarUsuarioAutenticado(ENUsuarioRestaurante usuario)
+        private void GuardarUsuarioAutenticado(string correo)
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
 
             try
             {
@@ -85,22 +78,19 @@ namespace Web
                 {
                     connection.Open();
 
-                    // Eliminar todos los registros
+                    // Eliminar todos los registros en la vista
                     string queryVistaEliminar = "DELETE FROM UsuariosAutenticados";
                     using (SqlCommand deleteCommand = new SqlCommand(queryVistaEliminar, connection))
                     {
                         deleteCommand.ExecuteNonQuery();
                     }
 
-                    // Insertar el usuario autenticado
-                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (Correo, Nombre, Tipo_usuario) VALUES (@Correo, @Nombre, @Tipo_usuario)";
+                    // Insertar el usuario autenticado en la vista
+                    string queryVistaInsertar = "INSERT INTO UsuariosAutenticados (correo, nombre, tipo_usuario) " +
+                                                "SELECT correo, nombre, tipo_usuario FROM USUARIO WHERE correo = @Correo";
                     using (SqlCommand insertCommand = new SqlCommand(queryVistaInsertar, connection))
                     {
-                        insertCommand.Parameters.AddWithValue("@Correo", usuario.Correo);
-                        insertCommand.Parameters.AddWithValue("@Nombre", usuario.Nombre);
-                        insertCommand.Parameters.AddWithValue("@Telefono", usuario.Telefono);
-                        insertCommand.Parameters.AddWithValue("@Tipo_usuario", usuario.Tipo_usuario);
-
+                        insertCommand.Parameters.AddWithValue("@Correo", correo);
                         insertCommand.ExecuteNonQuery();
                     }
                 }

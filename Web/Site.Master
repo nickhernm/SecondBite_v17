@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Web.SiteMaster" %>
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
@@ -60,10 +60,10 @@
                             <asp:Button ID="btnSignIn" runat="server" Text="Log In" OnClick="btnSignIn_Click" />
                             <asp:Button ID="btnSignUp" runat="server" Text="Register" OnClick="btnSignUp_Click" />
                         </asp:Panel>
-                        <asp:Panel ID="PanelAuthenticated" runat="server">
+                        <asp:Panel ID="PanelAuthenticated" runat="server" Visible="false">
                             <asp:LinkButton ID="lnkUsername" runat="server" CssClass="username" OnClick="lnkUsername_Click"></asp:LinkButton>
                             <asp:Button ID="btnProfile" runat="server" Text="Profile" OnClick="btnProfile_Click" />
-                    </asp:Panel>
+                        </asp:Panel>
                     </div>
                 </div>
 
@@ -74,9 +74,7 @@
                         <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
                         <li><a href="Contact">CONTACTO</a></li>
                         <li><a href="Quienessomos">QUIENES SOMOS</a></li>
-                      
-                            <li><a href="FAQS">FAQs</a></li>
-                     
+                        <li><a href="FAQS">FAQs</a></li>
                     </ul>
                 </nav>
             </header>

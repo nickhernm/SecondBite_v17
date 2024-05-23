@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using library;
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using library;
 
 namespace Web
 {
@@ -28,7 +25,7 @@ namespace Web
                 PanelAnonymous.Visible = false;
                 PanelAuthenticated.Visible = true;
 
-                // Obtener el correo electrónico del usuario autenticado desde la tabla temporal o vista
+                // Obtener el correo electrónico del usuario autenticado desde la vista
                 string correoUsuario = ObtenerCorreoUsuarioAutenticado();
 
                 // Mostrar el correo electrónico en la barra de navegación
@@ -47,7 +44,6 @@ namespace Web
             }
         }
 
-
         private bool VerificarUsuarioRestaurante(string correoUsuario)
         {
             ENUsuarioRestaurante usuario = new ENUsuarioRestaurante();
@@ -61,22 +57,6 @@ namespace Web
             return false; // Si no se encuentra el usuario, se asume que no es un restaurante
         }
 
-        private bool AuthenticateUser(string username, string password)
-        {
-            ENUsuarioRestaurante usuario = new ENUsuarioRestaurante();
-            usuario.Correo = username;
-            usuario.Contrasena = password;
-
-            if (usuario.CheckUser())
-            {
-                // Autenticar al usuario
-                FormsAuthentication.RedirectFromLoginPage(username, false);
-                return true;
-            }
-
-            return false;
-        }
-
         private string ObtenerCorreoUsuarioAutenticado()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
@@ -85,7 +65,7 @@ namespace Web
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT TOP 1 Correo FROM UsuariosAutenticados"; 
+                    string query = "SELECT TOP 1 correo FROM UsuariosAutenticados";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         object result = command.ExecuteScalar();

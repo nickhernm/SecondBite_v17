@@ -152,7 +152,7 @@ namespace library
                 {
                     connection.Open();
 
-                    string query = "SELECT TOP 1 * FROM USUARIO WHERE correo = @correo";
+                    string query = "SELECT TOP 1 * FROM prueba WHERE correo = @correo";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {

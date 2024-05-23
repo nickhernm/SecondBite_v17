@@ -52,19 +52,25 @@ El esquema entidad-relación de la base de datos se encuentra en la carpeta raí
 ## APUNTES ENTREGA FINAL:
 
 # Propuestas:
- 
+
+
 # Dificultades encontradas:
+- Problemas en coordinación y entregas a tiempo.
+- Mal reparto de tareas.
+- Proyecto demasido grancde
 
 # Problemas que se han encontrado:
 
 ## USUARIOS Y CONTRASEÑAS PARA EL REGISTRO
+Hemos proporcionado dos tipos de usuarios en la base de datos para poder registrarse como cliente y como restaurante:
+
 # Como usuario:
-Nombre: cesar98
-Contraseña: vivalafruta
+Usuario: bobsmith@gmail.com
+Contraseña: passwordsecure
 
 # Como restaurante:
-Nombre: UAMilDelicias
-contraseña: UAmildeli
+Usuario: cantinamex@gmail.com
+Contraseña: restaurantpass2
 
 ## TAREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
 

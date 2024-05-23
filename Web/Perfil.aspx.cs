@@ -1,55 +1,64 @@
-﻿using System;
+﻿using library;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class Perfil : System.Web.UI.Page
+    public partial class Perfil : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            ENUsuarioRestaurante usur = new ENUsuarioRestaurante();
+            usur.Read();
+        }
+
+        private void CargarOpiniones()
+        {
+            List<ENOpinion> opiniones = ObtenerOpinionesDeUsuario();
+
+            if (opiniones != null && opiniones.Count > 0)
             {
-                CargarDatosPerfil();
+                rptOpiniones.DataSource = opiniones;
+                rptOpiniones.DataBind();
+            }
+            else
+            {
+                // Mostrar mensaje si no hay opiniones
+                lblMensajeOpiniones.Text = "No hay opiniones disponibles.";
+                lblMensajeOpiniones.Visible = true;
             }
         }
 
-        private void CargarDatosPerfil()
+        private List<ENOpinion> ObtenerOpinionesDeUsuario()
         {
-            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
-            string query = "SELECT TOP 1 Correo FROM UsuariosAutenticados";
+            List<ENOpinion> opiniones = new List<ENOpinion>();
+            string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                string query = "SELECT Descripcion, Valoracion FROM OPINION WHERE Usuario = @Correo";
                 SqlCommand command = new SqlCommand(query, connection);
-                try
-                {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                command.Parameters.AddWithValue("@Correo", lblCorreo.Text);
 
-                    if (reader.HasRows)
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ENOpinion opinion = new ENOpinion
                     {
-                        while (reader.Read())
-                        {
-                        
-                            lblCorreo.Text = reader["correo"].ToString();
-                        
-                            //lblDireccion.Text = reader["direccion"].ToString();
-
-                        }
-                    }
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    // Manejar excepción
-                    Response.Write(ex.Message);
+                        Descripcion = reader["Descripcion"].ToString(),
+                        Valoracion = (float)Convert.ToDouble(reader["Valoracion"])
+                    };
+                    opiniones.Add(opinion);
                 }
             }
+
+            return opiniones;
         }
     }
 }
