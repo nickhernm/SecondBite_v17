@@ -12,41 +12,24 @@ using System.Configuration;
 namespace library {
     public class ENCliente
     {
-        public string dni { get; set; } // Clave primaria
+        public string dni { get; set; } 
         public string correo { get; set; }
-        public string nombre { get; set; } // Arreglar problme con tipo de dato Direccion
-       // public Direccion direccion { get; set; } // Relación con Direccion
+        public string nombre { get; set; } 
+       // public Direccion direccion { get; set; } 
         public string telefono { get; set; }
-        public ENCliente()
+        public ENCliente(string dni, string correo, string nombre, string telefono)
 	    {
-
+            this.dni = dni;
+            this.correo = correo;
+            this.nombre = nombre;
+            this.telefono = telefono;
 	    }
-        public bool Create()
+
+        public bool EsRestaurante(string username)
         {
-            CADCliente cli = new CADCliente();
-            bool create = cli.Create(this);
-            return create;
+            CADCliente cadUsuario = new CADCliente();
+            return cadUsuario.EsRestaurante(username);
         }
 
-        public bool Update()
-        {
-            CADCliente cli = new CADCliente();
-            bool update = cli.Update(this);
-            return update;
-        }
-
-        public bool Delete()
-        {
-            CADCliente cli = new CADCliente();
-            bool delete = cli.Delete(this);
-            return delete;
-        }
-
-        public bool Read()
-        {
-            CADCliente cli = new CADCliente();
-            bool read = cli.Read(this);
-            return read;
-        }
     }
 }

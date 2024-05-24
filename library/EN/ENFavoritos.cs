@@ -13,8 +13,8 @@ namespace library {
     public class ENFavoritos
     {
         public int id { get; set; } // Arreglar tipo de dato Cliente y Plato
-        //public Cliente cliente { get; set; } // Relación con Cliente
-        //public List<Plato> Platos { get; set; } // Relación con Plato
+        public ENUsuarioRestaurante usuario { get; set; }
+        public List<ENPlato> Platos { get; set; }
         public ENFavoritos()
 	    {
 
@@ -46,6 +46,21 @@ namespace library {
             CADFavoritos lin = new CADFavoritos();
             bool read = lin.Read(this);
             return read;
+        }
+
+        public List<ENFavoritos> ReadAll()
+        {
+            CADFavoritos fav = new CADFavoritos();
+            return fav.ReadAll();
+        }
+
+        public List<ENPlato> ReadFavoritosUsu(string value)
+        {
+            CADFavoritos fav = new CADFavoritos();
+            ENFavoritos eNFavoritos = new ENFavoritos();
+            eNFavoritos.usuario = new ENUsuarioRestaurante();
+            eNFavoritos.usuario.Correo = value;
+            return fav.ReadFavoritosUsu(eNFavoritos);
         }
     }
 }

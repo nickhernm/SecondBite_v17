@@ -13,16 +13,15 @@ namespace library
 {
     public class ENDireccion
     {
-        public int calle_num { get; set; } // Clave primaria
-        public int cod_p { get; set; }
-        public string ciudad { get; set; }
-        public string comunidad { get; set; } // Arreglar tipo de dato Restaurante y Cliente
-        //public Restaurante restaurante { get; set; } // Relación con Restaurante
-        //public Cliente cliente { get; set; } // Relación con Cliente
-        public ENDireccion()
-	    {
+        public string NombreCalle { get; set; }
+        public int CalleNumero { get; set; }
+        public int CodigoPostal { get; set; }
+        public string Ciudad { get; set; }
+        public string Comunidad { get; set; }
+        public int RestauranteId { get; set; } 
+        public string ClienteCorreo { get; set; } 
 
-	    }
+        public ENDireccion() { }
 
         public bool Create()
         {

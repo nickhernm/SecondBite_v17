@@ -3,13 +3,19 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
-
+    <asp:Repeater ID="Repeater1" runat="server">
+        <ItemTemplate>
     <div class="card" >
         <div class="card-header row" style="display: flex; justify-content: space-between;">
-            <h2 style="flex: 1;"><asp:Label ID="txtOrder" runat="server"></asp:Label></h2>
-            <h2 style="flex: 1; text-align: right;"><asp:Label ID="txtPriceTotal" runat="server"></asp:Label></h2>
+            <h2 style="flex: 1;">Num_ped:<%# DataBinder.Eval(Container.DataItem, "numPedido") %></h2>
+            <h2 style="flex: 1;"><%# DataBinder.Eval(Container.DataItem, "emailPedido") %></h2>
+            <h2 style="flex: 1; text-align: right;"><%# DataBinder.Eval(Container.DataItem, "fechaPedido") %></h2>
         </div>
+        
     <div class="card-body row">
+        <asp:Repeater ID="Repeater2" datasource='<%# DataBinder.Eval(Container.DataItem, "lineasPedido") %>' runat="server">
+    <ItemTemplate>
+                
         <div class="card" style="position: relative">
             <div class="row" style="position: absolute; top: 0px; right: 10px; padding: 10px;">
                 <asp:Button ID="Button2" runat="server" Text="Add favorite" OnClick="Delete"></asp:Button>
@@ -18,28 +24,38 @@
                 <asp:Button ID="Button3" runat="server" Text="Buy" OnClick="Delete"></asp:Button>
             </div>
             <div class="card-header">
-                <h2><asp:Label ID="txtTitle" runat="server"></asp:Label></h2>
+                <h2>Linea: <%# DataBinder.Eval(Container.DataItem, "linea") %></h2>
+                <h2>Pedido: <%# DataBinder.Eval(Container.DataItem, "pedido") %></h2>
+                <h2>Importe: <%# DataBinder.Eval(Container.DataItem, "importe") %></h2>
+                <h2>Cantidad: <%# DataBinder.Eval(Container.DataItem, "cantidad") %></h2>
+
             </div>
             <div class="card-body row">
                 <div style="width: 300px;float: left; position: relative; height:200px">
                 <p><asp:Label ID="txtContent" runat="server"></asp:Label></p>
                     <div style="position: absolute; bottom: 0px;">
-                        <h3 ><asp:Label ID="txtPrice" runat="server"></asp:Label> </h3>
-                        <div >Unidades: 2</div>
+                        <h2>Id: <%# DataBinder.Eval(Container.DataItem, "plato.Id") %></h2>
+                        <h2>Nombre: <%# DataBinder.Eval(Container.DataItem, "plato.Nombre") %></h2>
+                        <h2>Alergenos: <%# DataBinder.Eval(Container.DataItem, "plato.Alergenos") %></h2>
+                        <h2>Puntuacion: <%# DataBinder.Eval(Container.DataItem, "plato.Puntuacion") %>/5</h2>
+                            
+                      
                     </div>
                 </div>
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/sandwich.jpg"  AlternateText="Image" Width="200px" Height="200px" style="float: right;"></asp:Image>
-            </div>
+                </div>
         </div>
+        </ItemTemplate>
+    </asp:Repeater>
+
     </div>
     <div class="card-header row" style="display: flex; justify-content: space-between;">
         <h2>Enviado</h2>
     </div>
     </div>
-
+            </ItemTemplate>
+    </asp:Repeater>
 
     <style>
-        /* CSS styles for card */
         .card {
             border: 1px solid #ddd;
             border-radius: 8px;

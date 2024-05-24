@@ -1,34 +1,45 @@
-﻿<%@ Page Title="Platos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Platos.aspx.cs" Inherits="Web.Platos" %>
-
-
-
+﻿<%@ Page Title="Lista de Platos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Platos.aspx.cs" Inherits="Web.Platos" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <link rel="stylesheet" type="text/css" href="Platos.css" />
+    <h2>Lista de Platos</h2>
     
+    <div>
+        <asp:Label ID="lblMensaje" runat="server" Text="" Visible="False" ForeColor="Red"></asp:Label>
+    </div>
     
-    <!--<link rel="stylesheet" type="text/css" href="styles.css" /> ARREGLAR STYLE.CSS-->
-    <!-- Navbar superior -->
-         
+    <div class="filter-container">
+        <asp:Label ID="lblFiltroAlergenos" runat="server" Text="Alérgenos: "></asp:Label>
+        <asp:DropDownList ID="ddlAlergenos" runat="server">
+            <asp:ListItem Value="" Text="Todos" />
+            <asp:ListItem Value="soja" Text="Soja" />
+            <asp:ListItem Value="pescado" Text="Pescado" />
+        </asp:DropDownList>
 
-    <!-- Título del menú -->
-    <div class="purple-highlight">
-        <h1>Menú de <asp:Literal ID="Restaurante" runat="server"></asp:Literal></h1>
+        <asp:Label ID="lblFiltroPuntuacion" runat="server" Text="Puntuación: "></asp:Label>
+        <asp:DropDownList ID="ddlPuntuacion" runat="server">
+            <asp:ListItem Value="" Text="Todas" />
+            <asp:ListItem Value="5" Text="5" />
+            <asp:ListItem Value="4" Text="4" />
+            <asp:ListItem Value="3" Text="3" />
+            <asp:ListItem Value="2" Text="2" />
+            <asp:ListItem Value="1" Text="1" />
+        </asp:DropDownList>
+
+        <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" />
     </div>
 
-    <!-- Lista de platos -->
-    <div class="platos-list">
-        <asp:Repeater ID="repeaterPlatos" runat="server">
+    <div class="dish-grid">
+        <asp:Repeater ID="rptPlatos" runat="server">
             <ItemTemplate>
-                <div class="plato">
-                    <asp:Image ID="imgPlato" runat="server" ImageUrl='<%# Eval("ImagenUrl") %>' AlternateText='<%# Eval("Nombre") %>' CssClass="plato-imagen" />
+                <div class="dish-card">
                     <h3><%# Eval("Nombre") %></h3>
-                    <p>Precio: <asp:Label ID="lblPrecio" runat="server" Text='<%# Eval("Precio", "{0:C}") %>'></asp:Label></p>
-                    <p>Alérgenos: <asp:Label ID="lblAlergenos" runat="server" Text='<%# Eval("Alergenos") %>'></asp:Label></p>
-                    <p>Puntuación: <asp:Label ID="lblPuntuacion" runat="server" Text='<%# Eval("Puntuacion") %>'></asp:Label></p>
-                    <asp:Button ID="btnAnadirCesta" runat="server" Text="Añadir a cesta" OnClick="btnAnadirCesta_Click" CommandArgument='<%# Eval("PlatoId") %>' />
+                    <p>Alérgenos: <%# Eval("Alergenos") %></p>
+                    <p>Puntuación: <%# Eval("Puntuacion") %></p>
+                    <asp:Button ID="btnVerDetalles" runat="server" Text="Ver Detalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetalles_Click" />
                 </div>
+                <hr />
             </ItemTemplate>
         </asp:Repeater>
     </div>
 </asp:Content>
-

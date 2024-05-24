@@ -1,0 +1,42 @@
+﻿.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Añadido para mejorar la distribución */
+}
+
+.col-md-6 {
+    flex: 1;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 200px; /* Definir una altura fija para igualar las tarjetas */
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuir el contenido uniformemente */
+}
+
+    .card-body h3 {
+        margin: 0;
+        color: #333;
+    }
+
+    .card-body p {
+        margin: 0;
+        color: #666;
+    }

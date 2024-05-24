@@ -11,37 +11,85 @@ using System.Configuration;
 
 namespace library
 {
-	public class CADCesta
-	{
-    	public CADCesta()
-    	{
-    	    // Crear base de datos para conectar
-    	}
+    namespace library
+    {
+        public class CADCesta
+        {
+            private string connectionString;
 
-    	public bool Create(ENCesta en)
-    	{
-            return false;
-            //TODO
+            public CADCesta()
+            {
+                connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
+            }
+
+            public bool Create(ENCesta en)
+            {
+                bool created = false;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO CESTA (id, num_pedido) VALUES (@id, @num_pedido)";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", en.Id);
+                    cmd.Parameters.AddWithValue("@num_pedido", en.NumPedido ?? (object)DBNull.Value);
+                    con.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    created = rows > 0;
+                }
+                return created;
+            }
+
+            public bool Update(ENCesta en)
+            {
+                bool updated = false;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE CESTA SET num_pedido = @num_pedido WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", en.Id);
+                    cmd.Parameters.AddWithValue("@num_pedido", en.NumPedido ?? (object)DBNull.Value);
+                    con.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    updated = rows > 0;
+                }
+                return updated;
+            }
+
+            public bool Read(ENCesta en)
+            {
+                bool found = false;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT id, num_pedido FROM CESTA WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", en.Id);
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        en.Id = (int)reader["id"];
+                        en.NumPedido = reader["num_pedido"] != DBNull.Value ? (int?)reader["num_pedido"] : null;
+                        found = true;
+                    }
+                    reader.Close();
+                }
+                return found;
+            }
+
+            public bool Delete(ENCesta en)
+            {
+                bool deleted = false;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM CESTA WHERE id = @id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@id", en.Id);
+                    con.Open();
+                    int rows = cmd.ExecuteNonQuery();
+                    deleted = rows > 0;
+                }
+                return deleted;
+            }
         }
-
-        public bool Update(ENCesta en)
-    	{
-            return false;
-            //TODO
-        }
-
-        public bool Read(ENCesta en)
-    	{
-            return false;
-            //TODO
-        }
-
-        public bool Delete(ENCesta en)
-    	{
-            return false;
-            //TODO
-        }
-
-	}
+    }
 
 }

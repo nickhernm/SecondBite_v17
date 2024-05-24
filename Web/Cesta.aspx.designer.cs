@@ -24,6 +24,15 @@ namespace Web
         protected global::System.Web.UI.WebControls.GridView gvCesta;
 
         /// <summary>
+        /// Control lblMensajeCestaVacia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensajeCestaVacia;
+
+        /// <summary>
         /// Control btnVaciarCesta.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,23 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnVaciarCesta;
+
+        /// <summary>
+        /// Control lblTotalEuros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalEuros;
+
+        /// <summary>
+        /// Control btnPasarAPagar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPasarAPagar;
     }
 }

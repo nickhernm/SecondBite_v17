@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using library;
 
 namespace Web
 {
@@ -20,13 +18,50 @@ namespace Web
 
         protected void RegistrarUsu(object sender, EventArgs e)
         {
-            Response.Redirect("Pedidos.aspx");
+            try
+            {
+                string email = TextBox1.Text;
+                string name = TextBox2.Text;
+                string telefono = TextBox3.Text;
+                string contrasena = TextBox4.Text;
+                bool tipo_usuario = cbxRestaurante.Checked; 
+
+                if (IsValidEmail(email))
+                {
+                    ENUsuarioRestaurante usuario = new ENUsuarioRestaurante(email, name, telefono, tipo_usuario, contrasena);
+
+                    if (usuario.Create())
+                    {
+                        Response.Redirect("Pedidos.aspx");
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Datos faltantes y/o incorrectos";
+                        TextBox2.Text = "";
+                    }
+                }
+                else
+                {
+                    lblMessage.Text = "Correo electrónico no válido";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Ha ocurrido un error: " + ex.Message;
+            }
         }
 
-        protected string GetCardContent()
+        private bool IsValidEmail(string email)
         {
-            // Logic to retrieve dynamic content
-            return "Dynamic card content";
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

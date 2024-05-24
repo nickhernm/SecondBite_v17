@@ -1,23 +1,29 @@
-﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Web.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Web.SiteMaster" %>
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <%-- <title><%: Page.Title %> SECONDBITE 
-    </title>--%>
-
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="MainPage.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="MainPage.css" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .username {
+            color: #fff;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -40,47 +46,51 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-        
-        <div class="container body-content">
-            <header>
-                <div class ="TopContainer">
-                    <div class="TopElement">
-                        <div class="LogoMenu">
-                            <a href="Default.aspx">
-                                <img src="/Images/logo.jpg" width="100px" alt="Menu Principal">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="TopElement">
-                        <div class ="LogButtons">
-                            <div class="mitad">
-                                <asp:Button ID="Login" runat="server" Text="Sing In" OnClick="GoLogIn"/>
-                                <asp:Button ID="Registro" runat="server" Text="Sing Up" OnClick="GoSignIn"/>
-                            </div>
 
-                            <asp:Button class="entero" ID="Perfil" runat="server" Text="Profile" OnClick="GoPerfil"/> <%-- falta el evento  --%>
-                        </div>
-                    </div>                    
+        <div class="container">
+            <header>
+                <div class="TopContainer">
+                    <div class="LogoMenu">
+                        <a href="Default.aspx">
+                            <img src="/Images/logo.png" width="100px" alt="Menu Principal">
+                        </a>
+                    </div>
+                    <div class="AuthButtons">
+                        <asp:Panel ID="PanelAnonymous" runat="server">
+                            <asp:Button ID="btnSignIn" runat="server" Text="Log In" OnClick="btnSignIn_Click" />
+                            <asp:Button ID="btnSignUp" runat="server" Text="Register" OnClick="btnSignUp_Click" />
+                        </asp:Panel>
+                        <asp:Panel ID="PanelAuthenticated" runat="server" Visible="false">
+                            <asp:LinkButton ID="lnkUsername" runat="server" CssClass="username" OnClick="lnkUsername_Click"></asp:LinkButton>
+                            <asp:Button ID="btnProfile" runat="server" Text="Profile" OnClick="btnProfile_Click" />
+                        </asp:Panel>
+                    </div>
                 </div>
+
                 <nav class="navbar" style="background-color: #692A8A;">
                     <ul class="menu" style="padding-top: 15px;">
                         <li><a href="Restaurantes">RESTAURANTES</a></li>
                         <li><a href="Platos">PLATOS</a></li>
                         <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
-                        <li><a href="Contact">CONTACTO</a></li>
-                        <li><a href="About">QUIENES SOMOS</a></li>
+                        <li><a href="Quienes">QUIENES SOMOS</a></li>
                     </ul>
                 </nav>
             </header>
-            <hr />
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <footer style="position: absolute; bottom: 0; width: 100%;">
-                <hr />
-                <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
-            </footer>
+            <main>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
         </div>
-
+        <footer>
+            <p>
+                <a href="https://www.instagram.com/secondbiteweb/" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Instagram</a>
+                <a href="https://x.com/secondbiteweb" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Twitter</a>
+                <a href="https://www.facebook.com/people/SecondBite/61559970635101/" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Facebook</a>
+                <a href="Contact.aspx" style="color: white; text-decoration: none; margin-right: 15px;">CONTACTO</a>
+                <a href="FAQs.aspx" style="color: white; text-decoration: none; margin-right: 15px;">FAQS</a>
+                © 2024 - SecondBite
+            </p>
+        </footer>
     </form>
 </body>
 </html>

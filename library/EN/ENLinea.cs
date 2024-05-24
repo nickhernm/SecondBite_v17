@@ -1,39 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace library
 {
 	public class ENLinea
 	{
-        public int Linea
-        {
-            get { return Linea; }
-            set { Linea = value; }
-        }
+        public int linea { get; set; }
 
-        public int Importe
-        {
-            get { return Importe; }
-            set { Importe = value; }
-        }
+        public int pedido { get; set; }
 
-        public int Cantidad
-        {
-            get { return Cantidad; }
-            set { Cantidad = value; }
-        }
+        public float importe { get; set; }
 
-		public ENLinea()
+        public float cantidad { get; set; }
+
+        public int platoId { get; set; }
+
+        public ENPlato plato { get; set; }
+
+        public ENLinea()
 		{
-            this.Linea = 0;
-            this.Importe = 0;
-            this.Cantidad = 0;
+            this.linea = 0;
+            this.pedido = 0;
+            this.importe = 0;
+            this.cantidad = 0;
+            this.platoId = 0;
 		}
 
-        public ENLinea(int linea, int importe, int cantidad)
+        public ENLinea(int linea, int pedido, int importe, int cantidad, int platoId)
         {
-            this.Linea = linea;
-            this.Importe = importe;
-            this.Cantidad = cantidad;
+            this.linea = 0;
+            this.pedido = 0;
+            this.importe = 0;
+            this.cantidad = 0;
+            this.platoId = 0;
         }
 
         public bool Create()
@@ -62,6 +61,18 @@ namespace library
             CADLinea lin = new CADLinea();
             bool read = lin.Read(this);
             return read;
+        }
+
+        internal void Add(ENLinea linea)
+        {
+            throw new NotImplementedException();
+
+        }
+
+        public List<ENLinea> ReadAllPed()
+        {
+            CADLinea lin = new CADLinea();
+            return lin.ReadAllPed(this);
         }
     }
 }

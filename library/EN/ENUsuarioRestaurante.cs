@@ -1,52 +1,60 @@
 ﻿using System;
 
-namespace library 
+namespace library
 {
-	public class ENUsuarioRestaurante
-	{
-        public string Nif
-        {
-            get { return Nif; }
-            set { Nif = value; }
-        }
+    public class ENUsuarioRestaurante
+    {
+        public string Correo { get; set; }
 
-        public string Nombre
-        {
-            get { return Nombre; }
-            set { Nombre = value; }
-        }
+        public string Nombre { get; set; }
 
-        public string Correo
-        {
-            get { return Correo; }
-            set { Correo = value; }
-        }
+        public string Telefono { get; set; }
 
-        public string Telefono
-        {
-            get { return Telefono; }
-            set { Telefono = value; }
-        }
+        public bool Tipo_usuario { get; set; }
+
+        public string Metodo_pago { get; set; }
+
+        public string Contrasena { get; set; }
 
         public ENUsuarioRestaurante()
-		{
-            this.Nif = null;
-            this.Nombre = null;
+        {
             this.Correo = null;
+            this.Nombre = null;
             this.Telefono = null;
+            this.Tipo_usuario = false;
+            this.Metodo_pago = null;
+            this.Contrasena = null;
         }
 
-		public ENUsuarioRestaurante(string nif, string nombre, string correo, string telefono)
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, bool tipo_usuario, string metodo_pago, string contrasena)
         {
-            this.Nif = nif;
-            this.Nombre = nombre;
             this.Correo = correo;
+            this.Nombre = nombre;
             this.Telefono = telefono;
+            this.Tipo_usuario = tipo_usuario;
+            this.Metodo_pago = metodo_pago;
+            this.Contrasena = contrasena;
+        }
+
+        public ENUsuarioRestaurante(string correo, string nombre, string telefono, bool tipo_usuario, string contrasena)
+        {
+            this.Correo = correo;
+            this.Nombre = nombre;
+            this.Telefono = telefono;
+            this.Tipo_usuario = tipo_usuario;
+            this.Contrasena = contrasena;
+            System.Diagnostics.Debug.WriteLine("dest?: ", tipo_usuario);
+        }
+        public ENUsuarioRestaurante(string contrasena, string nombre)
+        {
+            this.Contrasena = contrasena;
+            this.Nombre = nombre;
         }
 
         public bool Create()
         {
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
+            System.Diagnostics.Debug.WriteLine("Rest?: ", Tipo_usuario);
             bool create = usu.Create(this);
             return create;
         }
@@ -70,6 +78,18 @@ namespace library
             CADUsuarioRestaurante usu = new CADUsuarioRestaurante();
             bool read = usu.Read(this);
             return read;
+        }
+
+        public bool CheckUser()
+        {
+            CADUsuarioRestaurante cad = new CADUsuarioRestaurante();
+            return cad.CheckUser(this);
+        }
+
+        public string ObtenerCorreoUsuario(string nombreUsuario)
+        {
+            CADUsuarioRestaurante cad = new CADUsuarioRestaurante();
+            return cad.ObtenerCorreoUsuario(nombreUsuario);
         }
     }
 }

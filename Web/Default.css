@@ -1,10 +1,10 @@
-﻿﻿.OptionContainer {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+﻿.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
 
-.OptionElement {
-    float: left;
-    margin-right: 45px;
+.mySlides {
+    display: none;
+    width: 100%;
 }
