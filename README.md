@@ -73,7 +73,7 @@ Hemos proporcionado dos tipos de usuarios en la base de datos para poder registr
 
 #### Como restaurante:
 - Usuario: wok_fusion@example.com
-<br>
+  <br>
 - Contraseña: FusionWok678
 
 ## TAREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
