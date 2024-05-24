@@ -1,0 +1,74 @@
+﻿/* Container for the filters */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+    .filter-container label {
+        margin-right: 10px;
+    }
+
+    .filter-container input,
+    .filter-container select {
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .filter-container button {
+        background-color: #692A8A;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .filter-container button:hover {
+            background-color: #581c6b;
+        }
+
+/* Grid layout for restaurants */
+.restaurant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Two cards per row with gap */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+    .restaurant-card h3 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .restaurant-card p {
+        margin: 5px 0;
+        color: #666;
+    }
+
+    .restaurant-card button {
+        background-color: #692A8A;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .restaurant-card button:hover {
+            background-color: #581c6b;
+        }
+
+.restaurant-separator {
+    display: none; /* Hide the separators */
+}
