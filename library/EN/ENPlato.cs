@@ -62,5 +62,12 @@ namespace library
             CADPlato cadPlato = new CADPlato();
             return cadPlato.ObtenerPlatosDestacados(codigoRestaurante);
         }
+
+        public List<ENPlato> ObtenerPlatosRecomendados()
+        {
+            CADPlato cadPlato = new CADPlato();
+            return cadPlato.ObtenerPlatosRecomendados();
+        }
+
     }
 }

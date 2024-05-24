@@ -72,9 +72,7 @@
                         <li><a href="Restaurantes">RESTAURANTES</a></li>
                         <li><a href="Platos">PLATOS</a></li>
                         <li><a href="Recomendaciones">RECOMENDACIONES</a></li>
-                        <li><a href="Contact">CONTACTO</a></li>
-                        <li><a href="Quienessomos">QUIENES SOMOS</a></li>
-                        <li><a href="FAQS">FAQs</a></li>
+                        <li><a href="Quienes">QUIENES SOMOS</a></li>
                     </ul>
                 </nav>
             </header>
@@ -84,7 +82,14 @@
             </main>
         </div>
         <footer>
-            <p> &copy; <%: DateTime.Now.Year %> - SecondBite</p>
+            <p>
+                <a href="https://www.instagram.com/Second_Bite" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Instagram</a>
+                <a href="https://twitter.com/SecondBite" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Twitter</a>
+                <a href="https://www.facebook.com/SecondBite" target="_blank" style="color: white; text-decoration: none; margin-right: 15px;">Facebook</a>
+                <a href="Contact.aspx" style="color: white; text-decoration: none; margin-right: 15px;">CONTACTO</a>
+                <a href="FAQs.aspx" style="color: white; text-decoration: none; margin-right: 15px;">FAQS</a>
+                © 2024 - SecondBite
+            </p>
         </footer>
     </form>
 </body>

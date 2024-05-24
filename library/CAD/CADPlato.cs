@@ -23,8 +23,9 @@ namespace library
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO PLATO (nombre, alergenos, puntuacion) VALUES (@Nombre, @Alergenos, @Puntuacion)";
+                    string query = "INSERT INTO PLATO (id, nombre, alergenos, puntuacion) VALUES (@PlatoId, @Nombre, @Alergenos, @Puntuacion)";
                     SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@PlatoId", en.Id);
                     command.Parameters.AddWithValue("@Nombre", en.Nombre);
                     command.Parameters.AddWithValue("@Alergenos", en.Alergenos);
                     command.Parameters.AddWithValue("@Puntuacion", en.Puntuacion);
@@ -212,5 +213,38 @@ namespace library
             }
             return platos;
         }
+
+        public List<ENPlato> ObtenerPlatosRecomendados()
+        {
+            List<ENPlato> platos = new List<ENPlato>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM PLATO WHERE puntuacion > 4.7";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ENPlato plato = new ENPlato();
+                        plato.Id = Convert.ToInt32(reader["id"]);
+                        plato.Nombre = reader["nombre"].ToString();
+                        plato.Alergenos = reader["alergenos"].ToString();
+                        plato.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
+                        platos.Add(plato);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los platos recomendados: " + ex.Message);
+            }
+
+            return platos;
+        }
+
     }
 }

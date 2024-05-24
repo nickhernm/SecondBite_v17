@@ -15,6 +15,15 @@ namespace Web
     {
 
         /// <summary>
+        /// Control lblMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
         /// Control txtUsuario.
         /// </summary>
         /// <remarks>
@@ -33,24 +42,6 @@ namespace Web
         protected global::System.Web.UI.WebControls.TextBox txtContrasena;
 
         /// <summary>
-        /// Control cbxMostrarContrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxMostrarContrasena;
-
-        /// <summary>
-        /// Control lblFuerzaContrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFuerzaContrasena;
-
-        /// <summary>
         /// Control btnLogin.
         /// </summary>
         /// <remarks>
@@ -58,14 +49,5 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-
-        /// <summary>
-        /// Control lblMessage.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

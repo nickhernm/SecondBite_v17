@@ -41,7 +41,7 @@
             <p>
                 Puntuación: &nbsp;<asp:Label ID="lblPuntuacion" runat="server" Text='<%# Eval("Puntuacion") %>'></asp:Label>
             </p>
-<asp:Button ID="btnMostrarMenu" runat="server" Text="Mostrar Menú" CommandArgument='<%# Eval("cod") %>' OnClick="btnMostrarMenu_Click" />        </div>
+            <asp:Button ID="btnMostrarMenu" runat="server" Text="Mostrar Menú" CommandArgument='<%# Eval("cod") %>' OnClick="btnMostrarMenu_Click" />        </div>
         <hr class="restaurante-separator" />
     </ItemTemplate>
 </asp:Repeater>

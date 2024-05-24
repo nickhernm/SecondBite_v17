@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Diagnostics;
+using System.Web.Security;
 using System.Web.UI;
 
 namespace Web
@@ -19,9 +19,15 @@ namespace Web
             }
         }
 
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Response.Redirect("Login.aspx");
+        }
+
         private void CargarPerfil()
         {
-            ENUsuarioRestaurante usuario = ObtenerUsuarioAutenticado();
+            ENUsuario usuario = ObtenerUsuarioAutenticado();
             if (usuario != null)
             {
                 lblNombreUsuario.Text = usuario.Nombre;
@@ -37,9 +43,9 @@ namespace Web
             }
         }
 
-        private ENUsuarioRestaurante ObtenerUsuarioAutenticado()
+        private ENUsuario ObtenerUsuarioAutenticado()
         {
-            ENUsuarioRestaurante usuario = null;
+            ENUsuario usuario = null;
             string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
 
             try
@@ -47,68 +53,30 @@ namespace Web
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    string query = "SELECT correo, nombre, telefono, tipo_usuario FROM prueba";
+                    string query = "SELECT correo, nombre, telefono, tipo_usuario FROM USUARIO WHERE correo = @correo";
                     SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@correo", User.Identity.Name);
 
                     SqlDataReader reader = command.ExecuteReader();
-
                     if (reader.Read())
                     {
-                        usuario = new ENUsuarioRestaurante
+                        usuario = new ENUsuario
                         {
                             Correo = reader["correo"].ToString(),
                             Nombre = reader["nombre"].ToString(),
                             Telefono = reader["telefono"].ToString(),
-                            Tipo_usuario = Convert.ToBoolean(reader["tipo_usuario"])
+                            TipoUsuario = Convert.ToBoolean(reader["tipo_usuario"])
                         };
                     }
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Error al obtener el usuario autenticado: " + ex.Message);
+                // Manejo de excepciones
+                Console.WriteLine("Error al obtener el usuario autenticado: " + ex.Message);
             }
 
             return usuario;
-        }
-
-        private void GuardarUsuarioAutenticado(string correo)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    // Eliminar la vista si existe
-                    string queryVistaEliminar = "IF OBJECT_ID('dbo.prueba', 'V') IS NOT NULL DROP VIEW dbo.prueba;";
-                    using (SqlCommand deleteCommand = new SqlCommand(queryVistaEliminar, connection))
-                    {
-                        deleteCommand.ExecuteNonQuery();
-                    }
-
-                    // Crear la vista con el usuario autenticado
-                    string queryVistaCrear = @"
-                CREATE VIEW prueba AS 
-                SELECT correo, nombre, telefono, tipo_usuario 
-                FROM USUARIO 
-                WHERE correo = @Correo;
-            ";
-                    using (SqlCommand createCommand = new SqlCommand(queryVistaCrear, connection))
-                    {
-                        createCommand.Parameters.AddWithValue("@Correo", correo);
-                        createCommand.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Manejo de excepciones
-                Debug.WriteLine("Error al guardar el usuario autenticado: " + ex.Message);
-            }
         }
 
         private void CargarOpiniones()
@@ -133,24 +101,32 @@ namespace Web
             List<ENOpinion> opiniones = new List<ENOpinion>();
             string connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "SELECT Descripcion, Valoracion FROM OPINION WHERE Usuario = @Correo";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Correo", lblCorreo.Text);
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    ENOpinion opinion = new ENOpinion
+                    string query = "SELECT Descripcion, Valoracion FROM OPINION WHERE Usuario = @correo";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@correo", User.Identity.Name);
+
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        Descripcion = reader["Descripcion"].ToString(),
-                        Valoracion = (float)Convert.ToDouble(reader["Valoracion"])
-                    };
-                    opiniones.Add(opinion);
+                        ENOpinion opinion = new ENOpinion
+                        {
+                            Descripcion = reader["Descripcion"].ToString(),
+                            Valoracion = (float)Convert.ToDouble(reader["Valoracion"])
+                        };
+                        opiniones.Add(opinion);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                Console.WriteLine("Error al obtener opiniones: " + ex.Message);
             }
 
             return opiniones;

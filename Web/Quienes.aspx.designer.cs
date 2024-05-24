@@ -11,25 +11,25 @@ namespace Web
 {
 
 
-    public partial class Recomendaciones
+    public partial class Quienes
     {
 
         /// <summary>
-        /// Control rptRestaurantes.
+        /// Control CoverImage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptRestaurantes;
+        protected global::System.Web.UI.WebControls.Image CoverImage;
 
         /// <summary>
-        /// Control rptPlatos.
+        /// Control btnContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptPlatos;
+        protected global::System.Web.UI.WebControls.Button btnContacto;
     }
 }

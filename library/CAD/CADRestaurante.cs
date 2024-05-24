@@ -280,5 +280,39 @@ namespace library
 
             return comunidades;
         }
+
+        public List<ENRestaurante> ObtenerRestaurantesRecomendados()
+        {
+            List<ENRestaurante> restaurantes = new List<ENRestaurante>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM RESTAURANTE WHERE puntuacion > 4.4";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ENRestaurante restaurante = new ENRestaurante();
+                        restaurante.Cod = Convert.ToInt32(reader["cod"]);
+                        restaurante.Nombre = reader["nombre"].ToString();
+                        restaurante.Localidad = reader["localidad"].ToString();
+                        restaurante.Tipo = reader["tipo"].ToString();
+                        restaurante.Puntuacion = Convert.ToSingle(reader["puntuacion"]);
+                        restaurantes.Add(restaurante);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener los restaurantes recomendados: " + ex.Message);
+            }
+
+            return restaurantes;
+        }
+
     }
 }

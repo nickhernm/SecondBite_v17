@@ -15,7 +15,7 @@
             </asp:TemplateField>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:Button ID="btnVerDetalles" runat="server" Text="Ver detalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetalles_Click" />
+                    <asp:Button ID="btnVerDetalles" runat="server" Text="Ver detalles" CommandArgument='<%# Eval("Id") %>' OnClick="btnVerDetallesPlato_Click" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
