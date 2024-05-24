@@ -61,7 +61,7 @@ El esquema entidad-relación de la base de datos se encuentra en la carpeta raí
 ## Problemas que se han encontrado:
 - Problemas en coordinación y entregas a tiempo.
 - Mal reparto de tareas.
-- Entregas no acordes a los pedido.
+- Entregas no acordes a lo pedido.
 - Fallo en las pruebas y uniones de las ramas.
 - Dimensión del proyecto para un grupo tan reducido.
 
