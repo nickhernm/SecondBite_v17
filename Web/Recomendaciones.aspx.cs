@@ -18,13 +18,11 @@ namespace Web
 
         private void CargarRecomendaciones()
         {
-            // Cargar restaurantes recomendados
             ENRestaurante enRestaurante = new ENRestaurante();
             List<ENRestaurante> restaurantesRecomendados = enRestaurante.ObtenerRestaurantesRecomendados();
             rptRestaurantes.DataSource = restaurantesRecomendados;
             rptRestaurantes.DataBind();
 
-            // Cargar platos recomendados
             ENPlato enPlato = new ENPlato();
             List<ENPlato> platosRecomendados = enPlato.ObtenerPlatosRecomendados();
             rptPlatos.DataSource = platosRecomendados;
@@ -36,6 +34,13 @@ namespace Web
             Button btnVerMenu = (Button)sender;
             int restauranteId = Convert.ToInt32(btnVerMenu.CommandArgument);
             Response.Redirect("Menu_Individual.aspx?RestauranteId=" + restauranteId);
+        }
+
+        protected void btnVerDetallesPlato_Click(object sender, EventArgs e)
+        {
+            Button btnVerDetalles = (Button)sender;
+            int platoId = Convert.ToInt32(btnVerDetalles.CommandArgument);
+            Response.Redirect("Plato_Individual.aspx?PlatoId=" + platoId);
         }
     }
 }
