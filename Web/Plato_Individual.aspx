@@ -10,4 +10,6 @@
             <p>Puntuación: <%# Eval("Puntuacion") %></p>
         </ItemTemplate>
     </asp:FormView>
+
+    <asp:Button ID="btnVolver" runat="server" Text="Volver a la Página Anterior" OnClientClick="history.back(); return false;" />
 </asp:Content>
