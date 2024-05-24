@@ -84,7 +84,7 @@
             </main>
         </div>
         <footer>
-            <p> &copy; <%: DateTime.Now.Year %> - SecondBite</p>
+            <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
         </footer>
     </form>
 </body>
