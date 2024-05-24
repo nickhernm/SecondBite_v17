@@ -15,6 +15,7 @@
                                 <p>Localidad: <%# Eval("Localidad") %></p>
                                 <p>Tipo: <%# Eval("Tipo") %></p>
                                 <p>Puntuación: <%# Eval("Puntuacion") %></p>
+                                <asp:Button ID="btnVerMenu" runat="server" Text="Ver Menú" CommandArgument='<%# Eval("Cod") %>' OnClick="btnVerMenu_Click" />
                             </div>
                         </div>
                     </ItemTemplate>

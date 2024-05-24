@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using library;
 
 namespace Web
@@ -11,25 +12,30 @@ namespace Web
         {
             if (!IsPostBack)
             {
-                CargarRestaurantesRecomendados();
-                CargarPlatosRecomendados();
+                CargarRecomendaciones();
             }
         }
 
-        private void CargarRestaurantesRecomendados()
+        private void CargarRecomendaciones()
         {
+            // Cargar restaurantes recomendados
             ENRestaurante enRestaurante = new ENRestaurante();
-            List<ENRestaurante> restaurantes = enRestaurante.ObtenerRestaurantesRecomendados();
-            rptRestaurantes.DataSource = restaurantes;
+            List<ENRestaurante> restaurantesRecomendados = enRestaurante.ObtenerRestaurantesRecomendados();
+            rptRestaurantes.DataSource = restaurantesRecomendados;
             rptRestaurantes.DataBind();
+
+            // Cargar platos recomendados
+            ENPlato enPlato = new ENPlato();
+            List<ENPlato> platosRecomendados = enPlato.ObtenerPlatosRecomendados();
+            rptPlatos.DataSource = platosRecomendados;
+            rptPlatos.DataBind();
         }
 
-        private void CargarPlatosRecomendados()
+        protected void btnVerMenu_Click(object sender, EventArgs e)
         {
-            ENPlato enPlato = new ENPlato();
-            List<ENPlato> platos = enPlato.ObtenerPlatosRecomendados();
-            rptPlatos.DataSource = platos;
-            rptPlatos.DataBind();
+            Button btnVerMenu = (Button)sender;
+            int restauranteId = Convert.ToInt32(btnVerMenu.CommandArgument);
+            Response.Redirect("Menu_Individual.aspx?RestauranteId=" + restauranteId);
         }
     }
 }
