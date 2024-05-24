@@ -74,5 +74,12 @@ namespace library {
             CADRestaurante cadRestaurante = new CADRestaurante();
             return cadRestaurante.ObtenerComunidades();
         }
+
+        public List<ENRestaurante> ObtenerRestaurantesRecomendados()
+        {
+            CADRestaurante cadRestaurante = new CADRestaurante();
+            return cadRestaurante.ObtenerRestaurantesRecomendados();
+        }
+
     }
 }

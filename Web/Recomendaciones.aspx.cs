@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using library;
 
 namespace Web
 {
@@ -11,10 +9,27 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            txtContent.Text = "Sandwich Gourmet con un total 160 kcal /n Pan, Queso, Lechuga";
-            txtPrice.Text = "1.30€";
+            if (!IsPostBack)
+            {
+                CargarRestaurantesRecomendados();
+                CargarPlatosRecomendados();
+            }
+        }
+
+        private void CargarRestaurantesRecomendados()
+        {
+            ENRestaurante enRestaurante = new ENRestaurante();
+            List<ENRestaurante> restaurantes = enRestaurante.ObtenerRestaurantesRecomendados();
+            rptRestaurantes.DataSource = restaurantes;
+            rptRestaurantes.DataBind();
+        }
+
+        private void CargarPlatosRecomendados()
+        {
+            ENPlato enPlato = new ENPlato();
+            List<ENPlato> platos = enPlato.ObtenerPlatosRecomendados();
+            rptPlatos.DataSource = platos;
+            rptPlatos.DataBind();
         }
     }
 }
-
