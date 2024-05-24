@@ -61,18 +61,7 @@ namespace Web
 
                     if (!string.IsNullOrEmpty(filtroPuntuacion))
                     {
-                        if (filtroPuntuacion == "5")
-                        {
-                            query += " AND Puntuacion = 5";
-                        }
-                        else if (filtroPuntuacion == "4")
-                        {
-                            query += " AND Puntuacion >= 4";
-                        }
-                        else if (filtroPuntuacion == "3")
-                        {
-                            query += " AND Puntuacion >= 3";
-                        }
+                        query += " AND Puntuacion = @Puntuacion";
                     }
 
                     SqlCommand command = new SqlCommand(query, connection);
@@ -80,6 +69,11 @@ namespace Web
                     if (!string.IsNullOrEmpty(filtroAlergenos))
                     {
                         command.Parameters.AddWithValue("@Alergenos", filtroAlergenos);
+                    }
+
+                    if (!string.IsNullOrEmpty(filtroPuntuacion))
+                    {
+                        command.Parameters.AddWithValue("@Puntuacion", filtroPuntuacion);
                     }
 
                     connection.Open();
