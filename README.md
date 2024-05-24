@@ -65,12 +65,14 @@ El esquema entidad-relación de la base de datos se encuentra en la carpeta raí
 Hemos proporcionado dos tipos de usuarios en la base de datos para poder registrarse como cliente y como restaurante:
 
 # Como usuario:
-Usuario: bobsmith@gmail.com
-Contraseña: passwordsecure
+- Usuario: PizzaConPiña@Muyrica.com
+  <br>
+- Contraseña: hada
 
 # Como restaurante:
-Usuario: cantinamex@gmail.com
-Contraseña: restaurantpass2
+- Usuario: wok_fusion@example.com
+<br>
+- Contraseña: FusionWok678
 
 ## TAREAS REALIZADAS POR CADA COMPONENTE DEL GRUPO
 
