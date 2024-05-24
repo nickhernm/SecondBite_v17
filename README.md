@@ -49,29 +49,29 @@ Se plantean las siguientes mejoras para la aplicación:
 
 El esquema entidad-relación de la base de datos se encuentra en la carpeta raíz del proyecto.
 
-## APUNTES ENTREGA FINAL:
+# APUNTES ENTREGA FINAL:
 
-# Dificultades encontradas:
+## Dificultades encontradas:
 - Mantener la sesión iniciada del usuario.
 - Uso de AJAX y GRIDs.
 - Interfaz y frontend (parte visual de la página).
 - Gestión de la(s) base(s) de datos.
 
-# Problemas que se han encontrado:
+## Problemas que se han encontrado:
 - Problemas en coordinación y entregas a tiempo.
 - Mal reparto de tareas.
 - No entregas de lo que se ha pedido o con errores.
 - Dimensión del proyecto para un grupo tan reducido.
 
-## USUARIOS Y CONTRASEÑAS PARA EL REGISTRO
+### USUARIOS Y CONTRASEÑAS PARA EL REGISTRO
 Hemos proporcionado dos tipos de usuarios en la base de datos para poder registrarse como cliente y como restaurante:
 
-# Como usuario:
+#### Como usuario:
 - Usuario: PizzaConPiña@Muyrica.com
   <br>
 - Contraseña: hada
 
-# Como restaurante:
+#### Como restaurante:
 - Usuario: wok_fusion@example.com
 <br>
 - Contraseña: FusionWok678
