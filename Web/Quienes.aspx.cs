@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class Quienes : System.Web.UI.Page
+    public partial class Quienes : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnContacto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Contact.aspx");
         }
     }
 }
