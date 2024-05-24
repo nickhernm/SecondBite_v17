@@ -18,6 +18,7 @@
             <a href="Cesta.aspx" class="btn">Cesta</a>
             <a href="Favoritos.aspx" class="btn">Favoritos</a>
             <a href="Pedidos.aspx" class="btn">Pedidos</a>
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-danger" OnClick="Logout_Click" />
         </div>
     </div>
     <hr />

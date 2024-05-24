@@ -71,6 +71,7 @@
     <Compile Include="EN\ENPedido.cs" />
     <Compile Include="EN\ENPlato.cs" />
     <Compile Include="EN\ENRestaurante.cs" />
+    <Compile Include="EN\ENUsuario.cs" />
     <Compile Include="EN\ENUsuarioRestaurante.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
