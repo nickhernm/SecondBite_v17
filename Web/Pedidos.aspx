@@ -56,7 +56,6 @@
     </asp:Repeater>
 
     <style>
-        /* CSS styles for card */
         .card {
             border: 1px solid #ddd;
             border-radius: 8px;

@@ -12,10 +12,10 @@ using System.Configuration;
 namespace library {
     public class ENCliente
     {
-        public string dni { get; set; } // Clave primaria
+        public string dni { get; set; } 
         public string correo { get; set; }
-        public string nombre { get; set; } // Arreglar problme con tipo de dato Direccion
-       // public Direccion direccion { get; set; } // Relación con Direccion
+        public string nombre { get; set; } 
+       // public Direccion direccion { get; set; } 
         public string telefono { get; set; }
         public ENCliente(string dni, string correo, string nombre, string telefono)
 	    {
@@ -27,11 +27,6 @@ namespace library {
 
         public bool EsRestaurante(string username)
         {
-            // Lógica para verificar si el usuario es un restaurante
-            // Puedes utilizar la base de datos o cualquier otra forma de verificación
-            // Devuelve true si el usuario es un restaurante, false en caso contrario
-
-            // Ejemplo de implementación utilizando una consulta a la base de datos
             CADCliente cadUsuario = new CADCliente();
             return cadUsuario.EsRestaurante(username);
         }

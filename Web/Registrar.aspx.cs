@@ -24,7 +24,7 @@ namespace Web
                 string name = TextBox2.Text;
                 string telefono = TextBox3.Text;
                 string contrasena = TextBox4.Text;
-                bool tipo_usuario = cbxRestaurante.Checked; // true si es restaurante, false si es cliente
+                bool tipo_usuario = cbxRestaurante.Checked; 
 
                 if (IsValidEmail(email))
                 {

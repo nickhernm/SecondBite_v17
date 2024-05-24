@@ -26,25 +26,21 @@ namespace library
     	public bool Create(ENFavoritos en)
     	{
             return false;
-            //TODO
         }
 
         public bool Update(ENFavoritos en)
     	{
             return false;
-            //TODO
         }
 
         public bool Read(ENFavoritos en)
     	{
             return false;
-            //TODO
         }
 
         public bool Delete(ENFavoritos en)
     	{
             return false;
-            //TODO
         }
 
 
@@ -73,10 +69,8 @@ namespace library
                             System.Diagnostics.Debug.WriteLine("-");
 
 
-                            // Check if there are rows to read
                             while (reader.Read())
                             {
-                                // Read each field in the current row
                                 ENFavoritos enTemp = new ENFavoritos();
                                 ENUsuarioRestaurante enUsu = new ENUsuarioRestaurante();
                                 enUsu.Correo = reader["usuario"].ToString();
@@ -181,8 +175,6 @@ namespace library
                             }
                             System.Diagnostics.Debug.WriteLine("-");
 
-
-                            // Check if there are rows to read
                             System.Diagnostics.Debug.WriteLine("rtrte");
                             while (reader.Read())
                             {

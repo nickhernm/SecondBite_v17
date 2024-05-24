@@ -22,7 +22,6 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Move profile picture to the left */
 .ProfilePic {
     order: -1;
     flex: 0 0 auto;

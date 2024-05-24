@@ -94,7 +94,6 @@ namespace Web
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los platos: " + ex.Message);
             }
 

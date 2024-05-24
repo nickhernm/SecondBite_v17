@@ -1,5 +1,4 @@
-﻿/* Container for the filters */
-.filter-container {
+﻿.filter-container {
     margin-bottom: 20px;
 }
 
@@ -27,7 +26,6 @@
             background-color: #581c6b;
         }
 
-/* Grid layout for dishes */
 .dish-grid {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +37,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 10px); /* Two cards per row with gap */
+    width: calc(50% - 10px); 
     box-sizing: border-box;
     padding: 20px;
 }
@@ -69,5 +67,5 @@
         }
 
 hr {
-    display: none; /* Hide the separators */
+    display: none; 
 }

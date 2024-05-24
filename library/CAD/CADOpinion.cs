@@ -32,7 +32,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al crear la opinión: " + ex.Message);
                 return false;
             }
@@ -61,7 +60,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al leer la opinión: " + ex.Message);
                 return false;
             }
@@ -86,7 +84,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al actualizar la opinión: " + ex.Message);
                 return false;
             }
@@ -108,7 +105,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al eliminar la opinión: " + ex.Message);
                 return false;
             }

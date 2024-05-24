@@ -4,8 +4,6 @@
     
    
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
-    <!-- Franja morada destacada -->
     <div class="purple-highlight">
         <h1>Cesta de Compra</h1>
     </div>

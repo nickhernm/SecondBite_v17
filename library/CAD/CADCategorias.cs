@@ -16,30 +16,26 @@ namespace library
     {
         public CADCategorias()
         {
-            // Crear base de datos para conectar
+            
         }
 
         public bool Create(ENCategorias en)
         {
-            // Implementación del método Create
             return false;
         }
 
         public bool Read(ENCategorias en)
         {
-            // Implementación del método Read
             return false;
         }
 
         public bool Update(ENCategorias en)
         {
-            // Implementación del método Update
             return false;
         }
 
         public bool Delete(ENCategorias en)
         {
-            // Implementación del método Delete
             return false;
         }
     }

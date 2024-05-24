@@ -13,13 +13,7 @@ namespace Web
         {
             if (Page.IsValid)
             {
-                // Aquí puedes agregar el código para procesar el mensaje de contacto,
-                // como enviarlo por correo electrónico o guardarlo en una base de datos.
-
-                // Mostrar el mensaje de confirmación
                 lblConfirmacion.Visible = true;
-
-                // Limpiar los campos del formulario
                 txtNombre.Text = string.Empty;
                 txtCorreo.Text = string.Empty;
                 txtMensaje.Text = string.Empty;

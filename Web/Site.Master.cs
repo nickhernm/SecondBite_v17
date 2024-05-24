@@ -25,16 +25,11 @@ namespace Web
                 PanelAnonymous.Visible = false;
                 PanelAuthenticated.Visible = true;
 
-                // Obtener el correo electrónico del usuario autenticado desde la vista
                 string correoUsuario = ObtenerCorreoUsuarioAutenticado();
 
-                // Mostrar el correo electrónico en la barra de navegación
                 lnkUsername.Text = correoUsuario;
-                lnkUsername.PostBackUrl = "~/Perfil.aspx"; // Redirigir a la página de perfil al hacer clic
-
-                // Verificar si el usuario es un restaurante
+                lnkUsername.PostBackUrl = "~/Perfil.aspx"; 
                 bool esRestaurante = VerificarUsuarioRestaurante(correoUsuario);
-                //PanelRestaurante.Visible = esRestaurante;
             }
             else
             {
@@ -51,10 +46,10 @@ namespace Web
 
             if (usuario.Read())
             {
-                return usuario.Tipo_usuario; // True si es restaurante, false si es cliente
+                return usuario.Tipo_usuario; 
             }
 
-            return false; // Si no se encuentra el usuario, se asume que no es un restaurante
+            return false; 
         }
 
         private string ObtenerCorreoUsuarioAutenticado()
@@ -75,7 +70,6 @@ namespace Web
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener el correo del usuario autenticado: " + ex.Message);
                 return string.Empty;
             }

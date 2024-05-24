@@ -18,10 +18,9 @@ namespace library
         public int CodigoPostal { get; set; }
         public string Ciudad { get; set; }
         public string Comunidad { get; set; }
-        public int RestauranteId { get; set; } // Clave foránea para la tabla Restaurante
-        public string ClienteCorreo { get; set; } // Clave foránea para la tabla Usuario
+        public int RestauranteId { get; set; } 
+        public string ClienteCorreo { get; set; } 
 
-        // Constructor vacío
         public ENDireccion() { }
 
         public bool Create()

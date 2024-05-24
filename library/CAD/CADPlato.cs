@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 
 namespace library
 {
-    // Clase CADPlato
     public class CADPlato
     {
         private string connectionString;
@@ -35,7 +34,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al crear el plato: " + ex.Message);
                 return false;
             }
@@ -67,7 +65,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los platos destacados: " + ex.Message);
             }
             return platos;
@@ -97,7 +94,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al leer el plato: " + ex.Message);
                 return false;
             }
@@ -122,7 +118,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al actualizar el plato: " + ex.Message);
                 return false;
             }
@@ -144,7 +139,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al eliminar el plato: " + ex.Message);
                 return false;
             }
@@ -175,7 +169,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los platos: " + ex.Message);
             }
 
@@ -208,7 +201,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los platos del restaurante: " + ex.Message);
             }
             return platos;

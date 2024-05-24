@@ -7,7 +7,7 @@ namespace library
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public float Valoracion { get; set; }
-        public string UsuarioCorreo { get; set; } // Clave foránea para la tabla Usuario
+        public string UsuarioCorreo { get; set; } 
 
         public ENOpinion()
         {

@@ -20,7 +20,6 @@ namespace Web
 
             if (AuthenticateUser(username, password))
             {
-                // Establecer la cookie de autenticación
                 FormsAuthentication.SetAuthCookie(username, false);
                 Response.Redirect("Perfil.aspx");
             }
@@ -51,7 +50,6 @@ namespace Web
             }
             catch (Exception ex)
             {
-                // Manejar la excepción según sea necesario
                 Console.WriteLine("Error al autenticar el usuario: " + ex.Message);
             }
 

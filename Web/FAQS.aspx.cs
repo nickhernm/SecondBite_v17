@@ -18,7 +18,6 @@ namespace Web
 
         private void LoadFAQs()
         {
-            // Simulación de preguntas frecuentes
             List<ENFAQ> faqs = new List<ENFAQ>
             {
                 new ENFAQ { Pregunta = "¿Cuál es el horario de atención?", Respuesta = "Nuestro horario de atención es de lunes a viernes de 9:00 AM a 1:00 AM." },
@@ -29,8 +28,6 @@ namespace Web
                 new ENFAQ { Pregunta = "¿Cómo puedo dejar una opinión sobre un restaurante o un plato?", Respuesta = "Debes estar registrado en nuestra plataforma. Una vez registrado, puedes dejar opiniones y puntuaciones en la página del restaurante o del plato." },
                 new ENFAQ { Pregunta = "¿Cómo puedo contactar con el servicio de atención al cliente?", Respuesta = " Puedes enviarnos un mensaje a través de la sección de contacto en nuestro sitio o llamarnos al número de teléfono proporcionado." }
             };
-
-            // Asignar los datos al repeater
             rptFAQs.DataSource = faqs;
             rptFAQs.DataBind();
         }

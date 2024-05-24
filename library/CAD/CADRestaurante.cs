@@ -40,7 +40,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los restaurantes: " + ex.Message);
             }
             return restaurantes;
@@ -65,7 +64,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al crear el restaurante: " + ex.Message);
                 return false;
             }
@@ -95,7 +93,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al leer el restaurante: " + ex.Message);
                 return false;
             }
@@ -121,7 +118,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al actualizar el restaurante: " + ex.Message);
                 return false;
             }
@@ -143,7 +139,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al eliminar el restaurante: " + ex.Message);
                 return false;
             }
@@ -218,7 +213,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los restaurantes: " + ex.Message);
             }
 
@@ -246,7 +240,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener los tipos de restaurantes: " + ex.Message);
             }
 
@@ -274,7 +267,6 @@ namespace library
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener las comunidades de restaurantes: " + ex.Message);
             }
 

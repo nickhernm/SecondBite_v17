@@ -13,8 +13,8 @@ namespace library {
     public class ENFavoritos
     {
         public int id { get; set; } // Arreglar tipo de dato Cliente y Plato
-        public ENUsuarioRestaurante usuario { get; set; } // Relación con Cliente
-        public List<ENPlato> Platos { get; set; } // Relación con Plato
+        public ENUsuarioRestaurante usuario { get; set; }
+        public List<ENPlato> Platos { get; set; }
         public ENFavoritos()
 	    {
 

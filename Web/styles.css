@@ -1,35 +1,33 @@
 ﻿.container {
-    max-width: 100%; /* Cambia el ancho máximo para que la tabla use todo el ancho de la página */
+    max-width: 100%; 
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para la tabla */
 .cesta-grid, .gvPlatos {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px; /* Añadir margen inferior para separación */
+    margin-bottom: 20px; 
 }
 
 .cesta-grid th, .cesta-grid td, .gvPlatos th, .gvPlatos td {
-    padding: 12px; /* Incrementar el padding para mejor visualización */
+    padding: 12px; 
     text-align: left;
     border-bottom: 1px solid #8a2be2;
 }
 
 .cesta-grid th, .gvPlatos th {
-    background-color: #8a2be2; /* Fondo morado para los encabezados */
-    color: white; /* Texto blanco para los encabezados */
-    text-transform: uppercase; /* Texto en mayúsculas */
+    background-color: #8a2be2; 
+    color: white; 
+    text-transform: uppercase; 
 }
 
 .cesta-grid td, .gvPlatos td {
-    background-color: #f9f9f9; /* Fondo claro para las celdas */
+    background-color: #f9f9f9; 
 }
 
-/* Estilos para botones en la tabla */
 .btn-eliminar, .btn-vaciar, .gvPlatos .btn {
     background-color: #8a2be2;
     color: white;
@@ -44,5 +42,5 @@
 }
 
 .btn-eliminar:hover, .btn-vaciar:hover, .gvPlatos .btn:hover {
-    background-color: #45a049; /* Cambiar el color al pasar el mouse */
+    background-color: #45a049; 
 }

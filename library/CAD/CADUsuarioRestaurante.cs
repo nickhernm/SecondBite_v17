@@ -209,7 +209,7 @@ namespace library
                             }
                             else
                             {
-                                return false; // Credenciales incorrectas
+                                return false; 
                             }
                         }
                     }

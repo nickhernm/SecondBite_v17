@@ -21,23 +21,20 @@ namespace Web
             if (!IsPostBack)
             {
                 
-                decimal total = 100.00m; // Ejemplo de total
+                decimal total = 00.00m; 
                 lblTotalCheckout.Text = $"Total: {total:C}";
             }
         }
 
         protected void ddlMetodoPago_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Mostrar u ocultar los detalles de la tarjeta según el método de pago seleccionado
             pnlCardDetails.Visible = ddlMetodoPago.SelectedValue == "Card";
 
-            // Cambiar el grupo de validación del botón de pagar
             btnPagar.ValidationGroup = ddlMetodoPago.SelectedValue == "Card" ? "CardGroup" : "";
         }
 
         protected void btnPagar_Click(object sender, EventArgs e)
         {
-            // Validar el grupo específico si el método de pago es Tarjeta
             if (ddlMetodoPago.SelectedValue == "Card")
             {
                 Page.Validate("CardGroup");
@@ -45,24 +42,21 @@ namespace Web
 
             if (Page.IsValid)
             {
-                // Obtener la dirección de envío y método de pago
                 string direccion = txtDireccion.Text;
                 string metodoPago = ddlMetodoPago.SelectedValue;
                 string numeroTarjeta = metodoPago == "Card" ? txtNumeroTarjeta.Text : null;
                 string fechaVencimiento = metodoPago == "Card" ? txtFechaVencimiento.Text : null;
-                string usuarioCorreo = "usuario@example.com"; // Deberías obtener esto del usuario autenticado
+                string usuarioCorreo = "usuario@example.com";
 
-                // Lógica para procesar el pago y crear el pedido
                 GuardarMetodoPago(metodoPago, numeroTarjeta, fechaVencimiento, usuarioCorreo);
 
-                // Redirigir a la página de inicio
                 Response.Redirect("Default.aspx");
             }
         }
 
         private void GuardarMetodoPago(string tipo, string numeroTarjeta, string fechaVencimiento, string usuarioCorreo)
         {
-            connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString; // Reemplaza con tu cadena de conexión
+           /* connectionString = ConfigurationManager.ConnectionStrings["DataBase"].ConnectionString; // Reemplaza con tu cadena de conexión
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -76,7 +70,7 @@ namespace Web
 
                     command.ExecuteNonQuery();
                 }
-            }
+            }*/
         }
     }
 }

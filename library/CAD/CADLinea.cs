@@ -24,19 +24,16 @@ namespace library
 		public bool Create(ENLinea en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Delete(ENLinea en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Update(ENLinea en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Read(ENLinea en)
@@ -106,8 +103,6 @@ namespace library
                             }
                             System.Diagnostics.Debug.WriteLine("-");
 
-
-                            // Check if there are rows to read
                             while (reader.Read())
                             {
                                 ENLinea enLinea = new ENLinea();

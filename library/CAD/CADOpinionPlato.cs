@@ -34,7 +34,6 @@ namespace library
             }
             catch (Exception)
             {
-                // Manejar excepción
                 return false;
             }
         }
@@ -57,7 +56,6 @@ namespace library
             }
             catch (Exception)
             {
-                // Manejar excepción
                 return false;
             }
         }
@@ -79,7 +77,6 @@ namespace library
             }
             catch (Exception)
             {
-                // Manejar excepción
                 return false;
             }
         }
@@ -98,19 +95,17 @@ namespace library
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read())
                     {
-                        // Asignar valores leídos a las propiedades del objeto ENOpinionPlato
                         en.IdOpinion = Convert.ToInt32(reader["id_o"]);
                         return true;
                     }
                     else
                     {
-                        return false; // No se encontró ninguna opinión para el plato
+                        return false;
                     }
                 }
             }
             catch (Exception)
             {
-                // Manejar excepción
                 return false;
             }
         }

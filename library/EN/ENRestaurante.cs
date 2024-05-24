@@ -12,7 +12,7 @@ using System.Configuration;
 namespace library {
     public class ENRestaurante
     {
-        public int Cod { get; set; } // Clave primaria
+        public int Cod { get; set; } 
         public string Nombre { get; set; }
         public string Localidad { get; set; }
         public string Tipo { get; set; }

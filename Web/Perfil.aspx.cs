@@ -37,7 +37,6 @@ namespace Web
             }
             else
             {
-                // Mostrar mensaje si no se encuentra el usuario
                 lblMensajeOpiniones.Text = "No se ha podido cargar el perfil del usuario.";
                 lblMensajeOpiniones.Visible = true;
             }
@@ -72,7 +71,6 @@ namespace Web
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener el usuario autenticado: " + ex.Message);
             }
 
@@ -90,7 +88,6 @@ namespace Web
             }
             else
             {
-                // Mostrar mensaje si no hay opiniones
                 lblMensajeOpiniones.Text = "No hay opiniones disponibles.";
                 lblMensajeOpiniones.Visible = true;
             }
@@ -125,7 +122,6 @@ namespace Web
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones
                 Console.WriteLine("Error al obtener opiniones: " + ex.Message);
             }
 

@@ -1,6 +1,5 @@
 C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
 C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
 C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
 C:\Users\ramaj\source\repos\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
 C:\Users\ramaj\source\repos\SecondBite_v17\library\bin\Debug\library.dll
@@ -11,8 +10,6 @@ C:\Users\Nada\source\repos\SecondBite_v17\library\bin\Debug\library.dll
 C:\Users\Nada\source\repos\SecondBite_v17\library\bin\Debug\library.pdb
 C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.dll
 C:\Users\Nada\source\repos\SecondBite_v17\library\obj\Debug\library.pdb
-=======
->>>>>>> 48776654W
 C:\Users\usuario\source\repos\SecondBite_v17test\library\bin\Debug\library.dll
 C:\Users\usuario\source\repos\SecondBite_v17test\library\bin\Debug\library.pdb
 C:\Users\usuario\source\repos\SecondBite_v17test\library\obj\Debug\library.csproj.AssemblyReference.cache
@@ -31,18 +28,12 @@ C:\Users\usuario\source\repos\SecondBite_v17as\library\obj\Debug\library.csproj.
 C:\Users\usuario\source\repos\SecondBite_v17as\library\obj\Debug\library.csproj.CoreCompileInputs.cache
 C:\Users\usuario\source\repos\SecondBite_v17as\library\obj\Debug\library.dll
 C:\Users\usuario\source\repos\SecondBite_v17as\library\obj\Debug\library.pdb
->>>>>>> aa02f21307e21bc4d2601d81557adfd9d75f56b7
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\bin\Debug\library.dll
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\bin\Debug\library.pdb
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.csproj.CoreCompileInputs.cache
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.dll
 C:\Users\G513\Desktop\SecondBiteRepo\SecondBite_v17\library\obj\Debug\library.pdb
->>>>>>> 74392984J
->>>>>>> 6bdbfc2686bf6fe5a61cd159173004bcf79ffd29
->>>>>>> develop
->>>>>>> BK5734575
->>>>>>> 28ea8a38838113268f2cd1183a84c3f18c2f06fe
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\bin\Debug\library.dll
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\bin\Debug\library.pdb
 C:\Users\G513\Desktop\SecondBite2repo\SecondBite_v17\library\obj\Debug\library.csproj.AssemblyReference.cache

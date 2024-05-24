@@ -14,6 +14,6 @@
         }
 
         slides.eq(slideIndex - 1).css('display', 'block');
-        setTimeout(showSlides, 7000); // Cambia imagen cada 7 segundos
+        setTimeout(showSlides, 7000); //7 seg cambio
     }
 });

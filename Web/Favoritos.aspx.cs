@@ -22,12 +22,10 @@ namespace Web
 
         protected void Delete(object sender, EventArgs e)
         {
-            // Your delete logic here
         }
 
         protected string GetCardContent()
         {
-            // Logic to retrieve dynamic content
             return "Dynamic card content";
         }
     }

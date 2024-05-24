@@ -23,25 +23,21 @@ namespace library
         public bool Create(ENPedido en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Delete(ENPedido en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Update(ENPedido en)
 		{
 			return false;
-			//TODO
 		}
 
 		public bool Read(ENPedido en)
 		{
 			return false;
-			//TODO
 		}
 
         public List<ENPedido> ReadAll()
@@ -68,11 +64,8 @@ namespace library
                             }
                             System.Diagnostics.Debug.WriteLine("-");
 
-
-                            // Check if there are rows to read
                             while (reader.Read())
                             {
-                                // Read each field in the current row
                                 ENPedido enTemp = new ENPedido();
                                 ENLinea enLinea = new ENLinea();
                                 enLinea.pedido = Convert.ToInt32(reader["num_pedido"].ToString());
@@ -125,11 +118,8 @@ namespace library
                             }
                             System.Diagnostics.Debug.WriteLine("-");
 
-
-                            // Check if there are rows to read
                             while (reader.Read())
                             {
-                                // Read each field in the current row
                                 ENPedido enTemp = new ENPedido();
                                 ENLinea enLinea = new ENLinea();
                                 enLinea.pedido = Convert.ToInt32(reader["num_pedido"].ToString());

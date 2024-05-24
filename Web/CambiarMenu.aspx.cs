@@ -46,7 +46,6 @@ namespace Web
 
             if (string.IsNullOrWhiteSpace(nombre))
             {
-                // Mostrar mensaje de error o realizar alguna acción
                 return;
             }
 
@@ -58,12 +57,10 @@ namespace Web
 
             if (plato.Id == 0)
             {
-                // Agregar nuevo plato
                 plato.Create();
             }
             else
             {
-                // Actualizar plato existente
                 plato.Update();
             }
 
