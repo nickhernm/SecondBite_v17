@@ -15,10 +15,10 @@
             <p class="telefono">Teléfono: <asp:Label ID="lblTelefono" runat="server" /></p>
         </div>
         <div class="ProfileElement ProfileActions">
-            <a href="Cesta.aspx" class="btn">Cesta</a>
-            <a href="Favoritos.aspx" class="btn">Favoritos</a>
-            <a href="Pedidos.aspx" class="btn">Pedidos</a>
-            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-danger" OnClick="Logout_Click" />
+            <a href="Cesta.aspx" class="btn" style="background-color: mediumpurple;">Cesta</a>
+            <a href="Favoritos.aspx" class="btn" style="background-color: mediumpurple;">Favoritos</a>
+            <a href="Pedidos.aspx" class="btn" style="background-color: mediumpurple;">Pedidos</a>
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-danger" OnClick="Logout_Click" style="background-color: mediumpurple;" />
         </div>
     </div>
     <hr />
