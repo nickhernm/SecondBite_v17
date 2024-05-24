@@ -51,15 +51,17 @@ El esquema entidad-relación de la base de datos se encuentra en la carpeta raí
 
 ## APUNTES ENTREGA FINAL:
 
-# Propuestas:
-
-
 # Dificultades encontradas:
-- Problemas en coordinación y entregas a tiempo.
-- Mal reparto de tareas.
-- Proyecto demasido grancde
+- Mantener la sesión iniciada del usuario.
+- Uso de AJAX y GRIDs.
+- Interfaz y frontend (parte visual de la página).
+- Gestión de la(s) base(s) de datos.
 
 # Problemas que se han encontrado:
+- Problemas en coordinación y entregas a tiempo.
+- Mal reparto de tareas.
+- No entregas de lo que se ha pedido o con errores.
+- Dimensión del proyecto para un grupo tan reducido.
 
 ## USUARIOS Y CONTRASEÑAS PARA EL REGISTRO
 Hemos proporcionado dos tipos de usuarios en la base de datos para poder registrarse como cliente y como restaurante:
