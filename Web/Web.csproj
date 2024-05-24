@@ -182,6 +182,9 @@
     <Content Include="Site.Master" />
     <Content Include="styles.css" />
     <Content Include="Menu.css" />
+    <Content Include="Restaurantes.css" />
+    <Content Include="Platos.css" />
+    <Content Include="Menu_Individual.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

@@ -22,6 +22,18 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Move profile picture to the left */
+.ProfilePic {
+    order: -1;
+    flex: 0 0 auto;
+}
+
+.TextInfo {
+    flex: 1 1 auto;
+    text-align: left;
+    margin-left: 20px;
+}
+
 .TextInfo h1 {
     font-size: 24px;
     color: #333;
@@ -34,25 +46,27 @@
 }
 
 .ProfileActions {
+    flex: 0 0 auto;
     margin-top: 20px;
 }
 
-    .ProfileActions .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 5px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    }
+.ProfileActions .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: mediumpurple;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-        .ProfileActions .btn:hover {
-            background-color: #45a049;
-        }
+.ProfileActions .btn:hover {
+    background-color: purple;
+    color: mediumpurple;
+}
 
 .OpinionList {
     background-color: #fff;
@@ -62,17 +76,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    .OpinionList h2 {
-        color: #333;
-        margin-bottom: 10px;
-    }
+.OpinionList h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
 
-    .OpinionList h3 {
-        color: #666;
-        margin-bottom: 5px;
-    }
+.OpinionList h3 {
+    color: #666;
+    margin-bottom: 5px;
+}
 
-    .OpinionList p {
-        color: #555;
-        margin-bottom: 5px;
-    }
+.OpinionList p {
+    color: #555;
+    margin-bottom: 5px;
+}

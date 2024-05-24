@@ -36,20 +36,6 @@ footer {
     color: #fff;
 }
 
-    footer p {
-        margin: 0;
-    }
-
-    footer a {
-        color: white;
-        text-decoration: none;
-        margin-right: 15px;
-    }
-
-        footer a:last-child {
-            margin-right: 0;
-        }
-
 .TopContainer {
     display: flex;
     justify-content: space-between;
