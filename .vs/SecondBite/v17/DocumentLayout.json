@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\",
+  "WorkspaceRootPath": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\repofinalporfavor\\secondbite_v17\\web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\optimizacion\\secondbite_v17\\web\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\optimizacion\\secondbite_v17\\web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|c:\\users\\g513\\desktop\\optimizacion\\secondbite_v17\\web\\recomendaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\recomendaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A39EA6-8E32-4514-905D-5BBB9D25B308}|Web\\Web.csproj|solutionrelative:web\\perfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +35,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Favoritos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Favoritos.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\Favoritos.aspx.cs",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Favoritos.aspx.cs",
+              "RelativeToolTip": "Web\\Favoritos.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T08:17:16.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Recomendaciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Recomendaciones.aspx.cs",
+              "RelativeDocumentMoniker": "Web\\Recomendaciones.aspx.cs",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Recomendaciones.aspx.cs",
+              "RelativeToolTip": "Web\\Recomendaciones.aspx.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T08:15:57.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Web.config",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Web.config",
               "RelativeDocumentMoniker": "Web\\Web.config",
-              "ToolTip": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Web.config",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Web.config",
               "RelativeToolTip": "Web\\Web.config",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-05-24T01:20:19.766Z",
               "EditorCaption": ""
@@ -41,9 +75,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Perfil.aspx",
-              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Perfil.aspx",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Perfil.aspx",
               "RelativeDocumentMoniker": "Web\\Perfil.aspx",
-              "ToolTip": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Perfil.aspx",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Perfil.aspx",
               "RelativeToolTip": "Web\\Perfil.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -52,16 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Perfil.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Perfil.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Perfil.aspx.cs",
               "RelativeDocumentMoniker": "Web\\Perfil.aspx.cs",
-              "ToolTip": "C:\\Users\\G513\\Desktop\\repofinalPORFAVOR\\SecondBite_v17\\Web\\Perfil.aspx.cs",
+              "ToolTip": "C:\\Users\\G513\\Desktop\\optimizacion\\SecondBite_v17\\Web\\Perfil.aspx.cs",
               "RelativeToolTip": "Web\\Perfil.aspx.cs",
               "ViewState": "AQIAAG4AAAAAAAAAAAAAAIcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T01:10:28.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-24T01:10:28.964Z"
             }
           ]
         }
