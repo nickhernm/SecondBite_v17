@@ -78,7 +78,7 @@ Contraseña: restaurantpass2
 | ------------------------- | -----------------------------------------------------------------------------------------------------------------------------    |
 | Jaime Hernández (Coordinador) | - Implementación de las páginas restaurantes  <br>- Implementación donde se muestra el menú de cada restaurante  <br>- Mostrar platos mejor valorados  <br>- Mostrar información restaurante individual  <br>- Información plato individual  <br>- Página donde el restaurante puede modificar el menú  <br>- Creación Base de datos y creación de tablas  |
 | Darío Simón               | - Master Page  <br>- Página principal  <br>- Parte visual de la página genérica  <br>- Arreglos y ayuda de subpáginas (restaurante y platos)  <br>- Creación Base de datos  <br>- Arreglos EN CAD  |
-| Yaroslav                  | - [Poner tareas aquí]  |
+| Yaroslav                  | - Login  <br>- Register  <br>- Pedidos  <br>- Favoritos  <br>- Otros Arreglos  |
 | Nada Benaissa             | - Cesta.aspx, checkout.aspx, Contact.aspx, Quienessomos.aspx <br>- CAD/EN Cesta,FAQ,UsuarioFAQ <br>- Tablas de base de datos |
 
 
