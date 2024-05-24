@@ -84,7 +84,12 @@
             </main>
         </div>
         <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - SecondBite</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/Second_Bite" target="_blank">Instagram</a>
+                <a href="https://twitter.com/SecondBite" target="_blank">Twitter</a>
+                <a href="https://www.facebook.com/SecondBite" target="_blank">Facebook</a>
+                <span>&copy; <%: DateTime.Now.Year %> - SecondBite</span>
+            </div>
         </footer>
     </form>
 </body>

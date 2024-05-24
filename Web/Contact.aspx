@@ -9,8 +9,7 @@
         <p>Email: <a href="mailto:secondbiteweb@gmail.com">secondbiteweb@gmail.com</a></p>
         <p>Dirección: Av. Hada, 12, Alicante, España</p>
     </div>
-
-    <asp:Panel ID="contactPanel" runat="server">
+    <asp:Panel ID="contactPanel" runat="server" DefaultButton="btnEnviar">
         <div class="contact-form">
             <h2>Envíanos un mensaje</h2>
             <asp:Label ID="lblNombre" runat="server" Text="Nombre:"></asp:Label>
@@ -31,13 +30,4 @@
             <asp:Label ID="lblConfirmacion" runat="server" ForeColor="Green" Visible="false" Text="¡Mensaje enviado correctamente!"></asp:Label>
         </div>
     </asp:Panel>
-
-    <div class="social-media">
-        <h2>Síguenos en redes sociales</h2>
-        <ul>
-            <li><a href="https://www.instagram.com/Second_Bite" target="_blank">Instagram: Second_Bite</a></li>
-            <li><a href="https://twitter.com/SecondBite" target="_blank">Twitter: SecondBite</a></li>
-            <li><a href="https://www.facebook.com/SecondBite" target="_blank">Facebook: SecondBite</a></li>
-        </ul>
-    </div>
 </asp:Content>

@@ -36,6 +36,22 @@ footer {
     color: #fff;
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+    .social-media a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
 .TopContainer {
     display: flex;
     justify-content: space-between;
