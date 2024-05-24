@@ -54,12 +54,12 @@ namespace library {
             return fav.ReadAll();
         }
 
-        public List<ENPlato> ReadFavoritosUsu()
+        public List<ENPlato> ReadFavoritosUsu(string value)
         {
             CADFavoritos fav = new CADFavoritos();
             ENFavoritos eNFavoritos = new ENFavoritos();
             eNFavoritos.usuario = new ENUsuarioRestaurante();
-            eNFavoritos.usuario.Correo = "john.doe@example.com";
+            eNFavoritos.usuario.Correo = value;
             return fav.ReadFavoritosUsu(eNFavoritos);
         }
     }

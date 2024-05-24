@@ -57,6 +57,13 @@ namespace library
             CADPedido ped = new CADPedido();
             return ped.ReadAll();
         }
+
+
+        public List<ENPedido> ReadpedidosUsu(string value)
+        {
+            CADPedido ped = new CADPedido();
+            return ped.ReadAllUser(value);
+        }
     }
 }
 

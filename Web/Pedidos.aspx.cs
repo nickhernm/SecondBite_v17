@@ -1,26 +1,43 @@
-﻿using System;
+﻿using library;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
-using library;
+using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace Web
 {
-    public partial class Pedidos : System.Web.UI.Page
+    public partial class Pedidos : Page
     {
+        private ENPedido pedido;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                CargarPedidos();
-            }
+
+            pedido = new ENPedido();
+            //pedido.ReadAll();
+            List<ENPedido> listPedido = pedido.ReadpedidosUsu(User.Identity.Name);
+            System.Diagnostics.Debug.WriteLine("aaaaa");
+            System.Diagnostics.Debug.WriteLine(listPedido);
+            System.Diagnostics.Debug.WriteLine("aaaaa");
+            System.Diagnostics.Debug.WriteLine("aaaaaimp");
+            Repeater1.DataSource = listPedido;
+            Repeater1.DataBind();
+            //productList = listPedido;
+
+
         }
 
-        private void CargarPedidos()
+        protected void Delete(object sender, EventArgs e)
         {
-            ENPedido pedido = new ENPedido();
-            List<ENPedido> listaPedidos = pedido.ReadAll();
-            rptPedidos.DataSource = listaPedidos;
-            rptPedidos.DataBind();
+            // Your delete logic here
+        }
+
+        protected string GetCardContent()
+        {
+            // Logic to retrieve dynamic content
+            return "Dynamic card content";
         }
     }
 }

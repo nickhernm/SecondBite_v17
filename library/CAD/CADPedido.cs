@@ -100,9 +100,10 @@ namespace library
 			
         }
 
-        public List<ENPedido> ReadAllUser(ENUsuarioRestaurante enUsu)
+        public List<ENPedido> ReadAllUser(string value)
         {
-
+            System.Diagnostics.Debug.WriteLine("-adwwdwd");
+            System.Diagnostics.Debug.WriteLine(value);
             try
             {
                 List<ENPedido> listPedido = new List<ENPedido>();
@@ -110,11 +111,11 @@ namespace library
                 {
                     connection.Open();
                     //string query = "INSERT INTO USUARIO (correo, nombre, telefono, tipo_usuario, id_metodo_pago) VALUES (@correo, @nombre, @telefono, @tipo_usuario, @id_metodo_pago)";
-                    string query = "SELECT * FROM PEDIDO";
+                    string query = "select * from PEDIDO where usuario = @usuario";
                     //string query = "SELECT * from Products";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-
+                        command.Parameters.AddWithValue("@usuario", value);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             for (int i = 0; i < reader.FieldCount; i++)
@@ -135,13 +136,11 @@ namespace library
                                 enTemp.numPedido = Convert.ToInt32(reader["num_pedido"].ToString());
                                 enTemp.fechaPedido = reader["fecha"].ToString();
                                 enTemp.emailPedido = reader["usuario"].ToString();
-                                //enTemp.lineasPedido = enLinea.ReadAllPed();
+                                enTemp.lineasPedido = enLinea.ReadAllPed();
                                 listPedido.Add(enTemp);
                                 System.Diagnostics.Debug.WriteLine(enTemp.emailPedido);
                                 System.Diagnostics.Debug.WriteLine("sssss");
                             }
-                            System.Diagnostics.Debug.WriteLine(listPedido[0].emailPedido);
-                            System.Diagnostics.Debug.WriteLine(listPedido[1].emailPedido);
                             return listPedido;
                         }
                     }

@@ -68,5 +68,11 @@ namespace library
             throw new NotImplementedException();
 
         }
+
+        public List<ENLinea> ReadAllPed()
+        {
+            CADLinea lin = new CADLinea();
+            return lin.ReadAllPed(this);
+        }
     }
 }
