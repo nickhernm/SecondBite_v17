@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\",
-<<<<<<< HEAD
   "Documents": [],
-=======
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|c:\\users\\ramaj\\source\\repos\\secondbite_v17\\library\\en\\enrestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{577DA5E8-EF25-4D7A-B0A4-30C6EAF6913C}|library\\library.csproj|solutionrelative:library\\en\\enrestaurante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
->>>>>>> ea3ffb7fb036a07add0a211820e65dc767a2a630
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -39,22 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-<<<<<<< HEAD
-=======
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ENRestaurante.cs",
-              "DocumentMoniker": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\EN\\ENRestaurante.cs",
-              "RelativeDocumentMoniker": "library\\EN\\ENRestaurante.cs",
-              "ToolTip": "C:\\Users\\ramaj\\source\\repos\\SecondBite_v17\\library\\EN\\ENRestaurante.cs",
-              "RelativeToolTip": "library\\EN\\ENRestaurante.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T16:41:35.63Z",
-              "EditorCaption": ""
->>>>>>> ea3ffb7fb036a07add0a211820e65dc767a2a630
             }
           ]
         }
